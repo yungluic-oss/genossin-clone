@@ -1,0 +1,625 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "docWidth": 1440,
+  "docHeight": 7998,
+  "htmlBg": "rgba(0, 0, 0, 0)",
+  "bodyBg": "rgb(0, 0, 0)",
+  "bodyColor": "rgb(0, 0, 0)",
+  "bodyFont": "sans-serif",
+  "bodyFontSize": "12px",
+  "h1": {
+    "tag": "h1",
+    "text": "Intelligent Solutions for Modern Businesses.",
+    "font": "Figtree, \"Figtree Placeholder\", sans-serif",
+    "size": "70px",
+    "weight": "600",
+    "lh": "77px",
+    "ls": "-2.2px",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "box": {
+      "w": 900,
+      "h": 154
+    }
+  },
+  "h2": {
+    "tag": "h2",
+    "text": "AI Solutions That Take Your Business to the Next Level",
+    "font": "\"Figtree Variable\", \"Figtree Placeholder\", sans-serif",
+    "size": "50px",
+    "weight": "400",
+    "lh": "55px",
+    "ls": "-2px",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "box": {
+      "w": 700,
+      "h": 110
+    }
+  },
+  "h3": {
+    "tag": "h3",
+    "text": "Automate repetitive tasks",
+    "font": "Figtree, \"Figtree Placeholder\", sans-serif",
+    "size": "35px",
+    "weight": "500",
+    "lh": "38.5px",
+    "ls": "-1.4px",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "box": {
+      "w": 470,
+      "h": 39
+    }
+  },
+  "p": {
+    "tag": "p",
+    "text": "GENOSSIN",
+    "font": "Figtree, \"Figtree Placeholder\", sans-serif",
+    "size": "21px",
+    "weight": "700",
+    "lh": "25.2px",
+    "ls": "-1.26px",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "box": {
+      "w": 98,
+      "h": 25
+    }
+  },
+  "a": {
+    "tag": "a",
+    "text": "GENOSSIN",
+    "font": "sans-serif",
+    "size": "12px",
+    "weight": "400",
+    "lh": "normal",
+    "ls": "normal",
+    "color": "rgb(0, 0, 238)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "box": {
+      "w": 127,
+      "h": 25
+    }
+  },
+  "cssVars": {
+    "--token-aae92d1e-1be4-447e-8038-565c6944f982": "#000",
+    "--token-02bad998-d047-4b5b-9bbd-f00fa4cca7fd": "#141417",
+    "--token-a888adc2-3d05-4d6f-88b7-8dab97418795": "#cafa5a",
+    "--token-5e4b2f96-b859-4111-ae18-4e131b98ae0e": "#080808",
+    "--token-cd9ad879-0340-4881-8da6-7efa110062d4": "#df7afe",
+    "--token-b2fb23d9-6070-4f2d-b3d0-2fe68c4f2aab": "#0d0d0dcc",
+    "--token-55fce8bf-ab86-42dc-8b77-6335cf9cf588": "#fff",
+    "--token-cfb0af42-62a5-486a-837b-9870b5e7030b": "#ffffff0d",
+    "--token-d072d1f5-ef86-4b7c-bae1-6c9f6238e10b": "#ccc",
+    "--token-313dd4d6-9859-4bdd-889b-954a849d13e3": "#222",
+    "--token-5ca39c84-aa81-4600-807d-fc1e6e718e60": "#ffffffe6",
+    "--token-73ebc18b-e0a6-4828-83ca-5395b5fe5857": "#ffffffbf",
+    "--token-a23fbd35-1ce2-4182-8084-5ed31447251e": "#f5f5f7",
+    "--token-3409596f-27d1-45d5-95d2-e123a22a76c1": "#949494",
+    "--token-5c4462f2-04c9-4c22-a413-821548c59fe8": "#08080880",
+    "--token-c98e51d5-41a8-4486-a5cc-d2ef26ff4bab": "#020202",
+    "--token-23b2e65f-8436-4591-aa37-0f674e6c69d5": "#fff",
+    "--token-54488dc5-e669-417b-a0e9-8fe628a00d8a": "#ffffffad",
+    "--token-116819d4-d38f-42b0-9b45-3f52eb0737ad": "#181818",
+    "--token-d418e6d8-3eb9-4109-a7c0-1158fa5ebb34": "#ffffff0a",
+    "--token-99ccfa93-5807-4a3f-a357-328cd0d357b6": "#814ac873",
+    "--framer-will-change-override": "none",
+    "--text-decoration": "var(--framer-link-current-text-decoration-style,var(--framer-link-text-decoration-style,var(--framer-text-decoration-style,solid)))var(--framer-link-current-text-decoration,var(--framer-link-text-decoration,var(--framer-text-decoration,none)))var(--framer-link-current-text-decoration-color,var(--framer-link-text-decoration-color,var(--framer-text-decoration-color,currentcolor)))var(--framer-link-current-text-decoration-thickness,var(--framer-link-text-decoration-thickness,var(--framer-text-decoration-thickness,auto)))",
+    "--text-decoration-skip-ink": "var(--framer-link-current-text-decoration-skip-ink,var(--framer-link-text-decoration-skip-ink,var(--framer-text-decoration-skip-ink)))",
+    "--text-underline-offset": "var(--framer-link-current-text-decoration-offset,var(--framer-link-text-decoration-offset,var(--framer-text-decoration-offset)))",
+    "--font-family": "var(--framer-link-current-font-family,var(--framer-link-font-family,var(--framer-font-family)))",
+    "--font-style": "var(--framer-link-current-font-style,var(--framer-link-font-style,var(--framer-font-style)))",
+    "--font-weight": "var(--framer-link-current-font-weight,var(--framer-link-font-weight,var(--framer-font-weight)))",
+    "--text-color": "var(--framer-link-current-text-color,var(--framer-link-text-color,var(--framer-text-color)))",
+    "--letter-spacing": "var(--framer-letter-spacing)",
+    "--font-size": "var(--framer-link-current-font-size,var(--framer-link-font-size,var(--framer-font-size)))",
+    "--text-transform": "var(--framer-link-current-text-transform,var(--framer-link-text-transform,var(--framer-text-transform)))",
+    "--line-height": "var(--framer-line-height)",
+    "--framer-will-change-filter-override": "none",
+    "--framer-font-family": "\"Figtree\",\"Figtree Placeholder\",sans-serif",
+    "--framer-font-style": "normal",
+    "--framer-font-weight": "500",
+    "--framer-text-color": "var(--token-55fce8bf-ab86-42dc-8b77-6335cf9cf588,#fff)",
+    "--framer-font-size": "14px",
+    "--framer-letter-spacing": "-.02em",
+    "--framer-text-transform": "none",
+    "--framer-text-decoration": "none",
+    "--framer-text-decoration-style": "none",
+    "--framer-text-decoration-color": "none",
+    "--framer-text-decoration-thickness": "none",
+    "--framer-text-decoration-skip-ink": "none",
+    "--framer-text-decoration-offset": "none",
+    "--framer-line-height": "1.2em",
+    "--framer-text-alignment": "start",
+    "--framer-font-open-type-features": "normal",
+    "--framer-text-background-color": "initial",
+    "--framer-text-background-radius": "initial",
+    "--framer-text-background-corner-shape": "initial",
+    "--framer-text-background-padding": "initial",
+    "--list-style-type": "decimal",
+    "--font-variation-settings": "normal",
+    "--framer-font-family-bold": "\"Figtree\",\"Figtree Placeholder\",sans-serif",
+    "--framer-font-family-bold-italic": "\"Figtree\",\"Figtree Placeholder\",sans-serif",
+    "--framer-font-family-italic": "\"Figtree\",\"Figtree Placeholder\",sans-serif",
+    "--framer-font-style-bold": "normal",
+    "--framer-font-style-bold-italic": "italic",
+    "--framer-font-style-italic": "italic",
+    "--framer-font-variation-axes": "normal",
+    "--framer-font-weight-bold": "700",
+    "--framer-font-weight-bold-italic": "700",
+    "--framer-font-weight-italic": "500",
+    "--framer-paragraph-spacing": "20px",
+    "--framer-text-stroke-color": "initial",
+    "--framer-text-stroke-width": "initial",
+    "--framer-link-text-color": "#09f",
+    "--framer-link-text-decoration": "none",
+    "--framer-text-wrap-override": "balance",
+    "--border-bottom-width": "1px",
+    "--border-color": "var(--token-313dd4d6-9859-4bdd-889b-954a849d13e3,#222)",
+    "--border-left-width": "1px",
+    "--border-right-width": "1px",
+    "--border-style": "solid",
+    "--border-top-width": "1px",
+    "--framer-font-variation-axes-bold": "\"wght\" 550",
+    "--framer-font-variation-axes-bold-italic": "\"wght\" 550",
+    "--framer-font-variation-axes-italic": "\"wght\" 550",
+    "--framer-link-current-text-decoration": "none",
+    "--framer-link-hover-text-color": "var(--token-55fce8bf-ab86-42dc-8b77-6335cf9cf588,#fff)",
+    "--framer-link-hover-text-decoration": "none"
+  },
+  "fonts": [
+    "DM Sans 400 normal unloaded",
+    "DM Sans 400 normal unloaded",
+    "DM Sans 500 normal unloaded",
+    "DM Sans 500 normal unloaded",
+    "Figtree 400 italic unloaded",
+    "Figtree 400 italic unloaded",
+    "Figtree 600 italic unloaded",
+    "Figtree 600 italic unloaded",
+    "Figtree 400 normal unloaded",
+    "Figtree 400 normal loaded",
+    "Figtree 600 normal unloaded",
+    "Figtree 600 normal loaded",
+    "Figtree Variable 300 900 normal unloaded",
+    "Figtree Variable 300 900 normal loaded",
+    "Figtree 900 italic unloaded",
+    "Figtree 900 italic unloaded",
+    "Figtree 900 normal unloaded",
+    "Figtree 900 normal unloaded",
+    "Fragment Mono 400 normal unloaded",
+    "Fragment Mono 400 normal unloaded",
+    "Fragment Mono 400 normal unloaded",
+    "Figtree 500 normal loaded",
+    "Figtree 700 normal loaded",
+    "Figtree 700 italic unloaded",
+    "Figtree 500 italic unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 400 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Inter 600 normal unloaded",
+    "Satoshi 500 normal loaded",
+    "Figtree Placeholder normal normal loaded",
+    "Figtree Variable Placeholder normal normal unloaded",
+    "DM Sans Placeholder normal normal unloaded",
+    "Inter Placeholder normal normal unloaded",
+    "Satoshi Placeholder normal normal loaded"
+  ],
+  "sections": [
+    {
+      "name": "Desktop",
+      "tag": "nav",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 65
+      }
+    },
+    {
+      "name": "Desktop",
+      "tag": "div",
+      "rect": {
+        "x": 120,
+        "y": 10,
+        "w": 1200,
+        "h": 45
+      }
+    },
+    {
+      "name": "Logo",
+      "tag": "a",
+      "rect": {
+        "x": 120,
+        "y": 20,
+        "w": 127,
+        "h": 25
+      }
+    },
+    {
+      "name": "Container",
+      "tag": "div",
+      "rect": {
+        "x": 858,
+        "y": 10,
+        "w": 462,
+        "h": 45
+      }
+    },
+    {
+      "name": "Links",
+      "tag": "div",
+      "rect": {
+        "x": 858,
+        "y": 14,
+        "w": 356,
+        "h": 37
+      }
+    },
+    {
+      "name": "Default",
+      "tag": "a",
+      "rect": {
+        "x": 858,
+        "y": 16,
+        "w": 65,
+        "h": 33
+      }
+    },
+    {
+      "name": "Default",
+      "tag": "a",
+      "rect": {
+        "x": 925,
+        "y": 16,
+        "w": 84,
+        "h": 33
+      }
+    },
+    {
+      "name": "Default",
+      "tag": "a",
+      "rect": {
+        "x": 1012,
+        "y": 16,
+        "w": 55,
+        "h": 33
+      }
+    },
+    {
+      "name": "Default",
+      "tag": "a",
+      "rect": {
+        "x": 1069,
+        "y": 16,
+        "w": 66,
+        "h": 33
+      }
+    },
+    {
+      "name": "Default",
+      "tag": "a",
+      "rect": {
+        "x": 1136,
+        "y": 16,
+        "w": 78,
+        "h": 33
+      }
+    },
+    {
+      "name": "Button",
+      "tag": "div",
+      "rect": {
+        "x": 1230,
+        "y": 15,
+        "w": 90,
+        "h": 35
+      }
+    },
+    {
+      "name": "Small",
+      "tag": "a",
+      "rect": {
+        "x": 1230,
+        "y": 15,
+        "w": 90,
+        "h": 35
+      }
+    },
+    {
+      "name": "Text Container",
+      "tag": "div",
+      "rect": {
+        "x": 1243,
+        "y": 24,
+        "w": 64,
+        "h": 17
+      }
+    },
+    {
+      "name": "1st state",
+      "tag": "div",
+      "rect": {
+        "x": 1243,
+        "y": 24,
+        "w": 64,
+        "h": 17
+      }
+    },
+    {
+      "name": "2nd state",
+      "tag": "div",
+      "rect": {
+        "x": 1243,
+        "y": 51,
+        "w": 64,
+        "h": 17
+      }
+    },
+    {
+      "name": "Hero section",
+      "tag": "section",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      }
+    },
+    {
+      "name": "Full",
+      "tag": "div",
+      "rect": {
+        "x": 585,
+        "y": 335,
+        "w": 271,
+        "h": 29
+      }
+    },
+    {
+      "name": "new",
+      "tag": "div",
+      "rect": {
+        "x": 587,
+        "y": 337,
+        "w": 45,
+        "h": 25
+      }
+    },
+    {
+      "name": "Content",
+      "tag": "div",
+      "rect": {
+        "x": 40,
+        "y": 389,
+        "w": 1360,
+        "h": 256
+      }
+    },
+    {
+      "name": "Heading and subheading",
+      "tag": "div",
+      "rect": {
+        "x": 40,
+        "y": 389,
+        "w": 1360,
+        "h": 191
+      }
+    },
+    {
+      "name": "CTA",
+      "tag": "div",
+      "rect": {
+        "x": 656,
+        "y": 605,
+        "w": 128,
+        "h": 40
+      }
+    },
+    {
+      "name": "Basic",
+      "tag": "a",
+      "rect": {
+        "x": 658,
+        "y": 607,
+        "w": 124,
+        "h": 36
+      }
+    },
+    {
+      "name": "Text Container",
+      "tag": "div",
+      "rect": {
+        "x": 671,
+        "y": 616,
+        "w": 98,
+        "h": 18
+      }
+    },
+    {
+      "name": "1st state",
+      "tag": "div",
+      "rect": {
+        "x": 671,
+        "y": 616,
+        "w": 98,
+        "h": 18
+      }
+    },
+    {
+      "name": "2nd state",
+      "tag": "div",
+      "rect": {
+        "x": 671,
+        "y": 644,
+        "w": 98,
+        "h": 18
+      }
+    },
+    {
+      "name": "BG",
+      "tag": "div",
+      "rect": {
+        "x": 517,
+        "y": 247,
+        "w": 406,
+        "h": 406
+      }
+    },
+    {
+      "name": "Big Circle",
+      "tag": "div",
+      "rect": {
+        "x": 503,
+        "y": 233,
+        "w": 434,
+        "h": 434
+      }
+    },
+    {
+      "name": "Small circle",
+      "tag": "div",
+      "rect": {
+        "x": 519,
+        "y": 249,
+        "w": 403,
+        "h": 403
+      }
+    },
+    {
+      "name": "Particles holder",
+      "tag": "div",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      }
+    },
+    {
+      "name": "Void",
+      "tag": "div",
+      "rect": {
+        "x": 515,
+        "y": 245,
+        "w": 410,
+        "h": 410
+      }
+    },
+    {
+      "name": "Logos",
+      "tag": "section",
+      "rect": {
+        "x": 0,
+        "y": 900,
+        "w": 1440,
+        "h": 122
+      }
+    },
+    {
+      "name": "Content",
+      "tag": "div",
+      "rect": {
+        "x": 40,
+        "y": 1000,
+        "w": 1360,
+        "h": 22
+      }
+    },
+    {
+      "name": "Services",
+      "tag": "section",
+      "rect": {
+        "x": 0,
+        "y": 1022,
+        "w": 1440,
+        "h": 2197
+      }
+    },
+    {
+      "name": "Header",
+      "tag": "div",
+      "rect": {
+        "x": 40,
+        "y": 1172,
+        "w": 1360,
+        "h": 237
+      }
+    },
+    {
+      "name": "Badge",
+      "tag": "div",
+      "rect": {
+        "x": 669,
+        "y": 1172,
+        "w": 101,
+        "h": 33
+      }
+    },
+    {
+      "name": "Text",
+      "tag": "div",
+      "rect": {
+        "x": 40,
+        "y": 1230,
+        "w": 1360,
+        "h": 179
+      }
+    },
+    {
+      "name": "cards",
+      "tag": "div",
+      "rect": {
+        "x": 220,
+        "y": 1419,
+        "w": 1000,
+        "h": 1700
+      }
+    },
+    {
+      "name": "Workflow automation",
+      "tag": "div",
+      "rect": {
+        "x": 220,
+        "y": 1419,
+        "w": 1000,
+        "h": 350
+      }
+    },
+    {
+      "name": "graphics",
+      "tag": "div",
+      "rect": {
+        "x": 220,
+        "y": 1419,
+        "w": 450,
+        "h": 350
+      }
+    },
+    {
+      "name": "workflow automation",
+      "tag": "div",
+      "rect": {
+        "x": 270,
+        "y": 1619,
+        "w": 350,
+        "h": 300
+      }
+    }
+  ],
+  "headHtml": "\n\t<meta charset=\"utf-8\">\n\t\n\t\n\t<script>try{if(localStorage.get(\"__framer_force_showing_editorbar_since\")){const n=document.createElement(\"link\");n.rel = \"modulepreload\";n.href=\"https://framer.com/edit/init.mjs\";document.head.appendChild(n)}}catch(e){}</script>\n\t<!-- Start of headStart -->\n    \n    <!-- End of headStart -->\n\t<meta name=\"viewport\" content=\"width=device-width\">\n\t<meta name=\"generator\" content=\"Framer e85a4e6\">\n\t<title>Genossin Technologies</title>\n    <meta name=\"description\" content=\"Don't know how to integrate AI into your business? No worries. Genossin is a modern AI automation agency, perfect for startups and businesses. We bridge the gap in your business with tailored AI automation solutions that lets you stay competitive.\">\n    <meta name=\"framer-search-index\" content=\"https://framerusercontent.com/sites/1nq50LzxpFU2SPBTUqRxf7/searchIndex-TCp22O0bYLEU.json\">\n    <meta name=\"framer-search-index-fallback\" content=\"https://framerusercontent.com/sites/1nq50LzxpFU2SPBTUqRxf7/searchIndex-wjnytC8Jg3Oq.json\">\n    <link href=\"https://framerusercontent.com/images/GV95TgfnpG2cJiybCbMmvBVKg4.png\" rel=\"icon\" media=\"(prefers-color-scheme: light)\">\n    <link href=\"https://framerusercontent.com/images/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png\" rel=\"icon\" media=\"(prefers-color-scheme: dark)\">\n    <link rel=\"apple-touch-icon\" href=\"https://framerusercontent.com/images/GV95TgfnpG2cJiybCbMmvBVKg4.png\">\n    <!-- Open Graph / Facebook -->\n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:title\" content=\"Genossin Technologies\">\n    <meta property=\"og:description\" content=\"Don't know how to integrate AI into your business? No worries. Genossin is a modern AI automation agency, perfect for startups and businesses. We bridge the gap in your business with tailored AI automation solutions that lets you stay competitive.\">\n    <meta property=\"og:image\" content=\"https://framerusercontent.com/assets/BDkySH1l96kZh7SgePJrIjeubQ.png\">\n    <!-- Twitter -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\">\n    <meta name=\"twitter:title\" content=\"Genossin Technologies\">\n    <meta name=\"twitter:description\" content=\"Don't know how to integrate AI into your business? No worries. Genossin is a modern AI automation agency, perfect for startups and businesses. We bridge the gap in your business with tailored AI automation solutions that lets you stay competitive.\">\n    <meta name=\"twitter:image\" content=\"https://framerusercontent.com/assets/BDkySH1l96kZh7SgePJrIjeubQ.png\">\n\t\n\t<style data-framer-font-css=\"\">/* latin-ext */\n@font-face {\n  font-family: 'DM Sans';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6h9Q.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;\n"
+}

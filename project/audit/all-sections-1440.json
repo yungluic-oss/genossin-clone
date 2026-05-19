@@ -1,0 +1,732 @@
+{
+  "nav": {
+    "candidates": [
+      {
+        "name": "Header",
+        "dim": {
+          "w": 1360,
+          "h": 237,
+          "y": 1172
+        }
+      },
+      {
+        "name": "Header",
+        "dim": {
+          "w": 1360,
+          "h": 237,
+          "y": 3369
+        }
+      },
+      {
+        "name": "Navigation icons",
+        "dim": {
+          "w": 38,
+          "h": 10,
+          "y": 3788
+        }
+      },
+      {
+        "name": "Header",
+        "dim": {
+          "w": 1360,
+          "h": 210,
+          "y": 4598
+        }
+      },
+      {
+        "name": "Header",
+        "dim": {
+          "w": 1360,
+          "h": 237,
+          "y": 5598
+        }
+      }
+    ],
+    "fixedTopName": null,
+    "topRows": [
+      {
+        "tag": "DIV",
+        "name": null,
+        "dim": {
+          "w": 1440,
+          "h": 65,
+          "y": 0
+        }
+      },
+      {
+        "tag": "NAV",
+        "name": "Desktop",
+        "dim": {
+          "w": 1440,
+          "h": 65,
+          "y": 0
+        }
+      },
+      {
+        "tag": "DIV",
+        "name": "Desktop",
+        "dim": {
+          "w": 1200,
+          "h": 45,
+          "y": 10
+        }
+      }
+    ],
+    "logoText": "GENOSSIN",
+    "navLinks": [
+      {
+        "text": "GENOSSIN",
+        "href": "./"
+      },
+      {
+        "text": "Home",
+        "href": "./"
+      },
+      {
+        "text": "Solutions",
+        "href": "./solutions"
+      },
+      {
+        "text": "Blog",
+        "href": "./blog"
+      },
+      {
+        "text": "About",
+        "href": "./about"
+      },
+      {
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "text": "Book a callBook a call",
+        "href": "https://cal.com"
+      }
+    ]
+  },
+  "hero": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 900,
+      "y": 0
+    },
+    "h1": {
+      "fontFamily": "Figtree, \"Figtree Placeholder\", sans-serif",
+      "fontSize": "70px",
+      "fontWeight": "600",
+      "lineHeight": "77px",
+      "letterSpacing": "-2.2px",
+      "color": "rgb(255, 255, 255)",
+      "textAlign": "center",
+      "text": "Intelligent Solutions for Modern Businesses.",
+      "dim": {
+        "w": 900,
+        "h": 154,
+        "y": 389
+      }
+    },
+    "sub": {
+      "fontSize": "18px",
+      "fontWeight": "500",
+      "lineHeight": "27px",
+      "color": "rgb(204, 204, 204)",
+      "textAlign": "center",
+      "text": "The first call is free. We listen, diagnose, then build exactly what you need.",
+      "dim": {
+        "w": 600,
+        "h": 27,
+        "y": 553
+      }
+    },
+    "badge": {
+      "text": "AI chatbot integration on websites",
+      "dim": {
+        "w": 209,
+        "h": 17,
+        "y": 341
+      }
+    },
+    "cta": {
+      "backgroundColor": "rgb(202, 250, 90)",
+      "color": "rgb(0, 0, 238)",
+      "borderRadius": "6px",
+      "padding": "9px 13px",
+      "text": "Get in touchGet in touch",
+      "tag": "A",
+      "dim": {
+        "w": 124,
+        "h": 36,
+        "y": 607
+      }
+    },
+    "trustLine": null,
+    "hasImage": 0,
+    "bgGlows": [
+      {
+        "name": "BG",
+        "dim": {
+          "w": 406,
+          "h": 406,
+          "y": 247
+        },
+        "bg": {
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "0.6",
+          "filter": "blur(10px)"
+        }
+      },
+      {
+        "name": "Big Circle",
+        "dim": {
+          "w": 434,
+          "h": 434,
+          "y": 233
+        },
+        "bg": {
+          "background": "rgba(0, 0, 0, 0) linear-gradient(229deg, rgb(223, 122, 254) 13%, rgba(201, 110, 240, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(202, 250, 90) 88%) repeat scroll 0% 0% / auto padding-box border-box",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(229deg, rgb(223, 122, 254) 13%, rgba(201, 110, 240, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(202, 250, 90) 88%)",
+          "opacity": "1",
+          "filter": "none"
+        }
+      },
+      {
+        "name": "Small circle",
+        "dim": {
+          "w": 310,
+          "h": 310,
+          "y": 295
+        },
+        "bg": {
+          "background": "rgba(0, 0, 0, 0) linear-gradient(141deg, rgb(223, 122, 254) 13%, rgba(201, 110, 240, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(202, 250, 90) 88%) repeat scroll 0% 0% / auto padding-box border-box",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(141deg, rgb(223, 122, 254) 13%, rgba(201, 110, 240, 0) 35.0236%, rgba(164, 92, 219, 0) 64.1724%, rgb(202, 250, 90) 88%)",
+          "opacity": "1",
+          "filter": "none"
+        }
+      },
+      {
+        "name": "Void",
+        "dim": {
+          "w": 410,
+          "h": 410,
+          "y": 245
+        },
+        "bg": {
+          "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "filter": "none"
+        }
+      }
+    ]
+  },
+  "logos": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 122,
+      "y": 900
+    },
+    "imgs": [],
+    "imgCount": 0,
+    "headerText": "Over 10+ business trust us"
+  },
+  "services": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 2197,
+      "y": 1022
+    },
+    "eyebrow": "Our Services",
+    "heading": "AI Solutions That Take Your Business to the Next Level",
+    "sub": "We design, develop, and implement automation tools that help you work smarter, not harder",
+    "cards": [
+      {
+        "name": "Workflow automation",
+        "dim": {
+          "w": 1000,
+          "h": 350,
+          "y": 1419
+        },
+        "eyebrow": "All Tasks",
+        "h3": {
+          "text": "Automate repetitive tasks",
+          "fontSize": "35px",
+          "fontWeight": "500",
+          "lineHeight": "38.5px",
+          "letterSpacing": "-1.4px"
+        },
+        "body": "We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains  saving time and cutting down errors.",
+        "tags": [
+          "All Tasks",
+          "Waiting for approval",
+          "Payroll management",
+          "Due on 2nd july",
+          "Employee Tracking",
+          "2 days ago"
+        ]
+      },
+      {
+        "name": "AI Assistant",
+        "dim": {
+          "w": 1000,
+          "h": 350,
+          "y": 1869
+        },
+        "eyebrow": "AI Assistant",
+        "h3": {
+          "text": "Delegate Daily Tasks",
+          "fontSize": "35px",
+          "fontWeight": "500",
+          "lineHeight": "38.5px",
+          "letterSpacing": "-1.4px"
+        },
+        "body": "From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster.",
+        "tags": [
+          "AI Assistant",
+          "Summaries",
+          "Scheduling",
+          "Many more",
+          "What can I help with?",
+          "Add document"
+        ]
+      },
+      {
+        "name": "Sales and marketing",
+        "dim": {
+          "w": 1000,
+          "h": 350,
+          "y": 2319
+        },
+        "eyebrow": "E-mail Sending..",
+        "h3": {
+          "text": "Accelerate Sales Growth",
+          "fontSize": "35px",
+          "fontWeight": "500",
+          "lineHeight": "38.5px",
+          "letterSpacing": "-1.4px"
+        },
+        "body": "AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence.",
+        "tags": [
+          "E-mail Sending..",
+          "LinkedIn",
+          "IT services",
+          "Founders",
+          "Jack Daniel",
+          "Founder"
+        ]
+      },
+      {
+        "name": "Sales and marketing",
+        "dim": {
+          "w": 350,
+          "h": 300,
+          "y": 2369
+        },
+        "eyebrow": "E-mail Sending..",
+        "h3": null,
+        "body": null,
+        "tags": [
+          "E-mail Sending..",
+          "LinkedIn",
+          "IT services",
+          "Founders",
+          "Jack Daniel",
+          "Founder"
+        ]
+      },
+      {
+        "name": "Custom project",
+        "dim": {
+          "w": 1000,
+          "h": 350,
+          "y": 2769
+        },
+        "eyebrow": "Custom Projects",
+        "h3": {
+          "text": "Build Smarter Systems",
+          "fontSize": "35px",
+          "fontWeight": "500",
+          "lineHeight": "38.5px",
+          "letterSpacing": "-1.4px"
+        },
+        "body": "Whether you're starting from scratch or enhancing an existing system, we offer strategic consulting and develop custom AI projects aligned with your unique goals.",
+        "tags": [
+          "Custom Projects",
+          "Strategy",
+          "Custom AI",
+          "Consulting",
+          "Hey David!",
+          "On going project :"
+        ]
+      },
+      {
+        "name": "Custom project",
+        "dim": {
+          "w": 350,
+          "h": 300,
+          "y": 2819
+        },
+        "eyebrow": "Hey David!",
+        "h3": null,
+        "body": null,
+        "tags": [
+          "Hey David!",
+          "On going project :",
+          "Customer Support Chatbot",
+          "90% Finsihed",
+          "Schedule",
+          "Mo"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 1230,
+      "y": 3219
+    },
+    "eyebrow": "Our Process",
+    "heading": "Our Simple, Smart, and Scalable Process",
+    "sub": "We design, develop, and implement automation tools that help you work smarter, not harder",
+    "cards": [
+      {
+        "name": "Strategy card",
+        "dim": {
+          "w": 440,
+          "h": 356,
+          "y": 3616
+        },
+        "step": "Step 1",
+        "title": "Smart Analyzing",
+        "body": "We assess your needs and identify AI solutions to streamline workflows and improve efficiency."
+      },
+      {
+        "name": "AI development card",
+        "dim": {
+          "w": 440,
+          "h": 356,
+          "y": 3616
+        },
+        "step": "Step 2",
+        "title": "AI Development",
+        "body": "Our team builds intelligent automation systems tailored to your business processes."
+      },
+      {
+        "name": "Integration card",
+        "dim": {
+          "w": 440,
+          "h": 356,
+          "y": 3992
+        },
+        "step": "Step 3",
+        "title": "Seamless Integration",
+        "body": "We smoothly integrate AI solutions into your existing infrastructure with minimal disruption."
+      },
+      {
+        "name": "Optimization card",
+        "dim": {
+          "w": 440,
+          "h": 356,
+          "y": 3992
+        },
+        "step": "Step 4",
+        "title": "Continuous Optimization",
+        "body": "We refine performance, analyze insights, and enhance automation for long-term growth."
+      }
+    ]
+  },
+  "cases": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 1000,
+      "y": 4448
+    },
+    "eyebrow": "Case Studies",
+    "heading": "See How Smart AI Automation Transforms Businesses",
+    "sub": "See how AI automation streamlines operations, boosts and drives growth.",
+    "items": [
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"AI-driven forecasting cut inventory waste by 40%\"",
+        "body": "A suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.",
+        "stats": [
+          "40% Less Inventory Waste",
+          "35% Faster Production",
+          "20% More Accurate Forecasting",
+          "25% Faster Fulfillment"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/wZ4QywsLlJwC6C7w4D9W92Oqug.jpeg?width=482&height=640"
+      },
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"AI-powered workflows reduced error rate by 80% in daily operations\"",
+        "body": "A healthcare logistics company, was dealing with frequent data errors and delays. We introduced AI validation and live tracking to improve accuracy and speed across their supply chain.",
+        "stats": [
+          "80% Error reduction",
+          "90% Accuracy in Data Logs",
+          "30% Faster Delivery",
+          "60+ Hours Saved"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/CDxS3e61UksiMm0oJGi80w7vEA.jpeg?width=640&height=453"
+      },
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"Automating 50% of operations saved 20% in costs within 2 months\"",
+        "body": "A financial services firm, was overloaded with repetitive admin tasks. By automating internal workflows and integrating data systems, they streamlined operations and reduced overhead.",
+        "stats": [
+          "50% Operations Automated",
+          "20% Cost Reduction",
+          "70+ Hours Saved/Month",
+          "2x Faster Client Onboarding"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/JK0fwwNQempKT9E5v6SvIj81ag.jpeg?width=640&height=640"
+      },
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"AI integration helped a StartUp close 3x more deals in less time\"",
+        "body": "ScaleByte’s sales team struggled with follow-up delays. Our AI sales assistant automated outreach, lead scoring, and CRM updates—resulting in faster responses and more closed deals.",
+        "stats": [
+          "3x More Deals",
+          "40% Faster Responses",
+          "95% Lead Accuracy"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/TbStOE6QtWLglNJaSOxQJqyQJOE.jpeg?width=427&height=640"
+      },
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"AI-driven forecasting cut inventory waste by 40%\"",
+        "body": "A suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.",
+        "stats": [
+          "40% Less Inventory Waste",
+          "35% Faster Production",
+          "20% More Accurate Forecasting",
+          "25% Faster Fulfillment"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/wZ4QywsLlJwC6C7w4D9W92Oqug.jpeg?width=482&height=640"
+      },
+      {
+        "dim": {
+          "w": 1000,
+          "h": 490,
+          "y": 4968
+        },
+        "quote": "\"AI-powered workflows reduced error rate by 80% in daily operations\"",
+        "body": "A healthcare logistics company, was dealing with frequent data errors and delays. We introduced AI validation and live tracking to improve accuracy and speed across their supply chain.",
+        "stats": [
+          "80% Error reduction",
+          "90% Accuracy in Data Logs",
+          "30% Faster Delivery",
+          "60+ Hours Saved"
+        ],
+        "hasImage": 1,
+        "imgSrc": "https://framerusercontent.com/images/CDxS3e61UksiMm0oJGi80w7vEA.jpeg?width=640&height=453"
+      }
+    ]
+  },
+  "benefits": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 896,
+      "y": 5448
+    },
+    "heading": "The Key Benefits of AI  for Your Business Growth",
+    "sub": "Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes.",
+    "tiles": [
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "Increased Productivity",
+        "body": "Gain actionable insights with AI-driven analytics to improve decision-making and strategy.",
+        "hasIcon": true
+      },
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "Better Customer Experience",
+        "body": "Personalized AI interactions improve response times, customer engagement, and overall satisfaction.",
+        "hasIcon": true
+      },
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "24/7 Availability",
+        "body": "AI-powered systems operate around the clock, ensuring seamless support and execution without downtime.",
+        "hasIcon": true
+      },
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "Cost Reduction",
+        "body": "AI automation minimizes manual work, cuts operational costs, and optimizes resource allocation for better profitability.",
+        "hasIcon": true
+      },
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "Data-Driven Insights",
+        "body": "Leverage AI to analyze vast data sets, identify trends, and make smarter, faster, and more accurate business decisions.",
+        "hasIcon": true
+      },
+      {
+        "name": null,
+        "dim": {
+          "w": 0,
+          "h": 0,
+          "y": 0
+        },
+        "title": "Scalability & Growth",
+        "body": "AI adapts to your business needs, allowing you to scale efficiently without increasing workload or costs.",
+        "hasIcon": true
+      }
+    ],
+    "iconTiles": []
+  },
+  "faqCta": {
+    "sectionDim": {
+      "w": 1440,
+      "h": 1567,
+      "y": 6345
+    },
+    "ctaHeading": "Let AI do the Work so you can Scale Faster",
+    "ctaSub": "Book a Call Today and Start Automating",
+    "ctaButton": "Book a free callBook a free call",
+    "faqEyebrow": "FAQs",
+    "faqHeading": "We’ve Got the Answers You’re Looking For",
+    "faqSub": "Quick answers to your AI automation questions."
+  },
+  "footer": {
+    "found": true,
+    "dim": {
+      "w": 1440,
+      "h": 334,
+      "y": 7911
+    },
+    "tagline": "Genossin – Automate Smarter, Optimize Faster, and Grow Stronger.",
+    "columns": [
+      "Links",
+      "Pages",
+      "Socials"
+    ],
+    "allLinks": [
+      {
+        "text": "GENOSSIN",
+        "href": "./"
+      },
+      {
+        "text": "Services",
+        "href": "./#services"
+      },
+      {
+        "text": "Process",
+        "href": "./#process"
+      },
+      {
+        "text": "Case studies",
+        "href": "./#cases"
+      },
+      {
+        "text": "Benefits",
+        "href": "./#benefits"
+      },
+      {
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "text": "Home",
+        "href": "./"
+      },
+      {
+        "text": "About",
+        "href": "./about"
+      },
+      {
+        "text": "Blog",
+        "href": "./blog"
+      },
+      {
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "text": "404",
+        "href": "./404"
+      },
+      {
+        "text": "Instagram",
+        "href": "https://instagram.com"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://facebook.com"
+      },
+      {
+        "text": "Linkedin",
+        "href": "https://linkedin.com"
+      },
+      {
+        "text": "Twitter",
+        "href": "https://x.com"
+      }
+    ],
+    "socialIcons": [
+      "Instagram",
+      "Facebook",
+      "Linkedin",
+      "Twitter"
+    ],
+    "designBy": null,
+    "copyright": null,
+    "newsletter": "Join our newsletter"
+  }
+}
