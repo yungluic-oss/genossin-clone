@@ -43,10 +43,10 @@ export default function Nav() {
         <a
           href="./"
           aria-label="Star Solutions — Startseite"
-          className="flex shrink-0 items-center gap-2.5 text-white"
+          className="flex shrink-0 items-center gap-3 text-white"
         >
-          <StarMark />
-          <Wordmark className="h-[18px] w-auto" />
+          <StarMark className="h-8 w-auto" />
+          <Wordmark className="h-[26px] w-auto" />
         </a>
 
         {/* Right cluster: links + CTA (desktop) */}
@@ -147,24 +147,27 @@ export default function Nav() {
   );
 }
 
-export function StarMark({ className = "h-6 w-6" }: { className?: string }) {
+export function StarMark({ className = "h-8 w-auto" }: { className?: string }) {
+  // The Stern mark from the Starvision identity — shared across both brands.
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 499.52 438.18"
       fill="currentColor"
       aria-hidden
       className={`${className} text-accent shrink-0`}
     >
-      <path d="M16 2 L18.6 12.1 L29 13.2 L21 20.2 L23.5 30 L16 24.5 L8.5 30 L11 20.2 L3 13.2 L13.4 12.1 Z" />
+      <path d="M495.79,402.81c-48.37-60.37-129.74-156.96-131.82-174.97-3.88-33.53,74.15-108.83,127.82-198.52,11.9-19.89-5.16-30.71-30.06-28.54-22.47,1.95-70.99,29.35-77.43,32.52-41.87,20.59-140.45,71.66-150.57,72.85-11.18,1.32-81.99-25.9-131.9-43.49-7.74-2.73-30.98-14.07-48.62-15.06-17.5-.98-40.95,9.47-31.58,26.58,24.1,44,59.51,76.63,103.8,131.22,6.76,8.33,11.88,13.68,6.59,24.32-25.98,52.26-64.89,82.85-127.87,168.31-10.08,13.68,1.81,46.29,22.06,38.47,68.33-26.42,195.59-97.05,221.11-96.83,9.87.09,183.5,97.08,225.71,96.83,24.72-.15,30.56-23.93,22.76-33.67ZM333.67,300.79c-15.86.1-81.12-36.36-84.83-36.39-9.59-.09-57.42,26.46-83.1,36.39-7.61,2.94-12.08-9.31-8.29-14.46,23.67-32.12,38.29-43.61,48.06-63.25,1.99-4,.06-6.01-2.48-9.14-16.65-20.51-29.96-32.78-39.01-49.32-3.52-6.43,5.29-10.36,11.87-9.99,6.63.37,15.37,4.63,18.27,5.66,18.76,6.61,45.37,16.84,49.57,16.35,3.8-.45,40.85-19.64,56.59-27.38,2.42-1.19,20.65-11.49,29.1-12.22,9.36-.81,15.77,3.25,11.3,10.73-20.17,33.71-49.5,62.01-48.04,74.61.78,6.77,31.37,43.07,49.54,65.76,2.93,3.66.73,12.6-8.55,12.65Z" />
     </svg>
   );
 }
 
-export function Wordmark({ className = "h-5 w-auto" }: { className?: string }) {
-  // Inline SVG so we can color via currentColor (white in nav, white in footer).
+export function Wordmark({ className = "h-6 w-auto" }: { className?: string }) {
+  // viewBox cropped to the content bbox — the source SVG has ~70% empty padding
+  // around the letters, which is why the wordmark looked tiny at any reasonable
+  // pixel height. Tight crop = readable wordmark at h-6/h-7 in a nav bar.
   return (
     <svg
-      viewBox="0 0 2000 1000"
+      viewBox="100 388 1758 143"
       fill="currentColor"
       aria-label="Star Solutions"
       className={className}
