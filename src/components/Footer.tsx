@@ -1,11 +1,11 @@
 "use client";
 
 import type { SVGProps } from "react";
+import { StarMark, Wordmark } from "@/components/Nav";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
 // Brand icons defined inline (lucide-react@1.16.0 lacks these).
-// All monochrome, use currentColor so they inherit text color.
 const Instagram = ({ className, ...p }: IconProps) => (
   <svg
     viewBox="0 0 24 24"
@@ -21,18 +21,6 @@ const Instagram = ({ className, ...p }: IconProps) => (
     <rect x="3" y="3" width="18" height="18" rx="5" />
     <circle cx="12" cy="12" r="4" />
     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-  </svg>
-);
-
-const Facebook = ({ className, ...p }: IconProps) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-    aria-hidden
-    {...p}
-  >
-    <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.7H7.8V14h2.7v8h3z" />
   </svg>
 );
 
@@ -66,27 +54,18 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 pt-20 pb-10 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left block: wordmark + tagline + newsletter */}
         <div>
-          <div className="flex items-center gap-2.5">
-            <img
-              src="/assets/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png"
-              alt=""
-              width={26}
-              height={26}
-            />
-            <span
-              className="font-display font-bold uppercase text-[21px] leading-[25.2px]"
-              style={{ letterSpacing: "-1.26px" }}
-            >
-              GENOSSIN
-            </span>
+          <div className="flex items-center gap-2.5 text-white">
+            <StarMark className="h-6 w-6" />
+            <Wordmark className="h-[18px] w-auto" />
           </div>
 
           <p className="mt-6 max-w-[360px] text-[15px] text-white/65 leading-relaxed">
-            Genossin – Automate Smarter, Optimize Faster, and Grow Stronger.
+            Star Solutions — smarter automatisieren, schneller optimieren, stärker
+            wachsen.
           </p>
 
           <h3 className="mt-7 font-display font-semibold text-[18px]">
-            Join our newsletter
+            Unseren Newsletter abonnieren
           </h3>
 
           <form
@@ -95,15 +74,15 @@ export default function Footer() {
           >
             <input
               type="email"
-              placeholder="Enter your email"
-              aria-label="Email"
+              placeholder="E-Mail-Adresse"
+              aria-label="E-Mail"
               className="flex-1 bg-transparent px-3 py-2 text-sm placeholder:text-white/45 focus:outline-none"
             />
             <button
               type="submit"
               className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-black hover:bg-white transition-colors"
             >
-              Subscribe
+              Abonnieren
             </button>
           </form>
         </div>
@@ -113,26 +92,26 @@ export default function Footer() {
           <FooterCol
             title="Links"
             items={[
-              { label: "Services", href: "/#services" },
-              { label: "Process", href: "/#process" },
-              { label: "Case studies", href: "/#cases" },
-              { label: "Benefits", href: "/#benefits" },
-              { label: "Pricing", href: "/#pricing" },
+              { label: "Leistungen", href: "/#services" },
+              { label: "Prozess", href: "/#process" },
+              { label: "Fallstudien", href: "/#cases" },
+              { label: "Vorteile", href: "/#benefits" },
+              { label: "Preise", href: "/#pricing" },
             ]}
           />
           <FooterCol
-            title="Pages"
+            title="Seiten"
             items={[
-              { label: "Home", href: "/" },
-              { label: "About", href: "/about" },
+              { label: "Start", href: "/" },
+              { label: "Studio", href: "/about" },
               { label: "Blog", href: "/blog" },
-              { label: "Contact", href: "/contact" },
+              { label: "Kontakt", href: "/contact" },
               { label: "404", href: "/404" },
             ]}
           />
           <div>
             <p className="font-display font-semibold text-[15px] text-white">
-              Socials
+              Social
             </p>
             <ul className="mt-4 space-y-3">
               {[
@@ -142,12 +121,7 @@ export default function Footer() {
                   Icon: Instagram,
                 },
                 {
-                  label: "Facebook",
-                  href: "https://facebook.com",
-                  Icon: Facebook,
-                },
-                {
-                  label: "Linkedin",
+                  label: "LinkedIn",
                   href: "https://linkedin.com",
                   Icon: Linkedin,
                 },
@@ -177,8 +151,8 @@ export default function Footer() {
       {/* Bottom row */}
       <div className="border-t border-white/[0.08]">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-white/55">
-          <p>Design by Ayush</p>
-          <p>© All right reserved</p>
+          <p>Zürich · Schweiz</p>
+          <p>© 2026 Star Solutions. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>

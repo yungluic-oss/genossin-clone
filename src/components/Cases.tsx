@@ -11,51 +11,51 @@ type Case = {
 const CASES: Case[] = [
   {
     image: "/assets/wZ4QywsLlJwC6C7w4D9W92Oqug.jpeg",
-    alt: "TrailForge suitcase brand case study",
-    headline: "“AI-driven forecasting cut inventory waste by 40%”",
-    body: "A suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.",
+    alt: "Fallstudie: Schweizer Kofferhersteller",
+    headline: "„AI-gestützte Prognosen reduzierten Lagerabfall um 40 %.“",
+    body: "Eine Schweizer Kofferherstellerin kämpfte mit Lager- und Effizienzproblemen. Unsere AI-Prognose optimierte Bestand und Produktionszyklen — kosteneffizient und schnell.",
     impact: [
-      "40% Less Inventory Waste",
-      "35% Faster Production",
-      "20% More Accurate Forecasting",
-      "25% Faster Fulfillment",
+      "40 % weniger Lagerabfall",
+      "35 % schnellere Produktion",
+      "20 % präzisere Prognosen",
+      "25 % schnellere Auslieferung",
     ],
   },
   {
     image: "/assets/CDxS3e61UksiMm0oJGi80w7vEA.jpeg",
-    alt: "Healthcare logistics case study",
+    alt: "Fallstudie: Healthcare-Logistik",
     headline:
-      "“AI-powered workflows reduced error rate by 80% in daily operations”",
-    body: "A healthcare logistics company, was dealing with frequent data errors and delays. We introduced AI validation and live tracking to improve accuracy and speed across their supply chain.",
+      "„AI-Workflows reduzierten die Fehlerquote im Tagesgeschäft um 80 %.“",
+    body: "Ein Logistikunternehmen im Gesundheitswesen hatte mit Datenfehlern und Verzögerungen zu kämpfen. Wir führten AI-Validierung und Live-Tracking ein — für Präzision und Tempo in der gesamten Lieferkette.",
     impact: [
-      "80% Error reduction",
-      "90% Accuracy in Data Logs",
-      "30% Faster Delivery",
-      "60+ Hours Saved",
+      "80 % weniger Fehler",
+      "90 % Datenqualität",
+      "30 % schnellere Lieferung",
+      "60+ Stunden gespart",
     ],
   },
   {
     image: "/assets/JK0fwwNQempKT9E5v6SvIj81ag.jpeg",
-    alt: "Financial services firm case study",
-    headline: "“Automating 50% of operations saved 20% in costs within 2 months”",
-    body: "A financial services firm, was overloaded with repetitive admin tasks. By automating internal workflows and integrating data systems, they streamlined operations and reduced overhead.",
+    alt: "Fallstudie: Finanzdienstleister",
+    headline: "„50 % der Abläufe automatisiert — 20 % Kostensenkung in zwei Monaten.“",
+    body: "Ein Finanzdienstleister war von repetitiven Admin-Aufgaben überlastet. Durch Workflow-Automatisierung und integrierte Datensysteme wurden Abläufe verschlankt und Gemeinkosten gesenkt.",
     impact: [
-      "50% Operations Automated",
-      "20% Cost Reduction",
-      "70+ Hours Saved/Month",
-      "2x Faster Client Onboarding",
+      "50 % Prozesse automatisiert",
+      "20 % Kosten reduziert",
+      "70+ Stunden / Monat gespart",
+      "2× schnelleres Kunden-Onboarding",
     ],
   },
   {
     image: "/assets/TbStOE6QtWLglNJaSOxQJqyQJOE.jpeg",
-    alt: "ScaleByte startup sales case study",
-    headline: "“AI integration helped a StartUp close 3x more deals in less time”",
-    body: "ScaleByte’s sales team struggled with follow-up delays. Our AI sales assistant automated outreach, lead scoring, and CRM updates—resulting in faster responses and more closed deals.",
+    alt: "Fallstudie: Startup im Vertrieb",
+    headline: "„AI-Integration half einem Startup, 3× mehr Deals in kürzerer Zeit abzuschliessen.“",
+    body: "Das Vertriebsteam kämpfte mit verzögerten Follow-ups. Unser AI-Vertriebsassistent automatisierte Ansprache, Lead-Scoring und CRM-Updates — schnellere Antworten, mehr Abschlüsse.",
     impact: [
-      "3x More Deals",
-      "40% Faster Responses",
-      "95% Lead Accuracy",
-      "CRM Fully Synced",
+      "3× mehr Abschlüsse",
+      "40 % schnellere Antworten",
+      "95 % Lead-Qualität",
+      "CRM vollständig synchronisiert",
     ],
   },
 ];
@@ -89,7 +89,7 @@ function CaseCard({ c }: { c: Case }) {
 
         <div className="mt-auto">
           <p className="text-[11px] uppercase tracking-[0.22em] text-white/45 mb-3">
-            Impact :
+            Wirkung:
           </p>
           <div className="grid grid-cols-2 gap-2.5">
             {c.impact.map((i) => (
@@ -124,11 +124,11 @@ export default function Cases() {
               fontWeight: 400,
             }}
           >
-            See How Smart AI Automation Transforms Businesses
+            So verändert smarte AI-Automatisierung Unternehmen
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            See how AI automation streamlines operations, boosts and drives
-            growth.
+            Wie AI-Automatisierung Abläufe verschlankt, Effizienz steigert und
+            Wachstum ermöglicht.
           </p>
         </div>
       </div>
@@ -146,10 +146,10 @@ export default function Cases() {
           </div>
         </div>
 
-        {/* DRAG TO EXPLORE pill */}
+        {/* Drag-to-explore pill */}
         <div className="pointer-events-none absolute right-6 bottom-[-1.25rem] z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur text-[10px] uppercase tracking-[0.22em] text-white/70">
-            <span>Drag to explore</span>
+            <span>Ziehen zum Stöbern</span>
             <svg
               width="14"
               height="14"

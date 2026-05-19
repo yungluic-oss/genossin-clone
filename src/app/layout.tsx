@@ -16,22 +16,26 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Genossin Technologies",
+  metadataBase: new URL("https://starsolutions.ch"),
+  title: "Star Solutions — Schweizer AI-Automatisierung",
   description:
-    "A modern AI automation agency for startups and businesses. We design, develop, and integrate tailored AI workflows so your team can move faster.",
+    "Ein Schweizer Studio für AI-Automatisierung. Wir konzipieren, entwickeln und integrieren massgeschneiderte AI-Workflows, damit Ihr Team schneller arbeitet.",
+  openGraph: {
+    title: "Star Solutions — Schweizer AI-Automatisierung",
+    description:
+      "Ein Schweizer Studio für AI-Automatisierung. Massgeschneiderte AI-Workflows für moderne Unternehmen.",
+    type: "website",
+    locale: "de_CH",
+    siteName: "Star Solutions",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Star Solutions — Schweizer AI-Automatisierung",
+    description:
+      "Massgeschneiderte AI-Workflows für moderne Schweizer Unternehmen.",
+  },
   icons: {
-    icon: [
-      {
-        url: "/assets/GV95TgfnpG2cJiybCbMmvBVKg4.png",
-        media: "(prefers-color-scheme: light)",
-        type: "image/png",
-      },
-      {
-        url: "/assets/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png",
-        media: "(prefers-color-scheme: dark)",
-        type: "image/png",
-      },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 
@@ -40,7 +44,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
+      lang="de-CH"
       className={`${dmSans.variable} ${figtree.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-black text-white">{children}</body>

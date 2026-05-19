@@ -10,9 +10,10 @@
   --color-line: #ffffff14;
   --color-line-strong: #ffffff26;
 
-  --color-accent: #cafa5a;
-  --color-violet: #814ac8;
-  --color-pink: #df7afe;
+  --color-accent: #bfd4de;
+  --color-accent-strong: #94b6c7;
+  --color-violet: #4a73c8;
+  --color-pink: #7aa9fe;
 
   --color-muted: #ffffffad;
   --color-muted-2: #ffffffbf;
@@ -30,7 +31,7 @@ body {
 }
 
 ::selection {
-  background: #cafa5a;
+  background: #bfd4de;
   color: #000;
 }
 
@@ -48,16 +49,16 @@ body {
 .glow-violet {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(129, 74, 200, 0.45) 0%,
-    rgba(129, 74, 200, 0) 70%
+    rgba(74, 115, 200, 0.45) 0%,
+    rgba(74, 115, 200, 0) 70%
   );
 }
 
-.glow-lime {
+.glow-blue {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(202, 250, 90, 0.22) 0%,
-    rgba(202, 250, 90, 0) 70%
+    rgba(191, 212, 222, 0.22) 0%,
+    rgba(191, 212, 222, 0) 70%
   );
 }
 

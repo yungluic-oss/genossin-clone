@@ -76,33 +76,33 @@ function IconScale(props: IconProps) {
 const ITEMS: { icon: React.ReactNode; title: string; body: string }[] = [
   {
     icon: <IconChartUp />,
-    title: "Increased Productivity",
-    body: "Gain actionable insights with AI-driven analytics to improve decision-making and strategy.",
+    title: "Mehr Produktivität",
+    body: "AI-gestützte Analysen liefern verwertbare Einblicke — für bessere Entscheidungen und schärfere Strategien.",
   },
   {
     icon: <IconSmile />,
-    title: "Better Customer Experience",
-    body: "Personalized AI interactions improve response times, customer engagement, and overall satisfaction.",
+    title: "Bessere Customer Experience",
+    body: "Personalisierte AI-Interaktionen verkürzen Antwortzeiten und steigern Engagement und Zufriedenheit.",
   },
   {
     icon: <IconClock />,
-    title: "24/7 Availability",
-    body: "AI-powered systems operate around the clock, ensuring seamless support and execution without downtime.",
+    title: "24/7 Verfügbarkeit",
+    body: "AI-Systeme arbeiten rund um die Uhr — für nahtlosen Support und unterbrechungsfreie Abläufe.",
   },
   {
     icon: <IconCoin />,
-    title: "Cost Reduction",
-    body: "AI automation minimizes manual work, cuts operational costs, and optimizes resource allocation for better profitability.",
+    title: "Kostenreduktion",
+    body: "Automatisierung minimiert manuelle Arbeit, senkt Betriebskosten und optimiert den Ressourceneinsatz.",
   },
   {
     icon: <IconLightbulb />,
-    title: "Data-Driven Insights",
-    body: "Leverage AI to analyze vast data sets, identify trends, and make smarter, faster, and more accurate business decisions.",
+    title: "Datengetriebene Entscheidungen",
+    body: "AI analysiert grosse Datenmengen, erkennt Muster und ermöglicht schnellere, präzisere Entscheidungen.",
   },
   {
     icon: <IconScale />,
-    title: "Scalability & Growth",
-    body: "AI adapts to your business needs, allowing you to scale efficiently without increasing workload or costs.",
+    title: "Skalierbarkeit & Wachstum",
+    body: "AI passt sich Ihrem Geschäft an, sodass Sie effizient skalieren — ohne Aufwand oder Kosten zu steigern.",
   },
 ];
 
@@ -120,11 +120,11 @@ export default function Benefits() {
               fontWeight: 400,
             }}
           >
-            {"The Key Benefits of AI  for Your Business Growth"}
+            Die wichtigsten Vorteile von AI für Ihr Wachstum
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Discover how AI automation enhances efficiency, reduces costs, and
-            drives business growth with smarter, faster processes.
+            Wie AI-Automatisierung Effizienz steigert, Kosten senkt und Ihr
+            Geschäft mit smarteren, schnelleren Prozessen vorantreibt.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function Benefits() {
                 className="pointer-events-none absolute -bottom-20 -right-20 w-56 h-56 rounded-full"
                 style={{
                   background:
-                    "radial-gradient(50% 50% at 50% 50%, rgba(129,74,200,0.18) 0%, rgba(129,74,200,0) 70%)",
+                    "radial-gradient(50% 50% at 50% 50%, rgba(74,115,200,0.18) 0%, rgba(74,115,200,0) 70%)",
                 }}
               />
               <span className="relative inline-flex w-9 h-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/85">

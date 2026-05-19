@@ -5,24 +5,24 @@ import { Plus, Minus } from "@/components/icons";
 
 const FAQS = [
   {
-    q: "How can AI automation help my business?",
-    a: "AI automation eliminates repetitive tasks, improves efficiency, and reduces errors. It allows your team to focus on high-value work while increasing productivity and lowering operational costs.",
+    q: "Wie hilft AI-Automatisierung meinem Unternehmen?",
+    a: "AI-Automatisierung übernimmt repetitive Aufgaben, steigert die Effizienz und reduziert Fehler. Ihr Team kann sich auf die wirklich wertschöpfende Arbeit konzentrieren — bei höherer Produktivität und tieferen Betriebskosten.",
   },
   {
-    q: "Is AI automation difficult to integrate?",
-    a: "No! Our AI solutions are designed for seamless integration with your existing tools and workflows. We provide step-by-step guidance to ensure a smooth and hassle-free setup.",
+    q: "Ist die Integration aufwendig?",
+    a: "Nein. Unsere Lösungen sind so gestaltet, dass sie sich nahtlos in Ihre bestehenden Tools und Workflows einfügen. Wir begleiten Sie Schritt für Schritt durch ein reibungsloses Setup — vom ersten Workshop bis zum produktiven Betrieb.",
   },
   {
-    q: "What industries can benefit from AI automation?",
-    a: "AI automation is beneficial across various industries, including marketing, sales, finance, healthcare, customer support, and operations. Any business looking to improve efficiency can leverage AI.",
+    q: "Welche Branchen profitieren von AI-Automatisierung?",
+    a: "Praktisch alle. Wir haben Lösungen in Marketing, Vertrieb, Finanzen, Gesundheitswesen, Kundensupport und Operations umgesetzt. Wo immer Effizienz, Datenqualität oder Skalierung Engpässe sind, hilft AI weiter.",
   },
   {
-    q: "Do I need technical knowledge to use AI automation?",
-    a: "Not at all! Our platform is user-friendly and built for all skill levels. We provide onboarding, tutorials, and customer support to ensure you can easily navigate and use the system.",
+    q: "Brauche ich technisches Wissen, um AI-Automatisierung zu nutzen?",
+    a: "Überhaupt nicht. Unsere Lösungen sind für Fachanwender:innen gebaut, nicht für Entwickler:innen. Sie erhalten ein klares Onboarding, verständliche Dokumentation und einen direkten Ansprechpartner — bei Fragen, Anpassungen oder neuen Ideen.",
   },
   {
-    q: "What kind of support do you offer?",
-    a: "We offer comprehensive support, including onboarding assistance, troubleshooting, and ongoing updates. Our team is available to help with any questions or technical issues you may have.",
+    q: "Welche Art von Support bieten Sie an?",
+    a: "Wir bieten umfassenden Support: Onboarding, Schulungen, laufende Updates und schnellen technischen Support. Unser Team ist erreichbar, wenn Sie es brauchen — und proaktiv, wenn wir Optimierungspotenzial sehen.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function FAQ() {
       <div className="relative max-w-3xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center px-3 py-1.5 rounded-md bg-white/[0.05] text-[12px] text-white/85 leading-none">
-            FAQs
+            FAQ
           </span>
           <h2
             className="mt-5 font-display max-w-3xl"
@@ -43,10 +43,10 @@ export default function FAQ() {
               fontWeight: 400,
             }}
           >
-            We&apos;ve Got the Answers You&apos;re Looking For
+            Wir haben die Antworten, die Sie suchen.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Quick answers to your AI automation questions.
+            Schnelle Antworten auf Ihre Fragen zur AI-Automatisierung.
           </p>
         </div>
 

@@ -12,37 +12,37 @@ export default function Process() {
               fontWeight: 400,
             }}
           >
-            Our Simple, Smart, and Scalable Process
+            Unser einfacher, smarter und skalierbarer Prozess
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            We design, develop, and implement automation tools that help you
-            work smarter, not harder
+            Wir konzipieren, entwickeln und implementieren Automatisierungen,
+            mit denen Ihr Team schlauer arbeitet — nicht härter.
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard
-            step="Step 1"
-            title="Smart Analyzing"
-            body="We assess your needs and identify AI solutions to streamline workflows and improve efficiency."
+            step="Schritt 1"
+            title="Smarte Analyse"
+            body="Wir analysieren Ihre Abläufe und identifizieren AI-Lösungen, die Workflows verschlanken und Effizienz schaffen."
             visual={<AnalyzeVisual />}
           />
           <StepCard
-            step="Step 2"
-            title="AI Development"
-            body="Our team builds intelligent automation systems tailored to your business processes."
+            step="Schritt 2"
+            title="AI-Entwicklung"
+            body="Unser Team baut intelligente Automatisierungen, exakt zugeschnitten auf Ihre Geschäftsprozesse."
             visual={<CodeVisual />}
           />
           <StepCard
-            step="Step 3"
-            title="Seamless Integration"
-            body="We smoothly integrate AI solutions into your existing infrastructure with minimal disruption."
+            step="Schritt 3"
+            title="Nahtlose Integration"
+            body="Wir integrieren AI-Lösungen mit minimaler Störung in Ihre bestehende Infrastruktur."
             visual={<IntegrationVisual />}
           />
           <StepCard
-            step="Step 4"
-            title="Continuous Optimization"
-            body="We refine performance, analyze insights, and enhance automation for long-term growth."
+            step="Schritt 4"
+            title="Kontinuierliche Optimierung"
+            body="Wir messen, analysieren und verbessern die Automatisierungen für langfristiges Wachstum."
             visual={<OptimizeVisual />}
           />
         </div>
@@ -80,15 +80,15 @@ function StepCard({
 
 function AnalyzeVisual() {
   const checks = [
-    { l: "System check", v: 100 },
-    { l: "Process check", v: 80 },
-    { l: "Speed check", v: 60 },
-    { l: "Manual work", v: 45 },
-    { l: "Repetative task", v: 30 },
+    { l: "Systemprüfung", v: 100 },
+    { l: "Prozessprüfung", v: 80 },
+    { l: "Geschwindigkeit", v: 60 },
+    { l: "Manuelle Arbeit", v: 45 },
+    { l: "Repetitive Tasks", v: 30 },
   ];
   return (
     <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-3">
-      <p className="text-[12px] text-white/55">Analyzing current workflow..</p>
+      <p className="text-[12px] text-white/55">Aktueller Workflow wird analysiert…</p>
       <div className="space-y-2">
         {checks.map((c) => (
           <div key={c.l}>
@@ -120,22 +120,22 @@ function CodeVisual() {
         <span className="text-violet">__init__</span>(self, threshold):
         {"\n    "}self.threshold = threshold
         {"\n    "}self.status ={" "}
-        <span className="text-emerald-400">"inactive"</span>
+        <span className="text-emerald-400">&quot;inactive&quot;</span>
         {"\n\n  "}
         <span className="text-pink">def</span>{" "}
         <span className="text-violet">check_trigger</span>(self, value):
         {"\n    "}
         <span className="text-pink">if</span> value &gt; self.threshold:
         {"\n      "}self.status ={" "}
-        <span className="text-emerald-400">"active"</span>
+        <span className="text-emerald-400">&quot;active&quot;</span>
         {"\n      "}
         <span className="text-pink">return</span>{" "}
-        <span className="text-emerald-400">"Automation triggered!"</span>
+        <span className="text-emerald-400">&quot;Automation triggered!&quot;</span>
         {"\n    "}
         <span className="text-pink">else</span>:
         {"\n      "}
         <span className="text-pink">return</span>{" "}
-        <span className="text-emerald-400">"No action taken."</span>
+        <span className="text-emerald-400">&quot;No action taken.&quot;</span>
       </pre>
     </div>
   );
@@ -145,10 +145,10 @@ function IntegrationVisual() {
   return (
     <div className="relative rounded-2xl bg-black/40 border border-white/5 p-6 min-h-[220px] flex items-center justify-between">
       <div className="flex flex-col items-center gap-2">
-        <span className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet to-pink flex items-center justify-center font-display text-xl text-black">
-          G
+        <span className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-violet flex items-center justify-center font-display text-xl text-black">
+          S
         </span>
-        <span className="text-[11px] text-white/55">Our solution</span>
+        <span className="text-[11px] text-white/55">Unsere Lösung</span>
       </div>
       <svg
         className="flex-1 mx-4"
@@ -158,20 +158,20 @@ function IntegrationVisual() {
       >
         <path
           d="M0 30 Q 100 -20 200 30"
-          stroke="rgba(202,250,90,0.6)"
+          stroke="rgba(191,212,222,0.7)"
           strokeWidth="1.5"
           strokeDasharray="4 4"
         />
         <path
           d="M0 30 Q 100 80 200 30"
-          stroke="rgba(129,74,200,0.6)"
+          stroke="rgba(74,115,200,0.7)"
           strokeWidth="1.5"
           strokeDasharray="4 4"
         />
       </svg>
       <div className="flex flex-col items-center gap-2">
         <div className="grid grid-cols-2 gap-1.5">
-          {["S", "N", "L", "G"].map((s) => (
+          {["S", "N", "M", "T"].map((s) => (
             <span
               key={s}
               className="w-6 h-6 rounded-lg bg-white/10 border border-white/10 text-[10px] flex items-center justify-center text-white/75"
@@ -180,7 +180,7 @@ function IntegrationVisual() {
             </span>
           ))}
         </div>
-        <span className="text-[11px] text-white/55">Your stack</span>
+        <span className="text-[11px] text-white/55">Ihr Stack</span>
       </div>
     </div>
   );
@@ -188,9 +188,9 @@ function IntegrationVisual() {
 
 function OptimizeVisual() {
   const rows = [
-    { l: "Chatbot system", v: "Efficiency will increase by 20%", c: "text-accent" },
-    { l: "Workflow system", v: "Update available..", c: "text-violet" },
-    { l: "Sales system", v: "Up to date", c: "text-emerald-400" },
+    { l: "Chatbot-System", v: "Effizienz steigt um 20 %", c: "text-accent" },
+    { l: "Workflow-System", v: "Update verfügbar…", c: "text-violet" },
+    { l: "Vertriebssystem", v: "Auf dem neusten Stand", c: "text-emerald-400" },
   ];
   return (
     <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-2">

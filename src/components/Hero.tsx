@@ -15,7 +15,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
       >
         <div className="relative w-[520px] h-[520px] -translate-y-[6%]">
-          {/* Lime upper glow */}
+          {/* Powder-blue upper glow */}
           <div
             className="absolute rounded-full"
             style={{
@@ -25,11 +25,11 @@ export default function Hero() {
               left: "50%",
               transform: "translateX(-50%)",
               background:
-                "radial-gradient(60% 60% at 50% 50%, rgba(202,250,90,0.55) 0%, rgba(202,250,90,0) 70%)",
+                "radial-gradient(60% 60% at 50% 50%, rgba(191,212,222,0.55) 0%, rgba(191,212,222,0) 70%)",
               filter: "blur(30px)",
             }}
           />
-          {/* Pink/violet lower glow */}
+          {/* Deeper steel-blue lower glow */}
           <div
             className="absolute rounded-full"
             style={{
@@ -39,7 +39,7 @@ export default function Hero() {
               left: "50%",
               transform: "translateX(-50%) translateX(40px)",
               background:
-                "radial-gradient(60% 60% at 50% 50%, rgba(223,122,254,0.45) 0%, rgba(223,122,254,0) 70%)",
+                "radial-gradient(60% 60% at 50% 50%, rgba(122,169,254,0.45) 0%, rgba(122,169,254,0) 70%)",
               filter: "blur(40px)",
             }}
           />
@@ -48,39 +48,40 @@ export default function Hero() {
 
       {/* Centered text composition */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Top badge: lime "New" pill + label */}
+        {/* Top badge: accent pill + label */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] py-1 pl-1 pr-3 text-[12px] leading-[17px] text-white/80 backdrop-blur-sm">
           <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-semibold text-black">
-            New
+            Neu
           </span>
-          <span>AI chatbot integration on websites</span>
+          <span>AI-Chatbots auf Ihrer Website</span>
         </div>
 
-        {/* H1 — Figtree 600, 70/77, -2.2 tracking, white */}
+        {/* H1 — Figtree 600 */}
         <h1
           className="font-display font-semibold text-white text-balance"
           style={{ letterSpacing: "-2.2px" }}
         >
           <span className="block text-[44px] leading-[1.05] sm:text-6xl sm:leading-[1.05] md:text-[70px] md:leading-[77px]">
-            Intelligent Solutions for
+            Intelligente Lösungen für
           </span>
           <span className="block text-[44px] leading-[1.05] sm:text-6xl sm:leading-[1.05] md:text-[70px] md:leading-[77px]">
-            Modern Businesses.
+            moderne Unternehmen.
           </span>
         </h1>
 
-        {/* Sub — 18/27, #ccc, max 600px */}
+        {/* Sub */}
         <p className="mt-6 max-w-[680px] text-[18px] font-medium leading-[27px] text-[#cccccc]">
-          The first call is free. We listen, diagnose, then build exactly what you need.
+          Das Erstgespräch ist kostenlos. Wir hören zu, analysieren und bauen
+          genau das, was Sie brauchen.
         </p>
 
-        {/* CTA — accent pill with arrow icon */}
+        {/* CTA */}
         <div className="mt-7">
           <a
             href="#contact"
             className="inline-flex items-center gap-1.5 rounded-[6px] bg-accent px-3.5 py-2 text-[14px] font-medium leading-[18px] text-black no-underline transition-opacity hover:opacity-90"
           >
-            Get in touch
+            Kontakt aufnehmen
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

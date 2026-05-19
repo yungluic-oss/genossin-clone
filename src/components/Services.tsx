@@ -23,45 +23,45 @@ export default function Services() {
               fontWeight: 400,
             }}
           >
-            AI Solutions That Take Your
-            <br className="hidden sm:block" /> Business to the Next Level
+            AI-Lösungen, die Ihr
+            <br className="hidden sm:block" /> Unternehmen voranbringen
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            We design, develop, and implement automation tools that help you
-            work smarter, not harder
+            Wir konzipieren, entwickeln und implementieren Automatisierungen,
+            mit denen Ihr Team schlauer arbeitet — nicht härter.
           </p>
         </div>
 
         <div className="mt-14 flex flex-col gap-5">
           <ServiceCard
             reverse={false}
-            eyebrow="Workflow Automation"
-            title="Automate repetitive tasks"
-            body="We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains — saving time and cutting down errors."
+            eyebrow="Workflow-Automatisierung"
+            title="Repetitive Aufgaben automatisieren"
+            body="Wir verschlanken Ihre internen Abläufe — Dateneingabe, Reporting, Freigabeketten — und ersparen Ihrem Team Stunden manueller Arbeit und Fehler."
             visual={<WorkflowVisual />}
           />
 
           <ServiceCard
             reverse
-            eyebrow="AI Assistant"
-            title="Delegate Daily Tasks"
-            body="From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster."
+            eyebrow="AI-Assistenten"
+            title="Tägliche Aufgaben delegieren"
+            body="Vom Kalender über E-Mail-Entwürfe bis zu Meeting-Zusammenfassungen: Unsere AI-Assistenten arbeiten rund um die Uhr — leise, präzise und konsistent."
             visual={<AssistantVisual />}
           />
 
           <ServiceCard
             reverse={false}
-            eyebrow="Sales & Marketing"
-            title="Accelerate Sales Growth"
-            body="AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence."
+            eyebrow="Vertrieb & Marketing"
+            title="Verkauf beschleunigen"
+            body="Leadgenerierung, personalisierte Ansprache und automatisierte Content-Erstellung — AI-Tools, die Ihren Vertrieb skalieren und Ihre Marke schärfen."
             visual={<SalesVisual />}
           />
 
           <ServiceCard
             reverse
-            eyebrow="Custom Projects"
-            title="Build Smarter Systems"
-            body="Whether you're starting from scratch or enhancing an existing system, we offer strategic consulting and develop custom AI projects aligned with your unique goals."
+            eyebrow="Massgeschneiderte Projekte"
+            title="Smartere Systeme bauen"
+            body="Vom Prototyp bis zur produktiven Lösung: Strategische Beratung und individuelle AI-Projekte, abgestimmt auf Ihre konkreten Ziele."
             visual={<CustomVisual />}
           />
         </div>
@@ -168,29 +168,6 @@ function ServiceCard({
   );
 }
 
-function Chip({
-  children,
-  tone = "default",
-}: {
-  children: ReactNode;
-  tone?: "default" | "accent" | "violet" | "pink";
-}) {
-  const toneMap = {
-    default: "bg-white/[0.04] border-white/10 text-white/75",
-    accent: "bg-accent/15 border-accent/30 text-accent",
-    violet: "bg-violet/15 border-violet/40 text-violet-200",
-    pink: "bg-pink/15 border-pink/40 text-pink-200",
-  } as const;
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 text-[11px] px-2.5 py-1 rounded-full border ${toneMap[tone]}`}
-    >
-      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-      {children}
-    </span>
-  );
-}
-
 /* -------------------------------------------------------------------------- */
 /*  Card 1 — Workflow Automation                                               */
 /* -------------------------------------------------------------------------- */
@@ -203,11 +180,11 @@ function WorkflowVisual() {
     metaTone?: "muted" | "violet" | "rose" | "emerald";
   };
   const rows: Row[] = [
-    { label: "Payroll management", meta: "Due on 2nd july", dot: "amber", metaTone: "violet" },
-    { label: "Employee Tracking", meta: "2 days ago", dot: "emerald", metaTone: "muted" },
-    { label: "Social media post", meta: "Cancelled by user", dot: "rose", metaTone: "rose" },
-    { label: "Lead list", meta: "70% prepared", dot: "violet", metaTone: "violet" },
-    { label: "Payment reminder", meta: "sent to selected clients", dot: "emerald", metaTone: "emerald" },
+    { label: "Lohnabrechnung", meta: "Fällig am 2. Juli", dot: "amber", metaTone: "violet" },
+    { label: "Mitarbeiter-Tracking", meta: "vor 2 Tagen", dot: "emerald", metaTone: "muted" },
+    { label: "Social-Media-Beitrag", meta: "Vom Nutzer abgebrochen", dot: "rose", metaTone: "rose" },
+    { label: "Lead-Liste", meta: "70% vorbereitet", dot: "violet", metaTone: "violet" },
+    { label: "Zahlungserinnerung", meta: "an ausgewählte Kunden", dot: "emerald", metaTone: "emerald" },
   ];
   const dotMap: Record<Row["dot"], string> = {
     violet: "bg-violet",
@@ -238,9 +215,9 @@ function WorkflowVisual() {
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
             </svg>
           </div>
-          <p className="text-[13px] font-medium text-white/90">All Tasks</p>
+          <p className="text-[13px] font-medium text-white/90">Alle Aufgaben</p>
         </div>
-        <span className="text-[11px] text-white/45">Waiting for approval</span>
+        <span className="text-[11px] text-white/45">Warten auf Freigabe</span>
       </div>
       <div className="space-y-1.5">
         {rows.map((r) => (
@@ -266,10 +243,10 @@ function WorkflowVisual() {
 
 function AssistantVisual() {
   const tools = [
-    { label: "Add document", icon: "doc" },
-    { label: "Analyze", icon: "bar" },
-    { label: "Generate Image", icon: "img" },
-    { label: "research", icon: "search" },
+    { label: "Dokument hinzufügen", icon: "doc" },
+    { label: "Analysieren", icon: "bar" },
+    { label: "Bild erzeugen", icon: "img" },
+    { label: "Recherche", icon: "search" },
   ] as const;
 
   return (
@@ -281,11 +258,11 @@ function AssistantVisual() {
     >
       <div>
         <p className="font-display text-[22px] tracking-tight">
-          What can I help with?
+          Wobei kann ich helfen?
         </p>
-        <p className="mt-1.5 text-[12px] text-white/55 leading-relaxed max-w-[28ch]">
-          Weather you want help in customer handling or make changes in your
-          system just give me command
+        <p className="mt-1.5 text-[12px] text-white/55 leading-relaxed max-w-[32ch]">
+          Ob Kundenanfragen oder Änderungen im System — geben Sie mir einfach
+          den Auftrag.
         </p>
       </div>
 
@@ -304,7 +281,7 @@ function AssistantVisual() {
       <div className="relative">
         <div className="flex items-center gap-2 pl-4 pr-2 py-2 rounded-full bg-white/[0.05] border border-white/10">
           <span className="text-[12.5px] text-white/85 flex-1 truncate">
-            Schedule a 30 day cont
+            30-Tage-Vertrag plan
             <span className="inline-block w-[1px] h-[14px] bg-accent ml-0.5 align-middle animate-pulse-dot" />
           </span>
           <button className="w-7 h-7 rounded-full bg-accent grid place-items-center text-black">
@@ -367,10 +344,10 @@ function ToolIcon({ name }: { name: "doc" | "bar" | "img" | "search" }) {
 
 function SalesVisual() {
   const founders = [
-    { name: "Jack Daniel", role: "Founder", email: "justin@main.com", company: "Xavier LLC", verified: true },
-    { name: "Gorge Chapel", role: "Founder", email: "gorge@mail.com", company: "Chapel LLC", verified: true },
-    { name: "Mike Tylor", role: "Founder", email: "mike@Cmb.com", company: "CMB LLC", verified: false },
-    { name: "Thomas Shelby", role: "Founder", email: "Thimas@Sby.com", company: "Shelby.co", verified: true },
+    { name: "Jonas Meier", role: "Gründer", email: "jonas@meier.ch", company: "Meier AG", verified: true },
+    { name: "Léa Bertrand", role: "CEO", email: "lea@bertrand.ch", company: "Bertrand SA", verified: true },
+    { name: "Marco Bianchi", role: "Gründer", email: "marco@bianchi.ch", company: "Bianchi GmbH", verified: false },
+    { name: "Sophie Keller", role: "Gründerin", email: "sophie@keller.ch", company: "Keller & Co.", verified: true },
   ];
 
   return (
@@ -385,16 +362,16 @@ function SalesVisual() {
         <div className="flex items-center gap-2 text-[11px]">
           <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot" />
-            E-mail Sending..
+            E-Mail wird versendet…
           </span>
           <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
             LinkedIn
           </span>
           <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
-            IT services
+            IT-Dienstleistungen
           </span>
-          <span className="px-2 py-1 rounded-full bg-violet/15 border border-violet/30 text-violet-200">
-            Founders
+          <span className="px-2 py-1 rounded-full bg-violet/15 border border-violet/30 text-[#a8c0ed]">
+            Gründer:innen
           </span>
         </div>
       </div>
@@ -436,7 +413,7 @@ function FounderRow({
     <div className="flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
       <div className="flex items-center gap-2.5 min-w-0">
         <div
-          className="w-7 h-7 rounded-full grid place-items-center text-[10px] font-medium shrink-0"
+          className="w-7 h-7 rounded-full grid place-items-center text-[10px] font-medium shrink-0 text-white"
           style={{
             background:
               "linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 100%)",
@@ -471,7 +448,7 @@ function FounderRow({
 /* -------------------------------------------------------------------------- */
 
 function CustomVisual() {
-  const days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+  const days = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
   return (
     <div
       className="rounded-2xl border border-white/[0.06] p-4 flex flex-col gap-3"
@@ -484,26 +461,26 @@ function CustomVisual() {
           className="w-8 h-8 rounded-full grid place-items-center text-[11px] font-semibold text-black"
           style={{
             background:
-              "linear-gradient(135deg, var(--color-accent) 0%, #a8e63a 100%)",
+              "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-strong) 100%)",
           }}
         >
           D
         </div>
         <div>
-          <p className="text-[13px] font-medium text-white/90">Hey David!</p>
+          <p className="text-[13px] font-medium text-white/90">Hallo David!</p>
           <p className="text-[11px] text-white/55">
-            Here is your Custom project &amp; schedule
+            Hier ist Ihr individuelles Projekt &amp; Ihre Planung
           </p>
         </div>
       </div>
 
       <div className="px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
         <p className="text-[10.5px] uppercase tracking-[0.14em] text-white/45">
-          On going project :
+          Laufendes Projekt:
         </p>
         <div className="mt-1 flex items-center justify-between text-[13px]">
-          <span className="text-white/90">Customer Support Chatbot</span>
-          <span className="text-accent text-[12px] font-medium">90% Finsihed</span>
+          <span className="text-white/90">Kundensupport-Chatbot</span>
+          <span className="text-accent text-[12px] font-medium">90 % erledigt</span>
         </div>
         <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
           <div className="h-full w-[90%] bg-accent" />
@@ -526,8 +503,8 @@ function CustomVisual() {
       </div>
 
       <div className="space-y-1.5">
-        <ScheduleRow time="10:00 am to 10:30 am" label="Discovery call" tone="accent" />
-        <ScheduleRow time="06:00 pm to 06:30 pm" label="Custom automation" tone="violet" />
+        <ScheduleRow time="10:00 – 10:30" label="Erstgespräch" tone="accent" />
+        <ScheduleRow time="18:00 – 18:30" label="Individuelle Automatisierung" tone="violet" />
       </div>
     </div>
   );
