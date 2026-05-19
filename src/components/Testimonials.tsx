@@ -3,76 +3,61 @@ import { SectionHeader } from "./Services";
 
 const FOUNDERS = [
   {
-    name: "Jordan Reeves",
-    role: "Founder, Northwind",
-    quote:
-      "Genossin replaced three brittle scripts with one calm system. Our ops team finally has weekends back.",
-    email: "jordan@northwind.co",
-    company: "Northwind",
+    name: "Jack Daniel",
+    role: "Founder",
+    email: "justin@main.com",
+    company: "Xavier LLC",
+    photo: "/assets/wZ4QywsLlJwC6C7w4D9W92Oqug.jpeg",
   },
   {
-    name: "Priya Shah",
-    role: "Founder, Cascade Labs",
-    quote:
-      "We got more value in six weeks than from a year of consultants. They build for the humans, not the demo.",
-    email: "priya@cascade.io",
-    company: "Cascade",
+    name: "Gorge Chapel",
+    role: "Founder",
+    email: "gorge@mail.com",
+    company: "Chapel LLC",
+    photo: "/assets/CDxS3e61UksiMm0oJGi80w7vEA.jpeg",
   },
   {
-    name: "Marco Linder",
-    role: "Founder, Orbital",
-    quote:
-      "They scoped tight, shipped tighter, and the support agent is now our most-loved teammate.",
-    email: "marco@orbital.app",
-    company: "Orbital",
+    name: "Mike Tylor",
+    role: "Founder",
+    email: "mike@Cmb.com",
+    company: "CMB LLC",
+    photo: "/assets/JK0fwwNQempKT9E5v6SvIj81ag.jpeg",
   },
   {
-    name: "Sara Klein",
-    role: "Founder, Helios",
-    quote:
-      "Pragmatic, fast, and quietly excellent. Exactly the partner we needed for our first AI rollout.",
-    email: "sara@helios.com",
-    company: "Helios",
+    name: "Thomas Shelby",
+    role: "Founder",
+    email: "Thimas@Sby.com",
+    company: "Shelby.co",
+    photo: "/assets/TbStOE6QtWLglNJaSOxQJqyQJOE.jpeg",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-28 px-4">
+    <section id="founders" className="relative py-28 px-4">
       <div className="relative max-w-6xl mx-auto">
-        <SectionHeader
-          eyebrow="Founders"
-          title={
-            <>
-              The people who let us
-              <br className="hidden sm:block" /> rewire their business
-            </>
-          }
-          sub="Founders and operators who handed us their hardest workflows — and got their afternoons back."
-        />
+        <SectionHeader eyebrow="Founders" title={<>Trusted by founders building serious teams</>} />
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {FOUNDERS.map((f) => (
-            <article
-              key={f.name}
-              className="card-surface p-7 flex flex-col gap-5"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet to-pink shrink-0" />
-                <div className="min-w-0">
-                  <p className="font-display text-lg tracking-tight flex items-center gap-2">
-                    {f.name}
-                    <CheckCircle2 className="w-4 h-4 text-accent" />
-                  </p>
-                  <p className="text-xs text-white/55">{f.role}</p>
-                </div>
+            <article key={f.name} className="card-surface p-5 flex flex-col gap-4">
+              <div
+                className="aspect-[4/5] rounded-2xl bg-cover bg-center"
+                style={{ backgroundImage: `url(${f.photo})` }}
+                aria-label={f.name}
+              />
+              <div>
+                <p className="font-display text-lg tracking-tight flex items-center gap-1.5">
+                  {f.name}
+                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                </p>
+                <p className="text-xs text-white/55">{f.role}</p>
               </div>
-              <p className="text-[15px] text-white/80 leading-relaxed">
-                “{f.quote}”
-              </p>
-              <div className="flex items-center justify-between text-xs text-white/55 pt-4 border-t border-white/[0.07]">
-                <span>{f.email}</span>
-                <span>{f.company}</span>
+              <div className="text-[12px] grid grid-cols-[auto_1fr] gap-x-3 gap-y-1.5 pt-3 border-t border-white/[0.07]">
+                <span className="text-white/45">E-mail</span>
+                <span className="text-white/85 truncate">{f.email}</span>
+                <span className="text-white/45">Company</span>
+                <span className="text-white/85">{f.company}</span>
               </div>
             </article>
           ))}

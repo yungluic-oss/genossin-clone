@@ -1,4 +1,10 @@
-import { ArrowUpRight, Instagram, Linkedin, TwitterX as Twitter, Facebook } from "@/components/icons";
+import {
+  ArrowUpRight,
+  Instagram,
+  Linkedin,
+  TwitterX as Twitter,
+  Facebook,
+} from "@/components/icons";
 
 export default function Footer() {
   return (
@@ -20,70 +26,89 @@ export default function Footer() {
               GENOSSIN
             </span>
           </div>
-          <p className="mt-5 max-w-sm text-sm text-white/55 leading-relaxed">
-            A modern AI automation studio for startups and growing teams.
-            Tailored systems that ship fast and compound over time.
+          <p className="mt-5 max-w-sm text-sm text-white/65 leading-relaxed">
+            Genossin – Automate Smarter, Optimize Faster, and Grow Stronger.
           </p>
-          <div className="mt-6 flex items-center gap-2">
-            {[Instagram, Facebook, Linkedin, Twitter].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="social"
-                className="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/[0.04] border border-white/10 text-white/65 hover:text-white hover:bg-white/[0.08] transition-colors"
-              >
-                <Icon className="w-4 h-4" />
-              </a>
-            ))}
-          </div>
+          <form className="mt-6 flex items-center gap-2 max-w-sm">
+            <input
+              type="email"
+              placeholder="Join our newsletter"
+              className="flex-1 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-sm placeholder:text-white/45 focus:outline-none focus:border-accent/60"
+            />
+            <button
+              type="submit"
+              className="w-10 h-10 rounded-full bg-accent text-black inline-flex items-center justify-center hover:bg-white transition-colors"
+              aria-label="Subscribe"
+            >
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+          </form>
         </div>
 
         <FooterCol
-          title="Solutions"
+          title="Links"
           items={[
-            "Workflow Automation",
-            "AI Assistant",
-            "Conversational Agents",
-            "Data & RAG",
+            { label: "Services", href: "#services" },
+            { label: "Process", href: "#process" },
+            { label: "Case studies", href: "#cases" },
+            { label: "Pricing", href: "#" },
           ]}
         />
         <FooterCol
-          title="Company"
-          items={["About", "Blog", "Case studies", "Contact"]}
+          title="Pages"
+          items={[{ label: "404", href: "#" }]}
         />
-        <FooterCol
-          title="Resources"
-          items={["Pricing", "Process", "Benefits", "FAQ"]}
-        />
+        <div>
+          <p className="text-xs uppercase tracking-[0.18em] text-white/45">Socials</p>
+          <ul className="mt-4 space-y-2.5">
+            {[
+              { label: "Instagram", Icon: Instagram },
+              { label: "Facebook", Icon: Facebook },
+              { label: "Linkedin", Icon: Linkedin },
+              { label: "Twitter", Icon: Twitter },
+            ].map(({ label, Icon }) => (
+              <li key={label}>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 text-sm text-white/75 hover:text-white"
+                >
+                  <Icon className="w-4 h-4" />
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="border-t border-white/[0.06]">
-        <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/45">
-          <p>© {new Date().getFullYear()} Genossin Technologies — All rights reserved.</p>
-          <a
-            href="mailto:hello@genossin.com"
-            className="inline-flex items-center gap-1.5 text-white/65 hover:text-white"
-          >
-            hello@genossin.com <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
+        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/45">
+          <p>© All right reserved</p>
+          <p>Design by Ayush</p>
         </div>
       </div>
     </footer>
   );
 }
 
-function FooterCol({ title, items }: { title: string; items: string[] }) {
+function FooterCol({
+  title,
+  items,
+}: {
+  title: string;
+  items: { label: string; href: string }[];
+}) {
   return (
     <div>
       <p className="text-xs uppercase tracking-[0.18em] text-white/45">{title}</p>
       <ul className="mt-4 space-y-2.5">
         {items.map((i) => (
-          <li key={i}>
+          <li key={i.label}>
             <a
-              href="#"
+              href={i.href}
               className="text-sm text-white/75 hover:text-white transition-colors"
             >
-              {i}
+              {i.label}
             </a>
           </li>
         ))}

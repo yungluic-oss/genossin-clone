@@ -6,24 +6,24 @@ import { SectionHeader } from "./Services";
 
 const FAQS = [
   {
-    q: "How long does a typical project take?",
-    a: "Most first engagements ship a working system in 3–6 weeks. We start with the single highest-leverage workflow, prove it works in production, then expand from there.",
+    q: "How can AI automation help my business?",
+    a: "",
   },
   {
-    q: "Do you work with non-technical founders?",
-    a: "Most of our clients are. You don't need to know what RAG, LLM, or webhook means — you tell us where the pain is, we handle the rest.",
+    q: "Is AI automation difficult to integrate?",
+    a: "",
   },
   {
-    q: "What about our data and privacy?",
-    a: "Your data stays in your accounts. We support self-hosted models, EU-only providers, audit logs, and clear role-based permissions. NDA on day one if you need it.",
+    q: "What industries can benefit from AI automation?",
+    a: "",
   },
   {
-    q: "How is this priced?",
-    a: "Fixed-scope projects for the initial build, then a flat monthly retainer for support, monitoring, and iteration. No per-seat surprises.",
+    q: "Do I need technical knowledge to use AI automation?",
+    a: "",
   },
   {
-    q: "What if it doesn't work?",
-    a: "We scope tight, ship in small increments, and measure against a real metric you pick. If a pilot doesn't move the number, we stop — no quarter-long sunk costs.",
+    q: "What kind of support do you offer?",
+    a: "",
   },
 ];
 
@@ -32,14 +32,9 @@ export default function FAQ() {
     <section id="faq" className="relative py-28 px-4">
       <div className="relative max-w-3xl mx-auto">
         <SectionHeader
-          eyebrow="FAQ"
-          title={
-            <>
-              Questions, answered
-              <br className="hidden sm:block" />{" "}
-              <span className="italic font-normal">straight</span>
-            </>
-          }
+          eyebrow="FAQs"
+          title={<>We&apos;ve Got the Answers You&apos;re Looking For</>}
+          sub="Quick answers to your AI automation questions."
         />
 
         <div className="mt-12 space-y-3">
@@ -81,7 +76,11 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       >
         <div className="overflow-hidden">
           <p className="px-5 sm:px-6 pb-5 text-white/65 text-sm sm:text-[15px] leading-relaxed">
-            {a}
+            {a || (
+              <span className="text-white/40 italic">
+                Paste answer here.
+              </span>
+            )}
           </p>
         </div>
       </div>

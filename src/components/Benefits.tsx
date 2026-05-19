@@ -10,34 +10,34 @@ import { SectionHeader } from "./Services";
 
 const ITEMS = [
   {
-    icon: <Gauge className="w-4 h-4" />,
-    title: "Faster everything",
-    body: "Cut hours from repetitive work — drafts, reports, follow-ups, triage — across every team.",
-  },
-  {
-    icon: <Coins className="w-4 h-4" />,
-    title: "Real ROI, fast",
-    body: "Most engagements pay for themselves in the first quarter. We track it, you see it.",
-  },
-  {
     icon: <TrendingUp className="w-4 h-4" />,
-    title: "Built to scale",
-    body: "Systems that hold up at 10× volume — without 10× the headcount or chaos.",
-  },
-  {
-    icon: <Lock className="w-4 h-4" />,
-    title: "Private by default",
-    body: "Your data stays where it lives. Self-hosted options, audit logs, and clear permissions.",
+    title: "Increased Productivity",
+    body: "Gain actionable insights with AI-driven analytics to improve decision-making and strategy.",
   },
   {
     icon: <Users className="w-4 h-4" />,
-    title: "Adopted by your team",
-    body: "We build for the humans using it — onboarding, training, and small wins from week one.",
+    title: "Better Customer Experience",
+    body: "Personalized AI interactions improve response times, customer engagement, and overall satisfaction.",
+  },
+  {
+    icon: <Gauge className="w-4 h-4" />,
+    title: "24/7 Availability",
+    body: "AI-powered systems operate around the clock, ensuring seamless support and execution without downtime.",
+  },
+  {
+    icon: <Coins className="w-4 h-4" />,
+    title: "Cost Reduction",
+    body: "AI automation minimizes manual work, cuts operational costs, and optimizes resource allocation for better profitability.",
+  },
+  {
+    icon: <Lock className="w-4 h-4" />,
+    title: "Data-Driven Insights",
+    body: "Leverage AI to analyze vast data sets, identify trends, and make smarter, faster, and more accurate business decisions.",
   },
   {
     icon: <PuzzleIcon className="w-4 h-4" />,
-    title: "Fits your stack",
-    body: "Drops into the tools you already use — no rip-and-replace, no migration drama.",
+    title: "Scalability & Growth",
+    body: "AI adapts to your business needs, allowing you to scale efficiently without increasing workload or costs.",
   },
 ];
 
@@ -47,13 +47,8 @@ export default function Benefits() {
       <div className="relative max-w-6xl mx-auto">
         <SectionHeader
           eyebrow="Benefits"
-          title={
-            <>
-              The key benefits of AI for
-              <br className="hidden sm:block" /> your business growth
-            </>
-          }
-          sub="Why teams stop running on caffeine and chaos once the right automations are in place."
+          title={<>The Key Benefits of AI for Your Business Growth</>}
+          sub="Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes."
         />
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

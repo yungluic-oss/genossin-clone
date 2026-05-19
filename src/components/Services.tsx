@@ -1,14 +1,3 @@
-import {
-  Bot,
-  Workflow,
-  MessageSquare,
-  Database,
-  Sparkles as Sparkle,
-  PenLine,
-  ScanLine,
-  Wand as Wand2,
-} from "@/components/icons";
-
 export default function Services() {
   return (
     <section id="services" className="relative py-28 px-4">
@@ -18,56 +7,52 @@ export default function Services() {
       />
       <div className="relative max-w-6xl mx-auto">
         <SectionHeader
-          eyebrow="Our services"
+          eyebrow="Our Services"
           title={
             <>
-              AI solutions that take your
-              <br className="hidden sm:block" /> business to the next level
+              AI Solutions That Take Your
+              <br className="hidden sm:block" /> Business to the Next Level
             </>
           }
-          sub="We design, develop, and integrate automation tools that help your team work smarter — not harder."
+          sub="We design, develop, and implement automation tools that help you work smarter, not harder"
         />
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
           <ServiceCard
             tone="violet"
-            icon={<Workflow className="w-4 h-4" />}
+            chips={["Internal Task Bots", "100+ Automations"]}
             title="Workflow Automation"
-            body="Streamline internal operations by automating manual workflows — data entry, reporting, approvals — so your team can focus on the work that matters."
-            chip="100+ automations shipped"
-          >
-            <WorkflowVisual />
-          </ServiceCard>
+            subtitle="Automate repetitive tasks"
+            body="We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains  saving time and cutting down errors."
+            visual={<WorkflowVisual />}
+          />
 
           <ServiceCard
             tone="lime"
-            icon={<Bot className="w-4 h-4" />}
+            chips={["Summaries", "Scheduling", "Many more"]}
             title="AI Assistant"
-            body="From managing calendars and drafting emails to summarizing meetings — AI assistants that work around the clock alongside your team."
-            chip="Always-on assistant"
-          >
-            <AssistantVisual />
-          </ServiceCard>
+            subtitle="Delegate Daily Tasks"
+            body="From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster."
+            visual={<AssistantVisual />}
+          />
 
           <ServiceCard
             tone="pink"
-            icon={<MessageSquare className="w-4 h-4" />}
-            title="Conversational Agents"
-            body="Custom chat and voice agents for support, sales, and onboarding — connected to your data, your tone, and your stack."
-            chip="Voice + chat"
-          >
-            <AgentVisual />
-          </ServiceCard>
+            chips={["Leads", "Content", "Social post"]}
+            title="Sales & Marketing"
+            subtitle="Accelerate Sales Growth"
+            body="AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence."
+            visual={<SalesVisual />}
+          />
 
           <ServiceCard
             tone="white"
-            icon={<Database className="w-4 h-4" />}
-            title="Data & RAG Systems"
-            body="Turn scattered documents and internal knowledge into a searchable, cited brain your team and your agents can rely on."
-            chip="Cited answers"
-          >
-            <DataVisual />
-          </ServiceCard>
+            chips={["Strategy", "Custom AI", "Consulting"]}
+            title="Custom Projects"
+            subtitle="Build Smarter Systems"
+            body="Whether you're starting from scratch or enhancing an existing system, we offer strategic consulting and develop custom AI projects aligned with your unique goals."
+            visual={<CustomVisual />}
+          />
         </div>
       </div>
     </section>
@@ -87,7 +72,7 @@ export function SectionHeader({
 }) {
   return (
     <div className={`flex flex-col ${center ? "items-center text-center" : ""}`}>
-      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/65">
+      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/70">
         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
         {eyebrow}
       </span>
@@ -103,44 +88,49 @@ export function SectionHeader({
 
 function ServiceCard({
   tone,
-  icon,
+  chips,
   title,
+  subtitle,
   body,
-  chip,
-  children,
+  visual,
 }: {
   tone: "violet" | "lime" | "pink" | "white";
-  icon: React.ReactNode;
+  chips: string[];
   title: string;
+  subtitle: string;
   body: string;
-  chip: string;
-  children: React.ReactNode;
+  visual: React.ReactNode;
 }) {
-  const toneClass: Record<typeof tone, string> = {
-    violet: "from-violet/30 to-transparent text-violet",
-    lime: "from-accent/30 to-transparent text-accent",
-    pink: "from-pink/30 to-transparent text-pink",
-    white: "from-white/15 to-transparent text-white",
-  } as Record<"violet" | "lime" | "pink" | "white", string>;
+  const glowMap = {
+    violet: "bg-violet",
+    lime: "bg-accent",
+    pink: "bg-pink",
+    white: "bg-white",
+  } as const;
 
   return (
     <div className="card-surface relative overflow-hidden group">
       <div
         aria-hidden
-        className={`absolute -top-20 -right-20 w-72 h-72 rounded-full bg-gradient-to-br ${toneClass[tone]} blur-3xl opacity-40 pointer-events-none`}
+        className={`absolute -top-20 -right-20 w-72 h-72 rounded-full ${glowMap[tone]} blur-3xl opacity-25 pointer-events-none`}
       />
-      <div className="relative p-7 flex flex-col gap-5 min-h-[420px]">
-        <div className="flex items-center gap-2 text-xs text-white/70">
-          <span
-            className={`w-7 h-7 rounded-md inline-flex items-center justify-center bg-white/[0.06] border border-white/10 ${toneClass[tone].split(" ").pop()}`}
-          >
-            {icon}
-          </span>
-          <span>{chip}</span>
+      <div className="relative p-7 flex flex-col gap-5 min-h-[460px]">
+        <div className="flex flex-wrap items-center gap-2">
+          {chips.map((c) => (
+            <span
+              key={c}
+              className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-white/75"
+            >
+              {c}
+            </span>
+          ))}
         </div>
-        <div className="flex-1">{children}</div>
+        <div className="flex-1">{visual}</div>
         <div>
-          <h3 className="font-display text-2xl tracking-tight">{title}</h3>
+          <p className="text-xs uppercase tracking-[0.18em] text-accent/90">
+            {subtitle}
+          </p>
+          <h3 className="mt-2 font-display text-2xl tracking-tight">{title}</h3>
           <p className="mt-2 text-sm text-white/60 leading-relaxed">{body}</p>
         </div>
       </div>
@@ -150,18 +140,23 @@ function ServiceCard({
 
 function WorkflowVisual() {
   const rows = [
-    { t: "Invoice triage", s: "Routed to finance", c: "bg-violet" },
-    { t: "Standup digest", s: "Sent to #team", c: "bg-emerald-400" },
-    { t: "Lead enrichment", s: "42 new contacts", c: "bg-accent" },
-    { t: "Support tagger", s: "Auto-classifying", c: "bg-pink" },
+    { t: "Payroll management", s: "Due on 2nd july", c: "amber" },
+    { t: "Employee Tracking", s: "2 days ago", c: "green" },
+    { t: "Social media post", s: "Cancelled by user", c: "red" },
+    { t: "Lead list", s: "70% prepared", c: "violet" },
+    { t: "Payment reminder", s: "sent to selected clients", c: "green" },
   ];
+  const dotMap: Record<string, string> = {
+    green: "bg-emerald-400",
+    amber: "bg-amber-400",
+    red: "bg-rose-400",
+    violet: "bg-violet",
+  };
   return (
-    <div className="rounded-2xl bg-black/40 border border-white/5 p-3">
-      <div className="flex items-center justify-between mb-3 px-1">
-        <p className="text-[11px] text-white/40 uppercase tracking-wider">
-          Active automations
-        </p>
-        <span className="text-[11px] text-white/40">live</span>
+    <div className="rounded-2xl bg-black/40 border border-white/5 p-4">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-[13px] font-medium">All Tasks</p>
+        <span className="text-[11px] text-white/40">Waiting for approval</span>
       </div>
       <div className="space-y-2">
         {rows.map((r) => (
@@ -170,7 +165,7 @@ function WorkflowVisual() {
             className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-white/[0.03] border border-white/5"
           >
             <span className="flex items-center gap-2.5 text-[13px]">
-              <span className={`w-2 h-2 rounded-full ${r.c} animate-pulse-dot`} />
+              <span className={`w-2 h-2 rounded-full ${dotMap[r.c]}`} />
               {r.t}
             </span>
             <span className="text-[11px] text-white/45">{r.s}</span>
@@ -183,107 +178,109 @@ function WorkflowVisual() {
 
 function AssistantVisual() {
   return (
-    <div className="rounded-2xl bg-black/40 border border-white/5 p-4 flex flex-col gap-3">
-      <div className="flex items-center gap-2">
-        <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-violet inline-flex items-center justify-center text-black">
-          <Sparkle className="w-4 h-4" />
-        </span>
-        <div>
-          <p className="text-[13px] font-medium">What can I help with?</p>
-          <p className="text-[11px] text-white/45">
-            Drafts, scheduling, summaries — just ask.
-          </p>
-        </div>
+    <div className="rounded-2xl bg-black/40 border border-white/5 p-5 flex flex-col gap-4">
+      <div>
+        <p className="font-display text-xl tracking-tight">What can I help with?</p>
+        <p className="mt-1 text-[12px] text-white/55 leading-relaxed">
+          Weather you want help in customer handling or make changes in your
+          system just give me command
+        </p>
       </div>
-      <div className="grid grid-cols-2 gap-2 mt-1">
-        {[
-          { label: "Summaries", icon: <PenLine className="w-3.5 h-3.5" /> },
-          { label: "Scheduling", icon: <Workflow className="w-3.5 h-3.5" /> },
-          { label: "Analyze", icon: <ScanLine className="w-3.5 h-3.5" /> },
-          { label: "Generate", icon: <Wand2 className="w-3.5 h-3.5" /> },
-        ].map((c) => (
+      <div className="grid grid-cols-2 gap-2">
+        {["Add document", "Analyze", "Generate Image", "research"].map((c) => (
           <button
-            key={c.label}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.04] border border-white/5 text-[12px] text-white/80 hover:bg-white/[0.07] transition-colors text-left"
+            key={c}
+            className="px-3 py-2 rounded-lg bg-white/[0.04] border border-white/5 text-[12px] text-white/80 hover:bg-white/[0.07] transition-colors text-left"
           >
-            <span className="text-accent">{c.icon}</span>
-            {c.label}
+            {c}
           </button>
         ))}
       </div>
-      <div className="mt-1 flex items-center gap-2 px-3 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-[12px] text-white/55">
+      <div className="flex items-center gap-2 px-3 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-[12px] text-white/55">
         <span className="text-accent">→</span>
-        Ask anything about your business…
+        Ask me anything…
       </div>
     </div>
   );
 }
 
-function AgentVisual() {
+function SalesVisual() {
   return (
-    <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-2">
-      <Bubble side="left">Hi! Looking for a quote on the Pro plan.</Bubble>
-      <Bubble side="right" tone="accent">
-        Happy to help. Team size & main use case?
-      </Bubble>
-      <Bubble side="left">12 people, mostly customer success.</Bubble>
-      <Bubble side="right" tone="violet">
-        Pro fits — drafting a tailored proposal now.
-      </Bubble>
-      <div className="flex items-center gap-1.5 pl-3 pt-1 text-[11px] text-white/50">
-        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot" />
-        Drafting reply…
-      </div>
-    </div>
-  );
-}
-
-function Bubble({
-  side,
-  tone,
-  children,
-}: {
-  side: "left" | "right";
-  tone?: "accent" | "violet";
-  children: React.ReactNode;
-}) {
-  const align = side === "right" ? "ml-auto" : "";
-  const bg =
-    tone === "accent"
-      ? "bg-accent text-black"
-      : tone === "violet"
-        ? "bg-violet text-white"
-        : "bg-white/[0.06] text-white/85";
-  return (
-    <div
-      className={`max-w-[80%] ${align} px-3 py-2 rounded-2xl text-[12.5px] leading-snug ${bg}`}
-    >
-      {children}
-    </div>
-  );
-}
-
-function DataVisual() {
-  return (
-    <div className="rounded-2xl bg-black/40 border border-white/5 p-4 grid grid-cols-3 gap-2">
-      {[
-        "Notion",
-        "Drive",
-        "Slack",
-        "Linear",
-        "Gmail",
-        "Confluence",
-        "HubSpot",
-        "Stripe",
-        "Postgres",
-      ].map((src) => (
-        <div
-          key={src}
-          className="aspect-square rounded-xl bg-white/[0.04] border border-white/5 flex items-center justify-center text-[11px] text-white/65 hover:border-accent/40 transition-colors"
-        >
-          {src}
+    <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-3">
+      <div className="rounded-xl bg-white/[0.04] border border-white/5 p-3">
+        <div className="flex items-center justify-between text-[11px] text-white/55 mb-1.5">
+          <span>To</span>
+          <span className="text-accent">E-mail Sending..</span>
         </div>
-      ))}
+        <p className="text-[13px] text-white/85">Hi LinkedIn lead — quick note about your IT services growth plans.</p>
+      </div>
+      <div className="grid grid-cols-3 gap-2">
+        {[
+          { label: "Draft", c: "bg-white/[0.04]" },
+          { label: "Schedule", c: "bg-violet/30 border-violet/40" },
+          { label: "Sent", c: "bg-accent/15 border-accent/40 text-accent" },
+        ].map((s) => (
+          <div
+            key={s.label}
+            className={`text-center text-[12px] py-2 rounded-lg border border-white/10 ${s.c}`}
+          >
+            {s.label}
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-between text-[11px] text-white/55 px-1">
+        <span>LinkedIn · IT services</span>
+        <span className="text-emerald-400">+24 leads today</span>
+      </div>
+    </div>
+  );
+}
+
+function CustomVisual() {
+  const days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+  return (
+    <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-3">
+      <div>
+        <p className="text-[13px] font-medium">Hey David!</p>
+        <p className="text-[11px] text-white/55">
+          Here is your Custom project &amp; schedule
+        </p>
+      </div>
+      <div className="px-3 py-2.5 rounded-lg bg-white/[0.04] border border-white/5">
+        <p className="text-[11px] text-white/55">On going project :</p>
+        <div className="mt-1 flex items-center justify-between text-[12.5px]">
+          <span>Customer Support Chatbot</span>
+          <span className="text-accent">90% Finsihed</span>
+        </div>
+        <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
+          <div className="h-full w-[90%] bg-accent" />
+        </div>
+      </div>
+      <div className="grid grid-cols-7 gap-1 text-[10px] text-center text-white/55">
+        {days.map((d, i) => (
+          <div
+            key={d}
+            className={`py-1.5 rounded-md ${
+              i === 2 ? "bg-violet/30 text-white" : "bg-white/[0.03]"
+            }`}
+          >
+            {d}
+          </div>
+        ))}
+      </div>
+      <div className="space-y-1.5">
+        <ScheduleRow time="10:00 am to 10:30 am" label="Discovery call" />
+        <ScheduleRow time="06:00 pm to 06:30 pm" label="Custom automation" />
+      </div>
+    </div>
+  );
+}
+
+function ScheduleRow({ time, label }: { time: string; label: string }) {
+  return (
+    <div className="flex items-center justify-between text-[12px] px-3 py-2 rounded-lg bg-white/[0.03] border border-white/5">
+      <span>{label}</span>
+      <span className="text-white/55 text-[11px]">{time}</span>
     </div>
   );
 }
