@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import LogoStrip from "@/components/LogoStrip";
 import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
 import Cases from "@/components/Cases";
 import Benefits from "@/components/Benefits";
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <LogoStrip />
       <Services />
-      <Testimonials />
       <Process />
       <Cases />
       <Benefits />
