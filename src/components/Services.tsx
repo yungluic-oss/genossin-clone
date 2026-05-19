@@ -13,22 +13,29 @@ export default function Services() {
       />
 
       <div className="relative max-w-[1100px] mx-auto">
-        <SectionHeader
-          eyebrow="Our Services"
-          title={
-            <>
-              AI Solutions That Take Your
-              <br className="hidden sm:block" /> Business to the Next Level
-            </>
-          }
-          sub="We design, develop, and implement automation tools that help you work smarter, not harder"
-        />
+        <div className="flex flex-col items-center text-center">
+          <h2
+            className="font-display max-w-3xl"
+            style={{
+              fontSize: "clamp(32px, 4vw, 50px)",
+              lineHeight: "1.1",
+              letterSpacing: "-2px",
+              fontWeight: 400,
+            }}
+          >
+            AI Solutions That Take Your
+            <br className="hidden sm:block" /> Business to the Next Level
+          </h2>
+          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+            We design, develop, and implement automation tools that help you
+            work smarter, not harder
+          </p>
+        </div>
 
         <div className="mt-14 flex flex-col gap-5">
           <ServiceCard
             reverse={false}
-            tone="violet"
-            chips={["Internal Task Bots", "100+ Automations"]}
+            eyebrow="Workflow Automation"
             title="Automate repetitive tasks"
             body="We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains — saving time and cutting down errors."
             visual={<WorkflowVisual />}
@@ -36,8 +43,7 @@ export default function Services() {
 
           <ServiceCard
             reverse
-            tone="lime"
-            chips={["Summaries", "Scheduling", "Many more"]}
+            eyebrow="AI Assistant"
             title="Delegate Daily Tasks"
             body="From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster."
             visual={<AssistantVisual />}
@@ -45,8 +51,7 @@ export default function Services() {
 
           <ServiceCard
             reverse={false}
-            tone="pink"
-            chips={["Leads", "Content", "Social post"]}
+            eyebrow="Sales & Marketing"
             title="Accelerate Sales Growth"
             body="AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence."
             visual={<SalesVisual />}
@@ -54,8 +59,7 @@ export default function Services() {
 
           <ServiceCard
             reverse
-            tone="white"
-            chips={["Strategy", "Custom AI", "Consulting"]}
+            eyebrow="Custom Projects"
             title="Build Smarter Systems"
             body="Whether you're starting from scratch or enhancing an existing system, we offer strategic consulting and develop custom AI projects aligned with your unique goals."
             visual={<CustomVisual />}
@@ -111,40 +115,26 @@ export function SectionHeader({
 
 function ServiceCard({
   reverse,
-  tone,
-  chips,
+  eyebrow,
   title,
   body,
   visual,
 }: {
   reverse: boolean;
-  tone: "violet" | "lime" | "pink" | "white";
-  chips: string[];
+  eyebrow: string;
   title: string;
   body: string;
   visual: ReactNode;
 }) {
-  const glowMap = {
-    violet: "bg-violet",
-    lime: "bg-accent",
-    pink: "bg-pink",
-    white: "bg-white",
-  } as const;
-
   return (
     <article
-      className="relative overflow-hidden rounded-3xl border border-white/[0.07]"
+      className="relative overflow-hidden rounded-3xl"
       style={{
         background:
           "linear-gradient(180deg, #141417 0%, #0b0b0d 100%)",
         minHeight: 350,
       }}
     >
-      <div
-        aria-hidden
-        className={`absolute -top-32 ${reverse ? "-left-32" : "-right-32"} w-80 h-80 rounded-full ${glowMap[tone]} blur-3xl opacity-20 pointer-events-none`}
-      />
-
       <div
         className={`relative grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-10 items-center p-7 sm:p-9 ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
@@ -154,12 +144,10 @@ function ServiceCard({
         <div className="relative">{visual}</div>
 
         {/* Copy */}
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-wrap items-center gap-2">
-            {chips.map((c) => (
-              <Chip key={c}>{c}</Chip>
-            ))}
-          </div>
+        <div className="flex flex-col gap-4">
+          <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-white/[0.05] text-[12px] text-white/85 leading-none">
+            {eyebrow}
+          </span>
           <h3
             className="font-display"
             style={{

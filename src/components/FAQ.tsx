@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "@/components/icons";
-import { SectionHeader } from "./Services";
 
 const FAQS = [
   {
@@ -31,11 +30,25 @@ export default function FAQ() {
   return (
     <section id="faq" className="relative py-28 px-4">
       <div className="relative max-w-3xl mx-auto">
-        <SectionHeader
-          eyebrow="FAQs"
-          title={<>We&apos;ve Got the Answers You&apos;re Looking For</>}
-          sub="Quick answers to your AI automation questions."
-        />
+        <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center px-3 py-1.5 rounded-md bg-white/[0.05] text-[12px] text-white/85 leading-none">
+            FAQs
+          </span>
+          <h2
+            className="mt-5 font-display max-w-3xl"
+            style={{
+              fontSize: "clamp(32px, 4vw, 50px)",
+              lineHeight: "1.1",
+              letterSpacing: "-2px",
+              fontWeight: 400,
+            }}
+          >
+            We&apos;ve Got the Answers You&apos;re Looking For
+          </h2>
+          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+            Quick answers to your AI automation questions.
+          </p>
+        </div>
 
         <div className="mt-12 space-y-[2px]">
           {FAQS.map((item, i) => (

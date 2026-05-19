@@ -1,0 +1,540 @@
+- main [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Genossin home" [ref=e5] [cursor=pointer]:
+        - /url: ./
+        - img [ref=e6]
+        - generic [ref=e9]: GENOSSIN
+      - generic [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Home" [ref=e13] [cursor=pointer]:
+              - /url: ./
+          - listitem [ref=e14]:
+            - link "Solutions" [ref=e15] [cursor=pointer]:
+              - /url: ./solutions
+          - listitem [ref=e16]:
+            - link "Blog" [ref=e17] [cursor=pointer]:
+              - /url: ./blog
+          - listitem [ref=e18]:
+            - link "About" [ref=e19] [cursor=pointer]:
+              - /url: ./about
+          - listitem [ref=e20]:
+            - link "Contact" [ref=e21] [cursor=pointer]:
+              - /url: ./contact
+        - link "Book a call" [ref=e22] [cursor=pointer]:
+          - /url: https://cal.com
+  - generic [ref=e24]:
+    - generic [ref=e25]: AI chatbot integration on websites
+    - heading "Intelligent Solutions for Modern Businesses." [level=1] [ref=e26]:
+      - generic [ref=e27]: Intelligent Solutions for
+      - generic [ref=e28]: Modern Businesses.
+    - paragraph [ref=e29]: The first call is free. We listen, diagnose, then build exactly what you need.
+    - link "Get in touch" [ref=e31] [cursor=pointer]:
+      - /url: "#contact"
+  - region "Trusted by" [ref=e32]:
+    - paragraph [ref=e33]: Over 10+ business trust us
+  - generic [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]: Our Services
+      - heading "AI Solutions That Take Your Business to the Next Level" [level=2] [ref=e39]:
+        - text: AI Solutions That Take Your
+        - text: Business to the Next Level
+      - paragraph [ref=e40]: We design, develop, and implement automation tools that help you work smarter, not harder
+    - generic [ref=e41]:
+      - article [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - img [ref=e49]
+                - paragraph [ref=e52]: All Tasks
+              - generic [ref=e53]: Waiting for approval
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: Payroll management
+                - generic [ref=e58]: Due on 2nd july
+              - generic [ref=e59]:
+                - generic [ref=e60]: Employee Tracking
+                - generic [ref=e62]: 2 days ago
+              - generic [ref=e63]:
+                - generic [ref=e64]: Social media post
+                - generic [ref=e66]: Cancelled by user
+              - generic [ref=e67]:
+                - generic [ref=e68]: Lead list
+                - generic [ref=e70]: 70% prepared
+              - generic [ref=e71]:
+                - generic [ref=e72]: Payment reminder
+                - generic [ref=e74]: sent to selected clients
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - generic [ref=e77]: Internal Task Bots
+              - generic [ref=e79]: 100+ Automations
+            - heading "Automate repetitive tasks" [level=3] [ref=e81]
+            - paragraph [ref=e82]: We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains — saving time and cutting down errors.
+      - article [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - paragraph [ref=e88]: What can I help with?
+              - paragraph [ref=e89]: Weather you want help in customer handling or make changes in your system just give me command
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - img [ref=e92]
+                - generic [ref=e95]: Add document
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - generic [ref=e98]: Analyze
+              - generic [ref=e99]:
+                - img [ref=e100]
+                - generic [ref=e104]: Generate Image
+              - generic [ref=e105]:
+                - img [ref=e106]
+                - generic [ref=e109]: research
+            - generic [ref=e111]:
+              - generic [ref=e112]: Schedule a 30 day cont
+              - button [ref=e114]:
+                - img [ref=e115]
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: Summaries
+              - generic [ref=e121]: Scheduling
+              - generic [ref=e123]: Many more
+            - heading "Delegate Daily Tasks" [level=3] [ref=e125]
+            - paragraph [ref=e126]: From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster.
+      - article [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e130]:
+            - generic [ref=e132]:
+              - generic [ref=e133]: E-mail Sending..
+              - generic [ref=e135]: LinkedIn
+              - generic [ref=e136]: IT services
+              - generic [ref=e137]: Founders
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - generic [ref=e142]: JD
+                  - generic [ref=e143]:
+                    - paragraph [ref=e144]:
+                      - text: Jack Daniel
+                      - img [ref=e145]
+                    - paragraph [ref=e147]: Founder · justin@main.com
+                - generic [ref=e148]: Xavier LLC
+              - generic [ref=e149]:
+                - generic [ref=e150]:
+                  - generic [ref=e151]: GC
+                  - generic [ref=e152]:
+                    - paragraph [ref=e153]:
+                      - text: Gorge Chapel
+                      - img [ref=e154]
+                    - paragraph [ref=e156]: Founder · gorge@mail.com
+                - generic [ref=e157]: Chapel LLC
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - generic [ref=e160]: MT
+                  - generic [ref=e161]:
+                    - paragraph [ref=e162]: Mike Tylor
+                    - paragraph [ref=e163]: Founder · mike@Cmb.com
+                - generic [ref=e164]: CMB LLC
+              - generic [ref=e165]:
+                - generic [ref=e166]:
+                  - generic [ref=e167]: TS
+                  - generic [ref=e168]:
+                    - paragraph [ref=e169]:
+                      - text: Thomas Shelby
+                      - img [ref=e170]
+                    - paragraph [ref=e172]: Founder · Thimas@Sby.com
+                - generic [ref=e173]: Shelby.co
+              - generic [ref=e174]:
+                - generic [ref=e175]:
+                  - generic [ref=e176]: JD
+                  - generic [ref=e177]:
+                    - paragraph [ref=e178]:
+                      - text: Jack Daniel
+                      - img [ref=e179]
+                    - paragraph [ref=e181]: Founder · justin@main.com
+                - generic [ref=e182]: Xavier LLC
+              - generic [ref=e183]:
+                - generic [ref=e184]:
+                  - generic [ref=e185]: GC
+                  - generic [ref=e186]:
+                    - paragraph [ref=e187]:
+                      - text: Gorge Chapel
+                      - img [ref=e188]
+                    - paragraph [ref=e190]: Founder · gorge@mail.com
+                - generic [ref=e191]: Chapel LLC
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - generic [ref=e194]: MT
+                  - generic [ref=e195]:
+                    - paragraph [ref=e196]: Mike Tylor
+                    - paragraph [ref=e197]: Founder · mike@Cmb.com
+                - generic [ref=e198]: CMB LLC
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - generic [ref=e201]: TS
+                  - generic [ref=e202]:
+                    - paragraph [ref=e203]:
+                      - text: Thomas Shelby
+                      - img [ref=e204]
+                    - paragraph [ref=e206]: Founder · Thimas@Sby.com
+                - generic [ref=e207]: Shelby.co
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: Leads
+              - generic [ref=e212]: Content
+              - generic [ref=e214]: Social post
+            - heading "Accelerate Sales Growth" [level=3] [ref=e216]
+            - paragraph [ref=e217]: AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence.
+      - article [ref=e218]:
+        - generic [ref=e219]:
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - generic [ref=e223]: D
+              - generic [ref=e224]:
+                - paragraph [ref=e225]: Hey David!
+                - paragraph [ref=e226]: Here is your Custom project & schedule
+            - generic [ref=e227]:
+              - paragraph [ref=e228]: "On going project :"
+              - generic [ref=e229]:
+                - generic [ref=e230]: Customer Support Chatbot
+                - generic [ref=e231]: 90% Finsihed
+            - generic [ref=e234]:
+              - generic [ref=e235]: Mo
+              - generic [ref=e236]: Tu
+              - generic [ref=e237]: We
+              - generic [ref=e238]: Th
+              - generic [ref=e239]: Fr
+              - generic [ref=e240]: Sa
+              - generic [ref=e241]: Su
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244]: Discovery call
+                - generic [ref=e246]: 10:00 am to 10:30 am
+              - generic [ref=e247]:
+                - generic [ref=e248]: Custom automation
+                - generic [ref=e250]: 06:00 pm to 06:30 pm
+          - generic [ref=e251]:
+            - generic [ref=e252]:
+              - generic [ref=e253]: Strategy
+              - generic [ref=e255]: Custom AI
+              - generic [ref=e257]: Consulting
+            - heading "Build Smarter Systems" [level=3] [ref=e259]
+            - paragraph [ref=e260]: Whether you're starting from scratch or enhancing an existing system, we offer strategic consulting and develop custom AI projects aligned with your unique goals.
+  - generic [ref=e262]:
+    - generic [ref=e263]:
+      - generic [ref=e264]: Our Process
+      - heading "Our Simple, Smart, and Scalable Process" [level=2] [ref=e266]
+    - generic [ref=e267]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e271]: Step 1
+          - heading "Smart Analyzing" [level=3] [ref=e272]
+          - paragraph [ref=e273]: We assess your needs and identify AI solutions to streamline workflows and improve efficiency.
+        - generic [ref=e275]:
+          - paragraph [ref=e276]: Analyzing current workflow..
+          - generic [ref=e277]:
+            - generic [ref=e279]:
+              - generic [ref=e280]: System check
+              - generic [ref=e281]: 100%
+            - generic [ref=e285]:
+              - generic [ref=e286]: Process check
+              - generic [ref=e287]: 80%
+            - generic [ref=e291]:
+              - generic [ref=e292]: Speed check
+              - generic [ref=e293]: 60%
+            - generic [ref=e297]:
+              - generic [ref=e298]: Manual work
+              - generic [ref=e299]: 45%
+            - generic [ref=e303]:
+              - generic [ref=e304]: Repetative task
+              - generic [ref=e305]: 30%
+      - generic [ref=e309]:
+        - generic [ref=e310]:
+          - generic [ref=e311]: Step 2
+          - heading "AI Development" [level=3] [ref=e312]
+          - paragraph [ref=e313]: Our team builds intelligent automation systems tailored to your business processes.
+        - generic [ref=e316]: "class Automation: def __init__(self, threshold): self.threshold = threshold self.status = \"inactive\" def check_trigger(self, value): ifvalue > self.threshold: self.status = \"active\" return \"Automation triggered!\" else: return \"No action taken.\""
+      - generic [ref=e318]:
+        - generic [ref=e319]:
+          - generic [ref=e320]: Step 3
+          - heading "Seamless Integration" [level=3] [ref=e321]
+          - paragraph [ref=e322]: We smoothly integrate AI solutions into your existing infrastructure with minimal disruption.
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - generic [ref=e326]: G
+            - generic [ref=e327]: Our solution
+          - generic [ref=e330]:
+            - generic [ref=e331]:
+              - generic [ref=e332]: S
+              - generic [ref=e333]: "N"
+              - generic [ref=e334]: L
+              - generic [ref=e335]: G
+            - generic [ref=e336]: Your stack
+      - generic [ref=e338]:
+        - generic [ref=e339]:
+          - generic [ref=e340]: Step 4
+          - heading "Continuous Optimization" [level=3] [ref=e341]
+          - paragraph [ref=e342]: We refine performance, analyze insights, and enhance automation for long-term growth.
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - paragraph [ref=e346]: Chatbot system
+            - paragraph [ref=e347]: Efficiency will increase by 20%
+          - generic [ref=e348]:
+            - paragraph [ref=e349]: Workflow system
+            - paragraph [ref=e350]: Update available..
+          - generic [ref=e351]:
+            - paragraph [ref=e352]: Sales system
+            - paragraph [ref=e353]: Up to date
+  - generic [ref=e354]:
+    - generic [ref=e356]:
+      - generic [ref=e357]: Case Studies
+      - heading "See How Smart AI Automation Transforms Businesses" [level=2] [ref=e359]
+      - paragraph [ref=e360]: See how AI automation streamlines operations, boosts and drives growth.
+    - generic [ref=e361]:
+      - generic [ref=e363]:
+        - article [ref=e364]:
+          - img "TrailForge suitcase brand case study" [ref=e366]
+          - generic [ref=e367]:
+            - paragraph [ref=e368]: “AI-driven forecasting cut inventory waste by 40%”
+            - paragraph [ref=e369]: A suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.
+            - generic [ref=e370]:
+              - paragraph [ref=e371]: "Impact :"
+              - generic [ref=e372]:
+                - generic [ref=e373]: 40% Less Inventory Waste
+                - generic [ref=e374]: 35% Faster Production
+                - generic [ref=e375]: 20% More Accurate Forecasting
+                - generic [ref=e376]: 25% Faster Fulfillment
+        - article [ref=e377]:
+          - img "Healthcare logistics case study" [ref=e379]
+          - generic [ref=e380]:
+            - paragraph [ref=e381]: “AI-powered workflows reduced error rate by 80% in daily operations”
+            - paragraph [ref=e382]: A healthcare logistics company, was dealing with frequent data errors and delays. We introduced AI validation and live tracking to improve accuracy and speed across their supply chain.
+            - generic [ref=e383]:
+              - paragraph [ref=e384]: "Impact :"
+              - generic [ref=e385]:
+                - generic [ref=e386]: 80% Error reduction
+                - generic [ref=e387]: 90% Accuracy in Data Logs
+                - generic [ref=e388]: 30% Faster Delivery
+                - generic [ref=e389]: 60+ Hours Saved
+        - article [ref=e390]:
+          - img "Financial services firm case study" [ref=e392]
+          - generic [ref=e393]:
+            - paragraph [ref=e394]: “Automating 50% of operations saved 20% in costs within 2 months”
+            - paragraph [ref=e395]: A financial services firm, was overloaded with repetitive admin tasks. By automating internal workflows and integrating data systems, they streamlined operations and reduced overhead.
+            - generic [ref=e396]:
+              - paragraph [ref=e397]: "Impact :"
+              - generic [ref=e398]:
+                - generic [ref=e399]: 50% Operations Automated
+                - generic [ref=e400]: 20% Cost Reduction
+                - generic [ref=e401]: 70+ Hours Saved/Month
+                - generic [ref=e402]: 2x Faster Client Onboarding
+        - article [ref=e403]:
+          - img "ScaleByte startup sales case study" [ref=e405]
+          - generic [ref=e406]:
+            - paragraph [ref=e407]: “AI integration helped a StartUp close 3x more deals in less time”
+            - paragraph [ref=e408]: ScaleByte’s sales team struggled with follow-up delays. Our AI sales assistant automated outreach, lead scoring, and CRM updates—resulting in faster responses and more closed deals.
+            - generic [ref=e409]:
+              - paragraph [ref=e410]: "Impact :"
+              - generic [ref=e411]:
+                - generic [ref=e412]: 3x More Deals
+                - generic [ref=e413]: 40% Faster Responses
+                - generic [ref=e414]: 95% Lead Accuracy
+                - generic [ref=e415]: CRM Fully Synced
+        - article [ref=e416]:
+          - img "TrailForge suitcase brand case study" [ref=e418]
+          - generic [ref=e419]:
+            - paragraph [ref=e420]: “AI-driven forecasting cut inventory waste by 40%”
+            - paragraph [ref=e421]: A suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.
+            - generic [ref=e422]:
+              - paragraph [ref=e423]: "Impact :"
+              - generic [ref=e424]:
+                - generic [ref=e425]: 40% Less Inventory Waste
+                - generic [ref=e426]: 35% Faster Production
+                - generic [ref=e427]: 20% More Accurate Forecasting
+                - generic [ref=e428]: 25% Faster Fulfillment
+        - article [ref=e429]:
+          - img "Healthcare logistics case study" [ref=e431]
+          - generic [ref=e432]:
+            - paragraph [ref=e433]: “AI-powered workflows reduced error rate by 80% in daily operations”
+            - paragraph [ref=e434]: A healthcare logistics company, was dealing with frequent data errors and delays. We introduced AI validation and live tracking to improve accuracy and speed across their supply chain.
+            - generic [ref=e435]:
+              - paragraph [ref=e436]: "Impact :"
+              - generic [ref=e437]:
+                - generic [ref=e438]: 80% Error reduction
+                - generic [ref=e439]: 90% Accuracy in Data Logs
+                - generic [ref=e440]: 30% Faster Delivery
+                - generic [ref=e441]: 60+ Hours Saved
+        - article [ref=e442]:
+          - img "Financial services firm case study" [ref=e444]
+          - generic [ref=e445]:
+            - paragraph [ref=e446]: “Automating 50% of operations saved 20% in costs within 2 months”
+            - paragraph [ref=e447]: A financial services firm, was overloaded with repetitive admin tasks. By automating internal workflows and integrating data systems, they streamlined operations and reduced overhead.
+            - generic [ref=e448]:
+              - paragraph [ref=e449]: "Impact :"
+              - generic [ref=e450]:
+                - generic [ref=e451]: 50% Operations Automated
+                - generic [ref=e452]: 20% Cost Reduction
+                - generic [ref=e453]: 70+ Hours Saved/Month
+                - generic [ref=e454]: 2x Faster Client Onboarding
+        - article [ref=e455]:
+          - img "ScaleByte startup sales case study" [ref=e457]
+          - generic [ref=e458]:
+            - paragraph [ref=e459]: “AI integration helped a StartUp close 3x more deals in less time”
+            - paragraph [ref=e460]: ScaleByte’s sales team struggled with follow-up delays. Our AI sales assistant automated outreach, lead scoring, and CRM updates—resulting in faster responses and more closed deals.
+            - generic [ref=e461]:
+              - paragraph [ref=e462]: "Impact :"
+              - generic [ref=e463]:
+                - generic [ref=e464]: 3x More Deals
+                - generic [ref=e465]: 40% Faster Responses
+                - generic [ref=e466]: 95% Lead Accuracy
+                - generic [ref=e467]: CRM Fully Synced
+      - generic:
+        - generic:
+          - generic: Drag to explore
+          - img
+  - generic [ref=e469]:
+    - generic [ref=e470]:
+      - generic [ref=e471]: Benefits
+      - heading "The Key Benefits of AI for Your Business Growth" [level=2] [ref=e473]
+      - paragraph [ref=e474]: Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes.
+    - generic [ref=e475]:
+      - generic [ref=e476]:
+        - img [ref=e478]
+        - heading "Increased Productivity" [level=3] [ref=e484]
+        - paragraph [ref=e485]: Gain actionable insights with AI-driven analytics to improve decision-making and strategy.
+      - generic [ref=e486]:
+        - img [ref=e488]
+        - heading "Better Customer Experience" [level=3] [ref=e493]
+        - paragraph [ref=e494]: Personalized AI interactions improve response times, customer engagement, and overall satisfaction.
+      - generic [ref=e495]:
+        - img [ref=e497]
+        - heading "24/7 Availability" [level=3] [ref=e500]
+        - paragraph [ref=e501]: AI-powered systems operate around the clock, ensuring seamless support and execution without downtime.
+      - generic [ref=e502]:
+        - img [ref=e504]
+        - heading "Cost Reduction" [level=3] [ref=e507]
+        - paragraph [ref=e508]: AI automation minimizes manual work, cuts operational costs, and optimizes resource allocation for better profitability.
+      - generic [ref=e509]:
+        - img [ref=e511]
+        - heading "Data-Driven Insights" [level=3] [ref=e513]
+        - paragraph [ref=e514]: Leverage AI to analyze vast data sets, identify trends, and make smarter, faster, and more accurate business decisions.
+      - generic [ref=e515]:
+        - img [ref=e517]
+        - heading "Scalability & Growth" [level=3] [ref=e520]
+        - paragraph [ref=e521]: AI adapts to your business needs, allowing you to scale efficiently without increasing workload or costs.
+  - generic [ref=e523]:
+    - heading "Let AI do the Work so you can Scale Faster" [level=2] [ref=e524]:
+      - text: Let AI do the Work so
+      - text: you can Scale Faster
+    - paragraph [ref=e525]: Book a Call Today and Start Automating
+    - link "Book a free call" [ref=e527] [cursor=pointer]:
+      - /url: https://cal.com
+      - text: Book a free call
+      - img [ref=e529]
+  - generic [ref=e533]:
+    - generic [ref=e534]:
+      - generic [ref=e535]: FAQs
+      - heading "We've Got the Answers You're Looking For" [level=2] [ref=e537]
+      - paragraph [ref=e538]: Quick answers to your AI automation questions.
+    - generic [ref=e539]:
+      - generic [ref=e540]:
+        - button "How can AI automation help my business?" [ref=e541] [cursor=pointer]:
+          - generic [ref=e542]: How can AI automation help my business?
+          - img [ref=e544]
+        - paragraph [ref=e546]: AI automation eliminates repetitive tasks, improves efficiency, and reduces errors. It allows your team to focus on high-value work while increasing productivity and lowering operational costs.
+      - generic [ref=e547]:
+        - button "Is AI automation difficult to integrate?" [ref=e548] [cursor=pointer]:
+          - generic [ref=e549]: Is AI automation difficult to integrate?
+          - img [ref=e551]
+        - paragraph [ref=e553]: No! Our AI solutions are designed for seamless integration with your existing tools and workflows. We provide step-by-step guidance to ensure a smooth and hassle-free setup.
+      - generic [ref=e554]:
+        - button "What industries can benefit from AI automation?" [ref=e555] [cursor=pointer]:
+          - generic [ref=e556]: What industries can benefit from AI automation?
+          - img [ref=e558]
+        - paragraph [ref=e560]: AI automation is beneficial across various industries, including marketing, sales, finance, healthcare, customer support, and operations. Any business looking to improve efficiency can leverage AI.
+      - generic [ref=e561]:
+        - button "Do I need technical knowledge to use AI automation?" [ref=e562] [cursor=pointer]:
+          - generic [ref=e563]: Do I need technical knowledge to use AI automation?
+          - img [ref=e565]
+        - paragraph [ref=e567]: Not at all! Our platform is user-friendly and built for all skill levels. We provide onboarding, tutorials, and customer support to ensure you can easily navigate and use the system.
+      - generic [ref=e568]:
+        - button "What kind of support do you offer?" [ref=e569] [cursor=pointer]:
+          - generic [ref=e570]: What kind of support do you offer?
+          - img [ref=e572]
+        - paragraph [ref=e574]: We offer comprehensive support, including onboarding assistance, troubleshooting, and ongoing updates. Our team is available to help with any questions or technical issues you may have.
+  - generic [ref=e575]:
+    - generic [ref=e576]:
+      - generic [ref=e577]:
+        - generic [ref=e578]:
+          - img [ref=e580]
+          - generic [ref=e582]: GENOSSIN
+        - paragraph [ref=e583]: Genossin – Automate Smarter, Optimize Faster, and Grow Stronger.
+        - heading "Join our newsletter" [level=3] [ref=e584]
+        - generic [ref=e585]:
+          - textbox "Email" [ref=e586]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=e587]
+      - generic [ref=e588]:
+        - generic [ref=e589]:
+          - paragraph [ref=e590]: Links
+          - list [ref=e591]:
+            - listitem [ref=e592]:
+              - link "Services" [ref=e593] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=e594]:
+              - link "Process" [ref=e595] [cursor=pointer]:
+                - /url: /#process
+            - listitem [ref=e596]:
+              - link "Case studies" [ref=e597] [cursor=pointer]:
+                - /url: /#cases
+            - listitem [ref=e598]:
+              - link "Benefits" [ref=e599] [cursor=pointer]:
+                - /url: /#benefits
+            - listitem [ref=e600]:
+              - link "Pricing" [ref=e601] [cursor=pointer]:
+                - /url: /#pricing
+        - generic [ref=e602]:
+          - paragraph [ref=e603]: Pages
+          - list [ref=e604]:
+            - listitem [ref=e605]:
+              - link "Home" [ref=e606] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e607]:
+              - link "About" [ref=e608] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e609]:
+              - link "Blog" [ref=e610] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e611]:
+              - link "Contact" [ref=e612] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e613]:
+              - link "404" [ref=e614] [cursor=pointer]:
+                - /url: /404
+        - generic [ref=e615]:
+          - paragraph [ref=e616]: Socials
+          - list [ref=e617]:
+            - listitem [ref=e618]:
+              - link "Instagram" [ref=e619] [cursor=pointer]:
+                - /url: https://instagram.com
+                - img [ref=e620]
+                - text: Instagram
+            - listitem [ref=e624]:
+              - link "Facebook" [ref=e625] [cursor=pointer]:
+                - /url: https://facebook.com
+                - img [ref=e626]
+                - text: Facebook
+            - listitem [ref=e628]:
+              - link "Linkedin" [ref=e629] [cursor=pointer]:
+                - /url: https://linkedin.com
+                - img [ref=e630]
+                - text: Linkedin
+            - listitem [ref=e632]:
+              - link "Twitter" [ref=e633] [cursor=pointer]:
+                - /url: https://x.com
+                - img [ref=e634]
+                - text: Twitter
+    - generic [ref=e637]:
+      - paragraph [ref=e638]: Design by Ayush
+      - paragraph [ref=e639]: © All right reserved

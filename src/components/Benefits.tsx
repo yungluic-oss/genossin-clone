@@ -1,8 +1,3 @@
-import { SectionHeader } from "./Services";
-
-// Inline SVGs scoped to this section. Stroked, currentColor, 1.6px stroke, 20px box.
-// Style tuned to match the live tile aesthetic: small accent icon on dark inset.
-
 type IconProps = React.SVGProps<SVGSVGElement>;
 
 const baseSvg: IconProps = {
@@ -115,26 +110,45 @@ export default function Benefits() {
   return (
     <section id="benefits" className="relative py-28 px-4">
       <div className="relative max-w-6xl mx-auto">
-        <SectionHeader
-          eyebrow="Benefits"
-          // Preserve the double-space between "AI" and "for" exactly as on live.
-          title={<>{"The Key Benefits of AI  for Your Business Growth"}</>}
-          sub="Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes."
-        />
+        <div className="flex flex-col items-center text-center">
+          <h2
+            className="font-display max-w-3xl"
+            style={{
+              fontSize: "clamp(32px, 4vw, 50px)",
+              lineHeight: "1.1",
+              letterSpacing: "-2px",
+              fontWeight: 400,
+            }}
+          >
+            {"The Key Benefits of AI  for Your Business Growth"}
+          </h2>
+          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+            Discover how AI automation enhances efficiency, reduces costs, and
+            drives business growth with smarter, faster processes.
+          </p>
+        </div>
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {ITEMS.map((b) => (
             <div
               key={b.title}
-              className="rounded-2xl p-6 bg-ink-2 border border-white/[0.08] hover:border-white/15 transition-colors"
+              className="relative overflow-hidden rounded-2xl p-7 bg-[#0f0f12] border border-white/[0.06]"
             >
-              <span className="inline-flex w-10 h-10 items-center justify-center rounded-lg border border-accent/40 text-accent bg-accent/[0.06]">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -bottom-20 -right-20 w-56 h-56 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(50% 50% at 50% 50%, rgba(129,74,200,0.18) 0%, rgba(129,74,200,0) 70%)",
+                }}
+              />
+              <span className="relative inline-flex w-9 h-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/85">
                 {b.icon}
               </span>
-              <h3 className="mt-5 font-display text-[22px] leading-tight tracking-tight text-white">
+              <h3 className="relative mt-5 font-display text-[21px] leading-tight tracking-tight text-white">
                 {b.title}
               </h3>
-              <p className="mt-2.5 text-[14px] leading-relaxed text-muted">
+              <p className="relative mt-2 text-[14px] leading-relaxed text-white/55">
                 {b.body}
               </p>
             </div>

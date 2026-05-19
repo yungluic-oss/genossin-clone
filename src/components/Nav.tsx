@@ -157,28 +157,15 @@ export default function Nav() {
   );
 }
 
-/**
- * Logo mark — white rounded square with a small accent notch in the top-right,
- * matching the live-site favicon mark next to the GENOSSIN wordmark.
- */
 function LogoMark() {
   return (
-    <svg
-      aria-hidden
-      width="22"
-      height="22"
-      viewBox="0 0 22 22"
-      fill="none"
+    <img
+      src="/assets/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png"
+      alt=""
+      width={22}
+      height={22}
       className="shrink-0"
-    >
-      {/* Main body */}
-      <path
-        d="M3 5.2C3 3.98 3.98 3 5.2 3H15v6.4h-3.2V6H6.2v9.8h5.6v-2.4H9.6v-3.2H15V19h-9.8C3.98 19 3 18.02 3 16.8V5.2Z"
-        fill="#ffffff"
-      />
-      {/* Small accent notch top-right */}
-      <rect x="16.2" y="2.6" width="3.4" height="3.4" rx="0.9" fill="#ffffff" />
-    </svg>
+    />
   );
 }
 

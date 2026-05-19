@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SectionHeader } from "./Services";
 
 type Case = {
   image: string;
@@ -115,11 +114,23 @@ export default function Cases() {
   return (
     <section id="cases" className="relative py-28 overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-4">
-        <SectionHeader
-          eyebrow="Case Studies"
-          title={<>See How Smart AI Automation Transforms Businesses</>}
-          sub="See how AI automation streamlines operations, boosts and drives growth."
-        />
+        <div className="flex flex-col items-center text-center">
+          <h2
+            className="font-display max-w-3xl"
+            style={{
+              fontSize: "clamp(32px, 4vw, 50px)",
+              lineHeight: "1.1",
+              letterSpacing: "-2px",
+              fontWeight: 400,
+            }}
+          >
+            See How Smart AI Automation Transforms Businesses
+          </h2>
+          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+            See how AI automation streamlines operations, boosts and drives
+            growth.
+          </p>
+        </div>
       </div>
 
       {/* Marquee track — full-bleed so cards can extend past the container */}

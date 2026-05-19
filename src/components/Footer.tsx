@@ -67,24 +67,15 @@ export default function Footer() {
         {/* Left block: wordmark + tagline + newsletter */}
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="inline-flex w-8 h-8 items-center justify-center rounded-md bg-white text-black">
-              <svg
-                viewBox="0 0 24 24"
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden
-              >
-                <path d="M4 18 L12 4 L20 18" />
-                <path d="M8 14 L16 14" />
-              </svg>
-            </span>
+            <img
+              src="/assets/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png"
+              alt=""
+              width={26}
+              height={26}
+            />
             <span
-              className="font-display font-bold uppercase tracking-tight text-[21px] leading-none"
-              style={{ letterSpacing: "-0.01em" }}
+              className="font-display font-bold uppercase text-[21px] leading-[25.2px]"
+              style={{ letterSpacing: "-1.26px" }}
             >
               GENOSSIN
             </span>

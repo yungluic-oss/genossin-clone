@@ -1,13 +1,24 @@
-import { SectionHeader } from "./Services";
-
 export default function Process() {
   return (
     <section id="process" className="relative py-28 px-4">
       <div className="relative max-w-6xl mx-auto">
-        <SectionHeader
-          eyebrow="Our Process"
-          title={<>Our Simple, Smart, and Scalable Process</>}
-        />
+        <div className="flex flex-col items-center text-center">
+          <h2
+            className="font-display max-w-3xl"
+            style={{
+              fontSize: "clamp(32px, 4vw, 50px)",
+              lineHeight: "1.1",
+              letterSpacing: "-2px",
+              fontWeight: 400,
+            }}
+          >
+            Our Simple, Smart, and Scalable Process
+          </h2>
+          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+            We design, develop, and implement automation tools that help you
+            work smarter, not harder
+          </p>
+        </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard
@@ -55,7 +66,7 @@ function StepCard({
     <div className="card-surface relative overflow-hidden">
       <div className="p-7 flex flex-col gap-5 min-h-[420px]">
         <div>
-          <span className="inline-block text-[11px] px-2.5 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent uppercase tracking-[0.16em]">
+          <span className="inline-block text-[12px] px-3 py-1.5 rounded-md bg-white/[0.05] text-white/85 leading-none">
             {step}
           </span>
           <h3 className="mt-4 font-display text-2xl tracking-tight">{title}</h3>

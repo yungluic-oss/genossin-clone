@@ -1,61 +1,46 @@
+import { ArrowUpRight } from "@/components/icons";
+
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative w-full min-h-[900px] overflow-hidden flex items-center justify-center px-4"
+      className="relative w-full min-h-[820px] overflow-hidden flex items-center justify-center px-4"
     >
-      {/* Decorative orb stack — centered behind text */}
+      {/* Particles / star field */}
+      <Particles />
+
+      {/* Soft blurred dual-color glow (no visible ring) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
       >
-        {/* Wrapper provides shared center; orbs are absolutely positioned within */}
-        <div className="relative w-[434px] h-[434px] -translate-y-[5%]">
-          {/* Big Circle (434×434, 229deg, violet→transparent→accent) */}
-          <div
-            className="absolute inset-0 rounded-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(229deg, #df7afe 13%, rgba(201,110,240,0) 35.02%, rgba(164,92,219,0) 64.17%, #cafa5a 88%)",
-            }}
-          />
-          {/* Small circle (310×310, mirrored 141deg) — concentric */}
+        <div className="relative w-[520px] h-[520px] -translate-y-[6%]">
+          {/* Lime upper glow */}
           <div
             className="absolute rounded-full"
             style={{
-              width: 310,
-              height: 310,
+              width: 360,
+              height: 240,
+              top: 60,
               left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundImage:
-                "linear-gradient(141deg, #df7afe 13%, rgba(201,110,240,0) 35.02%, rgba(164,92,219,0) 64.17%, #cafa5a 88%)",
+              transform: "translateX(-50%)",
+              background:
+                "radial-gradient(60% 60% at 50% 50%, rgba(202,250,90,0.55) 0%, rgba(202,250,90,0) 70%)",
+              filter: "blur(30px)",
             }}
           />
-          {/* Void — solid black 410×410 cut-out, creates the donut ring */}
-          <div
-            className="absolute rounded-full bg-black"
-            style={{
-              width: 410,
-              height: 410,
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-          {/* BG — soft blurred glow halo */}
+          {/* Pink/violet lower glow */}
           <div
             className="absolute rounded-full"
             style={{
-              width: 406,
-              height: 406,
+              width: 380,
+              height: 260,
+              top: 200,
               left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              opacity: 0.6,
-              filter: "blur(10px)",
-              backgroundImage:
-                "linear-gradient(229deg, #df7afe 13%, rgba(201,110,240,0) 35.02%, rgba(164,92,219,0) 64.17%, #cafa5a 88%)",
+              transform: "translateX(-50%) translateX(40px)",
+              background:
+                "radial-gradient(60% 60% at 50% 50%, rgba(223,122,254,0.45) 0%, rgba(223,122,254,0) 70%)",
+              filter: "blur(40px)",
             }}
           />
         </div>
@@ -63,42 +48,75 @@ export default function Hero() {
 
       {/* Centered text composition */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Top decorative pill badge */}
-        <div className="mb-6 inline-flex items-center rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-[12px] leading-[17px] text-white/80 backdrop-blur-sm">
-          AI chatbot integration on websites
+        {/* Top badge: lime "New" pill + label */}
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] py-1 pl-1 pr-3 text-[12px] leading-[17px] text-white/80 backdrop-blur-sm">
+          <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-semibold text-black">
+            New
+          </span>
+          <span>AI chatbot integration on websites</span>
         </div>
 
         {/* H1 — Figtree 600, 70/77, -2.2 tracking, white */}
         <h1
           className="font-display font-semibold text-white text-balance"
-          style={{
-            letterSpacing: "-2.2px",
-          }}
+          style={{ letterSpacing: "-2.2px" }}
         >
-          <span className="block text-[44px] leading-[1.1] sm:text-6xl sm:leading-[1.08] md:text-[70px] md:leading-[77px]">
+          <span className="block text-[44px] leading-[1.05] sm:text-6xl sm:leading-[1.05] md:text-[70px] md:leading-[77px]">
             Intelligent Solutions for
           </span>
-          <span className="block text-[44px] leading-[1.1] sm:text-6xl sm:leading-[1.08] md:text-[70px] md:leading-[77px]">
+          <span className="block text-[44px] leading-[1.05] sm:text-6xl sm:leading-[1.05] md:text-[70px] md:leading-[77px]">
             Modern Businesses.
           </span>
         </h1>
 
         {/* Sub — 18/27, #ccc, max 600px */}
-        <p className="mt-6 max-w-[600px] text-[18px] font-medium leading-[27px] text-[#cccccc]">
-          The first call is free. We listen, diagnose, then build exactly what
-          you need.
+        <p className="mt-6 max-w-[680px] text-[18px] font-medium leading-[27px] text-[#cccccc]">
+          The first call is free. We listen, diagnose, then build exactly what you need.
         </p>
 
-        {/* CTA — accent pill, dark text, 6px radius, 9px 13px padding */}
+        {/* CTA — accent pill with arrow icon */}
         <div className="mt-7">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-[6px] bg-accent px-[13px] py-[9px] text-[14px] font-medium leading-[18px] text-black no-underline transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-1.5 rounded-[6px] bg-accent px-3.5 py-2 text-[14px] font-medium leading-[18px] text-black no-underline transition-opacity hover:opacity-90"
           >
             Get in touch
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>
     </section>
+  );
+}
+
+function Particles() {
+  // 60 deterministic positions to look like a scattered star field
+  const stars = Array.from({ length: 60 }, (_, i) => {
+    const seed = i * 1.618;
+    const x = ((seed * 13.37) % 100).toFixed(2);
+    const y = ((seed * 7.91) % 100).toFixed(2);
+    const size = (((seed * 3.3) % 1.4) + 0.6).toFixed(2);
+    const opacity = (((seed * 0.71) % 0.5) + 0.25).toFixed(2);
+    return { x, y, size, opacity };
+  });
+  return (
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+    >
+      {stars.map((s, i) => (
+        <span
+          key={i}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: `${s.x}%`,
+            top: `${s.y}%`,
+            width: `${s.size}px`,
+            height: `${s.size}px`,
+            opacity: s.opacity,
+          }}
+        />
+      ))}
+    </div>
   );
 }
