@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   title: "Genossin Technologies",
   description:
     "A modern AI automation agency for startups and businesses. We design, develop, and integrate tailored AI workflows so your team can move faster.",
+  icons: {
+    icon: [
+      {
+        url: "/assets/GV95TgfnpG2cJiybCbMmvBVKg4.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+      },
+      {
+        url: "/assets/p7Lbvw5FtXUZVmWWgjuqwPnlASA.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
