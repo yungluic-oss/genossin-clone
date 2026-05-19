@@ -7,23 +7,23 @@ import { SectionHeader } from "./Services";
 const FAQS = [
   {
     q: "How can AI automation help my business?",
-    a: "",
+    a: "AI automation eliminates repetitive tasks, improves efficiency, and reduces errors. It allows your team to focus on high-value work while increasing productivity and lowering operational costs.",
   },
   {
     q: "Is AI automation difficult to integrate?",
-    a: "",
+    a: "No! Our AI solutions are designed for seamless integration with your existing tools and workflows. We provide step-by-step guidance to ensure a smooth and hassle-free setup.",
   },
   {
     q: "What industries can benefit from AI automation?",
-    a: "",
+    a: "AI automation is beneficial across various industries, including marketing, sales, finance, healthcare, customer support, and operations. Any business looking to improve efficiency can leverage AI.",
   },
   {
     q: "Do I need technical knowledge to use AI automation?",
-    a: "",
+    a: "Not at all! Our platform is user-friendly and built for all skill levels. We provide onboarding, tutorials, and customer support to ensure you can easily navigate and use the system.",
   },
   {
     q: "What kind of support do you offer?",
-    a: "",
+    a: "We offer comprehensive support, including onboarding assistance, troubleshooting, and ongoing updates. Our team is available to help with any questions or technical issues you may have.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function FAQ() {
           sub="Quick answers to your AI automation questions."
         />
 
-        <div className="mt-12 space-y-3">
+        <div className="mt-12 space-y-[2px]">
           {FAQS.map((item, i) => (
             <FaqItem key={i} q={item.q} a={item.a} />
           ))}
@@ -50,9 +50,9 @@ export default function FAQ() {
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
+    <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors hover:bg-white/[0.03]">
       <button
-        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-5 text-left"
+        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 min-h-[70px] py-4 text-left cursor-pointer"
         onClick={() => setOpen((s) => !s)}
         aria-expanded={open}
       >
@@ -70,17 +70,13 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       <div
-        className={`grid transition-[grid-template-rows] duration-300 ${
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 sm:px-6 pb-5 text-white/65 text-sm sm:text-[15px] leading-relaxed">
-            {a || (
-              <span className="text-white/40 italic">
-                Paste answer here.
-              </span>
-            )}
+          <p className="px-5 sm:px-6 pb-5 -mt-1 text-white/65 text-sm sm:text-[15px] leading-relaxed max-w-prose">
+            {a}
           </p>
         </div>
       </div>

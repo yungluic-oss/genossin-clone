@@ -54,16 +54,14 @@ function StepCard({
   return (
     <div className="card-surface relative overflow-hidden">
       <div className="p-7 flex flex-col gap-5 min-h-[420px]">
-        <div className="flex items-center justify-between">
-          <span className="text-[11px] px-2.5 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent uppercase tracking-[0.16em]">
+        <div>
+          <span className="inline-block text-[11px] px-2.5 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent uppercase tracking-[0.16em]">
             {step}
           </span>
-        </div>
-        <div className="flex-1">{visual}</div>
-        <div>
-          <h3 className="font-display text-2xl tracking-tight">{title}</h3>
+          <h3 className="mt-4 font-display text-2xl tracking-tight">{title}</h3>
           <p className="mt-2 text-sm text-white/60 leading-relaxed">{body}</p>
         </div>
+        <div className="flex-1 flex items-end">{visual}</div>
       </div>
     </div>
   );

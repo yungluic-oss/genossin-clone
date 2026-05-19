@@ -2,28 +2,32 @@ import { ArrowUpRight } from "@/components/icons";
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative py-28 px-4">
-      <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#15101e] via-[#0c0a14] to-black p-10 sm:p-16 text-center">
+    <section id="contact" className="relative px-4 pt-24 pb-12">
+      <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[32px] border border-white/10 bg-[#0a0710] px-8 py-20 sm:px-16 sm:py-24 text-center">
+        {/* Violet glow — top-left corner */}
         <div
           aria-hidden
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] glow-violet opacity-70 pointer-events-none"
+          className="pointer-events-none absolute -top-32 -left-32 h-[420px] w-[520px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(129,74,200,0.55),_transparent_70%)] blur-2xl"
         />
+        {/* Lime glow — bottom-right hairline */}
         <div
           aria-hidden
-          className="absolute -bottom-24 right-0 w-[400px] h-[300px] glow-lime opacity-50 pointer-events-none"
+          className="pointer-events-none absolute -bottom-40 -right-24 h-[360px] w-[440px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(202,250,90,0.18),_transparent_70%)] blur-3xl"
         />
 
-        <p className="relative inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/70">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          Let AI do the Work so you can Scale Faster
-        </p>
-        <h2 className="relative mt-6 font-display font-medium tracking-tight text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
-          Book a Call Today and
-          <br className="hidden sm:block" /> Start Automating
+        <h2 className="relative font-display font-normal tracking-[-0.04em] text-4xl sm:text-5xl leading-[1.05] text-white">
+          Let AI do the Work so
+          <br className="hidden sm:block" /> you can Scale Faster
         </h2>
-        <div className="relative mt-9 flex items-center justify-center gap-3 flex-wrap">
+        <p className="relative mt-5 text-[15px] sm:text-base text-white/70">
+          Book a Call Today and Start Automating
+        </p>
+
+        <div className="relative mt-8 flex items-center justify-center">
           <a
-            href="mailto:hello@genossin.com"
+            href="https://cal.com"
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center gap-2 pl-5 pr-1.5 py-1.5 rounded-full bg-accent text-black text-sm font-medium hover:bg-white transition-colors"
           >
             Book a free call
