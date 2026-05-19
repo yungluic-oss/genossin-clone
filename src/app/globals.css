@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0d0d0d;
+  --color-ink-2: #141417;
+  --color-ink-3: #181818;
+  --color-line: #ffffff14;
+  --color-line-strong: #ffffff26;
+
+  --color-accent: #cafa5a;
+  --color-violet: #814ac8;
+  --color-pink: #df7afe;
+
+  --color-muted: #ffffffad;
+  --color-muted-2: #ffffffbf;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #cafa5a;
+  color: #000;
+}
+
+.font-display {
+  font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glow-violet {
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(129, 74, 200, 0.45) 0%,
+    rgba(129, 74, 200, 0) 70%
+  );
+}
+
+.glow-lime {
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(202, 250, 90, 0.22) 0%,
+    rgba(202, 250, 90, 0) 70%
+  );
+}
+
+.hairline {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-surface {
+  background: linear-gradient(180deg, #131316 0%, #0b0b0d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
 }
