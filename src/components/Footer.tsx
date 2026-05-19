@@ -55,8 +55,8 @@ export default function Footer() {
         {/* Left block: wordmark + tagline + newsletter */}
         <div>
           <div className="flex items-center gap-3 text-white">
-            <StarMark className="h-8 w-auto" />
-            <Wordmark className="h-[26px] w-auto" />
+            <StarMark className="h-7 w-auto" />
+            <Wordmark className="h-[18px] w-auto" />
           </div>
 
           <p className="mt-6 max-w-[360px] text-[15px] text-white/65 leading-relaxed">
