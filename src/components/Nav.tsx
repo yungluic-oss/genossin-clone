@@ -15,7 +15,6 @@ const CTA_HREF = "#contact";
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
-  // Close drawer when viewport crosses lg breakpoint
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
     const onChange = () => mq.matches && setOpen(false);
@@ -23,7 +22,6 @@ export default function Nav() {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  // Lock scroll while mobile drawer open
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -34,117 +32,100 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <nav
-      data-framer-name="Desktop"
-      className="sticky top-0 z-40 w-full border-b border-white/[0.06] bg-black/70 text-white backdrop-blur-xl"
-    >
-      <div className="mx-auto flex h-[65px] w-full max-w-[1200px] items-center justify-between px-5 py-[10px]">
-        {/* Left: logo + wordmark */}
-        <a
-          href="./"
-          aria-label="Star Solutions — Startseite"
-          className="flex shrink-0 items-center gap-3 text-white"
-        >
-          <StarMark className="h-7 w-auto" />
-          <Wordmark className="h-[18px] w-auto" />
-        </a>
-
-        {/* Right cluster: links + CTA (desktop) */}
-        <div className="hidden items-center gap-8 lg:flex">
-          <ul className="flex items-center gap-8">
-            {LINKS.map((l) => (
-              <li key={l.label}>
-                <a
-                  href={l.href}
-                  className="font-display text-white/90 transition-colors hover:text-white"
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    letterSpacing: "-0.02em",
-                    lineHeight: 1,
-                  }}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
+    <div className="sticky top-4 z-40 px-4">
+      <nav
+        data-framer-name="Desktop"
+        className="skeo-raised relative mx-auto w-full max-w-[1180px]"
+        style={{ borderRadius: 22 }}
+      >
+        <div className="relative flex h-[64px] w-full items-center justify-between px-3 py-2 sm:px-4">
+          {/* Left: logo + wordmark */}
           <a
-            href={CTA_HREF}
-            className="font-display inline-flex items-center justify-center bg-accent text-black transition-[filter,transform] hover:brightness-95 active:translate-y-[1px]"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              letterSpacing: "-0.02em",
-              lineHeight: 1,
-              padding: "10px 16px",
-              borderRadius: "8px",
-            }}
+            href="#top"
+            aria-label="Star Solutions — Startseite"
+            className="flex shrink-0 items-center gap-3 text-[var(--color-ink)] pl-2"
           >
-            Projekt starten
+            <StarMark className="h-7 w-auto" />
+            <Wordmark className="h-[16px] w-auto" />
           </a>
-        </div>
 
-        {/* Mobile: hamburger */}
-        <button
-          type="button"
-          aria-label={open ? "Menü schliessen" : "Menü öffnen"}
-          aria-expanded={open}
-          onClick={() => setOpen((s) => !s)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/5 lg:hidden"
-        >
-          <span className="sr-only">Menü umschalten</span>
-          {open ? <CloseIcon /> : <HamburgerIcon />}
-        </button>
-      </div>
-
-      {/* Mobile drawer */}
-      {open && (
-        <div className="absolute left-0 right-0 top-[65px] z-50 border-t border-white/10 bg-black/95 backdrop-blur-xl lg:hidden">
-          <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-1 px-5 py-4">
-            <ul className="flex flex-col">
+          {/* Right cluster (desktop) */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <ul className="flex items-center gap-1">
               {LINKS.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="font-display block rounded-md px-3 py-3 text-white/90 hover:bg-white/5 hover:text-white"
-                    style={{
-                      fontSize: "16px",
-                      fontWeight: 500,
-                      letterSpacing: "-0.02em",
-                    }}
+                    className="font-display rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.01em] text-[var(--color-ink-2)] transition-colors hover:bg-black/[0.04] hover:text-[var(--color-ink)]"
                   >
                     {l.label}
                   </a>
                 </li>
               ))}
             </ul>
+
             <a
               href={CTA_HREF}
-              onClick={() => setOpen(false)}
-              className="font-display mt-3 inline-flex items-center justify-center bg-accent text-black"
-              style={{
-                fontSize: "14px",
-                fontWeight: 500,
-                letterSpacing: "-0.02em",
-                lineHeight: 1,
-                padding: "12px 16px",
-                borderRadius: "8px",
-              }}
+              className="skeo-btn-neon font-display ml-2 text-[13.5px]"
+              style={{ padding: "10px 16px" }}
             >
+              <span className="led-green" style={{ width: 7, height: 7 }} />
               Projekt starten
             </a>
           </div>
+
+          {/* Mobile: hamburger */}
+          <button
+            type="button"
+            aria-label={open ? "Menü schliessen" : "Menü öffnen"}
+            aria-expanded={open}
+            onClick={() => setOpen((s) => !s)}
+            className="skeo-btn-ghost inline-flex h-10 w-10 items-center justify-center lg:hidden"
+            style={{ borderRadius: 12, padding: 0 }}
+          >
+            <span className="sr-only">Menü umschalten</span>
+            {open ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile drawer */}
+        {open && (
+          <div
+            className="skeo-raised absolute left-0 right-0 top-[72px] z-50 lg:hidden"
+            style={{ borderRadius: 18 }}
+          >
+            <div className="flex flex-col gap-1 p-4">
+              <ul className="flex flex-col gap-1">
+                {LINKS.map((l) => (
+                  <li key={l.label}>
+                    <a
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className="font-display block rounded-lg px-3 py-3 text-[15px] font-medium text-[var(--color-ink-2)] hover:bg-black/[0.04] hover:text-[var(--color-ink)]"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={CTA_HREF}
+                onClick={() => setOpen(false)}
+                className="skeo-btn-neon font-display mt-3 text-[14px]"
+                style={{ padding: "12px 16px" }}
+              >
+                <span className="led-green" style={{ width: 7, height: 7 }} />
+                Projekt starten
+              </a>
+            </div>
+          </div>
+        )}
+      </nav>
+    </div>
   );
 }
 
 export function StarMark({ className = "h-8 w-auto" }: { className?: string }) {
-  // The Stern mark from the Starvision identity — shared across both brands.
   return (
     <svg
       viewBox="0 0 499.52 438.18"
@@ -158,9 +139,6 @@ export function StarMark({ className = "h-8 w-auto" }: { className?: string }) {
 }
 
 export function Wordmark({ className = "h-6 w-auto" }: { className?: string }) {
-  // viewBox cropped to the content bbox — the source SVG has ~70% empty padding
-  // around the letters, which is why the wordmark looked tiny at any reasonable
-  // pixel height. Tight crop = readable wordmark at h-6/h-7 in a nav bar.
   return (
     <svg
       viewBox="100 388 1758 143"
@@ -202,7 +180,7 @@ function HamburgerIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.2"
       strokeLinecap="round"
     >
       <path d="M4 7h16M4 12h16M4 17h16" />
@@ -218,7 +196,7 @@ function CloseIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.2"
       strokeLinecap="round"
     >
       <path d="M6 6l12 12M18 6 6 18" />

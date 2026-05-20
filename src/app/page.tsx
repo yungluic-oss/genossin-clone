@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-black text-white overflow-hidden">
+    <main className="relative overflow-hidden bg-[var(--color-paper)] text-[var(--color-ink)]">
       <Nav />
       <Hero />
       <LogoStrip />

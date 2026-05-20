@@ -62,7 +62,7 @@ export default function RootLayout({
       lang="de-CH"
       className={`${dmSans.variable} ${figtree.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-black text-white">{children}</body>
+      <body className="min-h-full bg-[var(--color-paper)] text-[var(--color-ink)]">{children}</body>
     </html>
   );
 }

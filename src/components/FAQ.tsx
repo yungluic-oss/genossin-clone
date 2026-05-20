@@ -32,31 +32,32 @@ const FAQS = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="relative py-28 px-4">
-      <div className="relative max-w-3xl mx-auto">
+    <section id="faq" className="relative px-4 py-28">
+      <div className="relative mx-auto max-w-3xl">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center px-3 py-1.5 rounded-md bg-white/[0.05] text-[12px] text-white/85 leading-none">
+          <span className="skeo-nameplate font-display">
+            <span className="led-green" style={{ width: 7, height: 7 }} />
             FAQ
           </span>
           <h2
-            className="mt-5 font-display max-w-3xl"
+            className="font-display headline-engraved mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
               letterSpacing: "-2px",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             Die häufigsten Fragen,
             <br className="hidden sm:block" /> ehrlich beantwortet.
           </h2>
-          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+          <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
             Sollte etwas fehlen — schreiben Sie uns einfach. Wir antworten
             innerhalb von 24h.
           </p>
         </div>
 
-        <div className="mt-12 space-y-[2px]">
+        <div className="mt-12 space-y-3">
           {FAQS.map((item, i) => (
             <FaqItem key={i} q={item.q} a={item.a} />
           ))}
@@ -69,23 +70,31 @@ export default function FAQ() {
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors hover:bg-white/[0.03]">
+    <div
+      className="skeo-raised overflow-hidden"
+      style={{ borderRadius: 16 }}
+    >
       <button
-        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 min-h-[70px] py-4 text-left cursor-pointer"
+        className="font-display flex w-full min-h-[68px] cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left sm:px-6"
         onClick={() => setOpen((s) => !s)}
         aria-expanded={open}
       >
-        <span className="font-display text-lg sm:text-xl tracking-tight">
+        <span
+          className="headline-engraved text-lg tracking-tight sm:text-xl"
+          style={{ fontWeight: 600 }}
+        >
           {q}
         </span>
         <span
-          className={`w-8 h-8 shrink-0 rounded-full inline-flex items-center justify-center border transition-colors ${
-            open
-              ? "bg-accent text-black border-accent"
-              : "bg-white/[0.04] text-white border-white/10"
+          className={`inline-flex h-9 w-9 shrink-0 items-center justify-center ${
+            open ? "skeo-btn-neon" : "skeo-btn-ghost"
           }`}
+          style={{
+            borderRadius: 999,
+            padding: 0,
+          }}
         >
-          {open ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+          {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
         </span>
       </button>
       <div
@@ -94,9 +103,12 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 sm:px-6 pb-5 -mt-1 text-white/65 text-sm sm:text-[15px] leading-relaxed max-w-prose">
-            {a}
-          </p>
+          <div className="px-5 pb-5 sm:px-6">
+            <hr className="skeo-groove mb-4" />
+            <p className="max-w-prose text-[14.5px] leading-relaxed text-[var(--color-ink-2)] sm:text-[15px]">
+              {a}
+            </p>
+          </div>
         </div>
       </div>
     </div>

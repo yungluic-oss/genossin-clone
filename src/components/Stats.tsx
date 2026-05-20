@@ -7,26 +7,49 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section aria-label="Zahlen" className="relative py-16 px-4">
-      <div className="relative mx-auto max-w-[1100px]">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] sm:grid-cols-4">
-          {STATS.map((s) => (
+    <section aria-label="Zahlen" className="relative px-4 py-14">
+      <div
+        className="skeo-raised relative mx-auto max-w-[1100px] overflow-hidden"
+        style={{ borderRadius: 22 }}
+      >
+        <div className="grid grid-cols-2 sm:grid-cols-4">
+          {STATS.map((s, i) => (
             <div
               key={s.l}
-              className="bg-[#0a0a0d] p-6 text-center sm:p-8"
+              className="relative px-6 py-9 text-center sm:px-8 sm:py-11"
+              style={{
+                borderRight:
+                  i < STATS.length - 1
+                    ? "1px solid rgba(0,0,0,0.08)"
+                    : undefined,
+                boxShadow:
+                  i < STATS.length - 1
+                    ? "1px 0 0 0 rgba(255,255,255,0.8)"
+                    : undefined,
+              }}
             >
-              <p
-                className="font-display text-white"
-                style={{
-                  fontSize: "clamp(34px, 4vw, 48px)",
-                  letterSpacing: "-1.5px",
-                  lineHeight: 1,
-                  fontWeight: 500,
-                }}
+              <div
+                className="skeo-inset mx-auto inline-flex min-w-[110px] items-center justify-center px-5 py-3"
+                style={{ borderRadius: 12 }}
               >
-                {s.v}
-              </p>
-              <p className="mt-3 text-[12px] uppercase tracking-[0.18em] text-white/55">
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: "clamp(28px, 3.5vw, 40px)",
+                    letterSpacing: "-1px",
+                    lineHeight: 1,
+                    fontWeight: 700,
+                    color: "#0a4a00",
+                    textShadow:
+                      "0 1px 0 rgba(255,255,255,0.7), 0 0 12px rgba(57,255,20,0.45)",
+                    fontFamily:
+                      "'JetBrains Mono', ui-monospace, SFMono-Regular, monospace",
+                  }}
+                >
+                  {s.v}
+                </span>
+              </div>
+              <p className="engraved mt-4 text-[11px] uppercase tracking-[0.18em] text-[var(--color-ink-3)]">
                 {s.l}
               </p>
             </div>

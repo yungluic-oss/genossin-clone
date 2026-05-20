@@ -1,12 +1,12 @@
 type IconProps = React.SVGProps<SVGSVGElement>;
 
 const baseSvg: IconProps = {
-  width: 20,
-  height: 20,
+  width: 22,
+  height: 22,
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.6,
+  strokeWidth: 1.8,
   strokeLinecap: "round",
   strokeLinejoin: "round",
 };
@@ -18,12 +18,9 @@ function IconChartUp(props: IconProps) {
       <rect x="5" y="13" width="3.2" height="6" rx="0.6" />
       <rect x="10.4" y="9" width="3.2" height="10" rx="0.6" />
       <rect x="15.8" y="5" width="3.2" height="14" rx="0.6" />
-      <path d="M5 9l4-3 4 3 5-4" />
-      <path d="M14 2h4v4" />
     </svg>
   );
 }
-
 function IconSmile(props: IconProps) {
   return (
     <svg {...baseSvg} {...props}>
@@ -34,7 +31,6 @@ function IconSmile(props: IconProps) {
     </svg>
   );
 }
-
 function IconClock(props: IconProps) {
   return (
     <svg {...baseSvg} {...props}>
@@ -43,7 +39,6 @@ function IconClock(props: IconProps) {
     </svg>
   );
 }
-
 function IconCoin(props: IconProps) {
   return (
     <svg {...baseSvg} {...props}>
@@ -53,7 +48,6 @@ function IconCoin(props: IconProps) {
     </svg>
   );
 }
-
 function IconLightbulb(props: IconProps) {
   return (
     <svg {...baseSvg} {...props}>
@@ -63,7 +57,6 @@ function IconLightbulb(props: IconProps) {
     </svg>
   );
 }
-
 function IconScale(props: IconProps) {
   return (
     <svg {...baseSvg} {...props}>
@@ -74,86 +67,61 @@ function IconScale(props: IconProps) {
 }
 
 const ITEMS: { icon: React.ReactNode; title: string; body: string }[] = [
-  {
-    icon: <IconChartUp />,
-    title: "Moderner Tech-Stack",
-    body: "Next.js, TypeScript, Postgres, React Native — Technologien mit grosser Community, langer Lebensdauer und einfacher Hire-bility.",
-  },
-  {
-    icon: <IconCoin />,
-    title: "Sie besitzen den Code",
-    body: "Kein Vendor-Lock-in. Das gesamte Repository, die CI/CD-Konfiguration und die Infrastruktur gehen am Ende vollständig in Ihren Besitz über.",
-  },
-  {
-    icon: <IconClock />,
-    title: "Speed-to-Launch",
-    body: "Pragmatischer Scope, klare Sprints und ein erfahrenes Team. Erste Live-Version typischerweise nach 4 – 8 Wochen, nicht nach Quartalen.",
-  },
-  {
-    icon: <IconScale />,
-    title: "Skalierbar von Tag eins",
-    body: "Wir entwickeln so, dass Ihr Produkt von 100 auf 100'000 Nutzer wachsen kann — ohne dass die Architektur neu geschrieben werden muss.",
-  },
-  {
-    icon: <IconSmile />,
-    title: "Design-led",
-    body: "Bevor wir programmieren, designen wir. Klare UX, durchdachte Microinteractions und ein Look, der zu Ihrer Marke passt.",
-  },
-  {
-    icon: <IconLightbulb />,
-    title: "Langfristige Partnerschaft",
-    body: "Nach dem Launch ist nicht Schluss. Wir bleiben verfügbar — als Retainer für Wartung und Features, oder per On-Demand-Abruf.",
-  },
+  { icon: <IconChartUp />, title: "Moderner Tech-Stack", body: "Next.js, TypeScript, Postgres, React Native — Technologien mit grosser Community, langer Lebensdauer und einfacher Hire-bility." },
+  { icon: <IconCoin />, title: "Sie besitzen den Code", body: "Kein Vendor-Lock-in. Das gesamte Repository, die CI/CD-Konfiguration und die Infrastruktur gehen am Ende vollständig in Ihren Besitz über." },
+  { icon: <IconClock />, title: "Speed-to-Launch", body: "Pragmatischer Scope, klare Sprints und ein erfahrenes Team. Erste Live-Version typischerweise nach 4 – 8 Wochen, nicht nach Quartalen." },
+  { icon: <IconScale />, title: "Skalierbar von Tag eins", body: "Wir entwickeln so, dass Ihr Produkt von 100 auf 100'000 Nutzer wachsen kann — ohne dass die Architektur neu geschrieben werden muss." },
+  { icon: <IconSmile />, title: "Design-led", body: "Bevor wir programmieren, designen wir. Klare UX, durchdachte Microinteractions und ein Look, der zu Ihrer Marke passt." },
+  { icon: <IconLightbulb />, title: "Langfristige Partnerschaft", body: "Nach dem Launch ist nicht Schluss. Wir bleiben verfügbar — als Retainer für Wartung und Features, oder per On-Demand-Abruf." },
 ];
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="relative py-28 px-4">
-      <div className="relative max-w-6xl mx-auto">
+    <section id="benefits" className="relative px-4 py-28">
+      <div className="relative mx-auto max-w-6xl">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="skeo-nameplate font-display">
+            <span className="led-green" style={{ width: 7, height: 7 }} />
             Warum Star Solutions
           </span>
           <h2
-            className="font-display mt-5 max-w-3xl"
+            className="font-display headline-engraved mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
               letterSpacing: "-2px",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             Sechs Gründe, warum Teams uns
             <br className="hidden sm:block" /> zur Software-Hand werden lassen.
           </h2>
-          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+          <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
             Wir sind klein genug, um direkt zu arbeiten — und erfahren genug,
             um Software zu liefern, die in Produktion bleibt.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((b) => (
             <div
               key={b.title}
-              className="relative overflow-hidden rounded-2xl p-7 bg-[#0f0f12] border border-white/[0.06]"
+              className="skeo-raised relative overflow-hidden p-7"
+              style={{ borderRadius: 18 }}
             >
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -bottom-20 -right-20 w-56 h-56 rounded-full"
-                style={{
-                  background:
-                    "radial-gradient(50% 50% at 50% 50%, rgba(74,115,200,0.18) 0%, rgba(74,115,200,0) 70%)",
-                }}
-              />
-              <span className="relative inline-flex w-9 h-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/85">
+              <span
+                className="skeo-inset relative inline-flex h-12 w-12 items-center justify-center text-[#0a4a00]"
+                style={{ borderRadius: 12 }}
+              >
                 {b.icon}
               </span>
-              <h3 className="relative mt-5 font-display text-[21px] leading-tight tracking-tight text-white">
+              <h3
+                className="font-display headline-engraved mt-5 text-[22px] leading-tight"
+                style={{ letterSpacing: "-0.5px", fontWeight: 600 }}
+              >
                 {b.title}
               </h3>
-              <p className="relative mt-2 text-[14px] leading-relaxed text-white/55">
+              <p className="mt-2 text-[14px] leading-relaxed text-[var(--color-ink-3)]">
                 {b.body}
               </p>
             </div>

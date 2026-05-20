@@ -4,77 +4,357 @@
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0d0d0d;
-  --color-ink-2: #141417;
-  --color-ink-3: #181818;
-  --color-line: #ffffff14;
-  --color-line-strong: #ffffff26;
+  /* Light paper palette */
+  --color-paper: #f3f1ea;
+  --color-paper-2: #ebe9e2;
+  --color-paper-3: #dcd9cf;
+  --color-ink: #0a0a0a;
+  --color-ink-2: #2a2a2a;
+  --color-ink-3: #4a4a4a;
+  --color-line: #00000014;
+  --color-line-strong: #00000026;
 
-  --color-accent: #bfd4de;
-  --color-accent-strong: #94b6c7;
-  --color-violet: #4a73c8;
-  --color-pink: #7aa9fe;
+  /* Neon green accent */
+  --color-accent: #39ff14;
+  --color-accent-bright: #6dff3a;
+  --color-accent-deep: #1fa800;
+  --color-accent-ink: #0a4a00;
 
-  --color-muted: #ffffffad;
-  --color-muted-2: #ffffffbf;
+  /* Backwards-compat aliases (some old code referenced these tokens) */
+  --color-accent-strong: #1fa800;
+  --color-violet: #2eb800;
+  --color-pink: #6dff3a;
+
+  --color-muted: #00000099;
+  --color-muted-2: #000000bf;
 }
 
 html,
 body {
-  background: #000;
-  color: #fff;
+  background: var(--color-paper);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
 }
 
 body {
   font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  background-image:
+    /* Subtle noise/paper grain */
+    radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.025) 1px, transparent 0),
+    /* Top vignette */
+    radial-gradient(120% 60% at 50% 0%, rgba(255, 255, 255, 0.9), transparent 60%);
+  background-size: 6px 6px, 100% 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 ::selection {
-  background: #bfd4de;
-  color: #000;
+  background: #39ff14;
+  color: #0a0a0a;
 }
 
 .font-display {
   font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* ============================================================ */
+/*  SKEUOMORPHIC UTILITIES                                       */
+/* ============================================================ */
+
+/* Raised surface — like a panel lifting off the page */
+.skeo-raised {
+  background: linear-gradient(180deg, #ffffff 0%, #e8e6dd 100%);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow:
+    /* Inner top highlight */
+    0 1px 0 0 rgba(255, 255, 255, 0.95) inset,
+    /* Inner bottom shadow */
+    0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+    /* Drop shadow soft */
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 6px 14px -4px rgba(0, 0, 0, 0.15),
+    0 18px 36px -12px rgba(0, 0, 0, 0.18);
+  border-radius: 18px;
+}
+
+/* Lighter / smaller raised — for inline chips and buttons */
+.skeo-raised-sm {
+  background: linear-gradient(180deg, #ffffff 0%, #ece9df 100%);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.08) inset,
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 3px 6px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Inset / recessed — input fields, recessed wells */
+.skeo-inset {
+  background: linear-gradient(180deg, #d6d3c8 0%, #ece9df 60%, #f0ede3 100%);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow:
+    /* Inner top shadow */
+    0 2px 4px 0 rgba(0, 0, 0, 0.18) inset,
+    0 1px 2px 0 rgba(0, 0, 0, 0.12) inset,
+    /* Inner bottom highlight */
+    0 -1px 0 0 rgba(255, 255, 255, 0.6) inset,
+    /* Outer ring highlight */
+    0 1px 0 0 rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+}
+
+/* Even deeper inset — for screens, displays */
+.skeo-inset-deep {
+  background:
+    linear-gradient(180deg, #cfcdc3 0%, #e0ddd2 100%);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  box-shadow:
+    0 3px 6px 0 rgba(0, 0, 0, 0.22) inset,
+    0 1px 2px 0 rgba(0, 0, 0, 0.16) inset,
+    0 -1px 0 0 rgba(255, 255, 255, 0.5) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+}
+
+/* Neon-green raised button — the primary CTA */
+.skeo-btn-neon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #0a2a00;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  background:
+    linear-gradient(180deg, #8dff5e 0%, #39ff14 45%, #20d400 100%);
+  border: 1px solid #1a7a00;
+  border-radius: 14px;
+  box-shadow:
+    /* Top inner highlight */
+    0 1px 0 0 rgba(255, 255, 255, 0.65) inset,
+    0 2px 6px 0 rgba(255, 255, 255, 0.35) inset,
+    /* Bottom inner shadow */
+    0 -2px 0 0 rgba(0, 0, 0, 0.18) inset,
+    /* Neon halo */
+    0 0 0 1px rgba(57, 255, 20, 0.2),
+    0 0 18px rgba(57, 255, 20, 0.55),
+    /* Drop shadow */
+    0 4px 8px rgba(0, 0, 0, 0.18),
+    0 8px 18px -6px rgba(0, 0, 0, 0.22);
+  transition: transform 0.08s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+.skeo-btn-neon:hover {
+  filter: brightness(1.04);
+}
+.skeo-btn-neon:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.18) inset,
+    0 0 0 1px rgba(57, 255, 20, 0.2),
+    0 0 10px rgba(57, 255, 20, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Ghost/secondary raised button — light surface */
+.skeo-btn-ghost {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #0a0a0a;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  background: linear-gradient(180deg, #ffffff 0%, #e8e6dd 100%);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.95) inset,
+    0 -2px 0 0 rgba(0, 0, 0, 0.06) inset,
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 6px 12px -4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+.skeo-btn-ghost:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #ece9df 100%);
+}
+.skeo-btn-ghost:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.7) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.1) inset,
+    0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Neon LED indicator — small glowing dot */
+.led-green {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 30%, #d8ffb3 0%, #39ff14 50%, #1a7a00 100%);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.15),
+    0 0 6px rgba(57, 255, 20, 0.95),
+    0 0 14px rgba(57, 255, 20, 0.55),
+    0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+.led-green::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 35% 25%,
+    rgba(255, 255, 255, 0.7) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* Tiny "off" / muted LED — gray pearl */
+.led-off {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #f5f3ec 0%, #c5c2b6 70%, #8b8979 100%);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.18) inset;
+}
+
+/* Engraved text effect (letterpress, sunk into paper) */
+.engraved {
+  color: #0a0a0a;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85),
+    0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Embossed text effect (raised) */
+.embossed {
+  color: #1a1a1a;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Headline display style — strongly engraved */
+.headline-engraved {
+  color: #0a0a0a;
+  text-shadow:
+    0 1px 0 #ffffff,
+    0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+/* Metal nameplate / eyebrow tag */
+.skeo-nameplate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: linear-gradient(180deg, #f8f6ed 0%, #d8d5c8 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.05) inset,
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Neon outline ring — for highlighted/active states */
+.neon-ring {
+  box-shadow:
+    0 0 0 2px rgba(57, 255, 20, 0.5),
+    0 0 12px rgba(57, 255, 20, 0.4);
+}
+
+/* "Glass" overlay highlight across the top of any raised surface */
+.skeo-gloss::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Hairline divider — engraved groove */
+.skeo-groove {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 50%,
+    transparent 100%
+  );
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  border: 0;
+}
+
+/* ============================================================ */
+/*  Legacy / compat                                              */
+/* ============================================================ */
+
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
 .glow-violet {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(74, 115, 200, 0.45) 0%,
-    rgba(74, 115, 200, 0) 70%
+    rgba(57, 255, 20, 0.18) 0%,
+    rgba(57, 255, 20, 0) 70%
   );
 }
 
 .glow-blue {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(191, 212, 222, 0.22) 0%,
-    rgba(191, 212, 222, 0) 70%
+    rgba(57, 255, 20, 0.12) 0%,
+    rgba(57, 255, 20, 0) 70%
   );
 }
 
 .hairline {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card-surface {
-  background: linear-gradient(180deg, #131316 0%, #0b0b0d 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #e8e6dd 100%);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+    0 6px 14px -4px rgba(0, 0, 0, 0.15),
+    0 18px 36px -12px rgba(0, 0, 0, 0.18);
 }
 
 @keyframes marquee {
@@ -102,9 +382,29 @@ body {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 0.4; }
+  0%, 100% { opacity: 0.55; }
   50% { opacity: 1; }
 }
 .animate-pulse-dot {
   animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.15),
+      0 0 6px rgba(57, 255, 20, 0.95),
+      0 0 14px rgba(57, 255, 20, 0.55),
+      0 1px 1px rgba(0, 0, 0, 0.2) inset;
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.15),
+      0 0 10px rgba(57, 255, 20, 1),
+      0 0 22px rgba(57, 255, 20, 0.85),
+      0 1px 1px rgba(0, 0, 0, 0.2) inset;
+  }
+}
+.animate-neon {
+  animation: neon-pulse 1.8s ease-in-out infinite;
 }

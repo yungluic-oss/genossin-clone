@@ -6,37 +6,32 @@ import type { ReactNode } from "react";
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 sm:py-28 px-4">
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-72 glow-violet opacity-30 pointer-events-none"
-      />
-
-      <div className="relative max-w-[1100px] mx-auto">
+    <section id="services" className="relative px-4 py-24 sm:py-28">
+      <div className="relative mx-auto max-w-[1100px]">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="skeo-nameplate font-display">
+            <span className="led-green" style={{ width: 7, height: 7 }} />
             Leistungen
           </span>
           <h2
-            className="font-display mt-5 max-w-3xl"
+            className="font-display headline-engraved mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
               letterSpacing: "-2px",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             Software, die heute produktiv geht —
             <br className="hidden sm:block" /> und morgen noch wartbar ist.
           </h2>
-          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+          <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
             Vom MVP zum produktiven Produkt: Wir konzipieren, designen und
             entwickeln Software — und übergeben sauberen Code, den Sie besitzen.
           </p>
         </div>
 
-        <div className="mt-14 flex flex-col gap-5">
+        <div className="mt-14 flex flex-col gap-6">
           <ServiceCard
             reverse={false}
             eyebrow="Web-Apps & Plattformen"
@@ -75,7 +70,7 @@ export default function Services() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Shared header (consumed by FAQ.tsx — keep export!)                         */
+/*  Shared header (consumed by FAQ.tsx)                                        */
 /* -------------------------------------------------------------------------- */
 
 export function SectionHeader({
@@ -91,23 +86,25 @@ export function SectionHeader({
 }) {
   return (
     <div className={`flex flex-col ${center ? "items-center text-center" : ""}`}>
-      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/70">
-        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+      <span className="skeo-nameplate font-display">
+        <span className="led-green" style={{ width: 7, height: 7 }} />
         {eyebrow}
       </span>
       <h2
-        className="mt-5 font-display max-w-3xl"
+        className="font-display headline-engraved mt-5 max-w-3xl"
         style={{
           fontSize: "clamp(32px, 4vw, 50px)",
           lineHeight: "1.1",
           letterSpacing: "-2px",
-          fontWeight: 400,
+          fontWeight: 500,
         }}
       >
         {title}
       </h2>
       {sub ? (
-        <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">{sub}</p>
+        <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
+          {sub}
+        </p>
       ) : null}
     </div>
   );
@@ -132,38 +129,33 @@ function ServiceCard({
 }) {
   return (
     <article
-      className="relative overflow-hidden rounded-3xl"
-      style={{
-        background:
-          "linear-gradient(180deg, #141417 0%, #0b0b0d 100%)",
-        minHeight: 350,
-      }}
+      className="skeo-raised relative overflow-hidden"
+      style={{ borderRadius: 24, minHeight: 360 }}
     >
       <div
-        className={`relative grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-10 items-center p-7 sm:p-9 ${
+        className={`relative grid grid-cols-1 items-center gap-8 p-7 sm:p-9 lg:grid-cols-[1.05fr_1fr] lg:gap-10 ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        {/* Visual */}
         <div className="relative">{visual}</div>
 
-        {/* Copy */}
         <div className="flex flex-col gap-4">
-          <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-white/[0.05] text-[12px] text-white/85 leading-none">
+          <span className="skeo-nameplate self-start font-display">
+            <span className="led-green" style={{ width: 7, height: 7 }} />
             {eyebrow}
           </span>
           <h3
-            className="font-display"
+            className="font-display headline-engraved"
             style={{
-              fontSize: "35px",
-              lineHeight: "38.5px",
-              letterSpacing: "-1.4px",
-              fontWeight: 500,
+              fontSize: "32px",
+              lineHeight: "36px",
+              letterSpacing: "-1.2px",
+              fontWeight: 600,
             }}
           >
             {title}
           </h3>
-          <p className="text-[15px] text-white/55 leading-relaxed max-w-md">
+          <p className="text-[15px] leading-relaxed text-[var(--color-ink-3)] max-w-md">
             {body}
           </p>
         </div>
@@ -173,67 +165,63 @@ function ServiceCard({
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Card 1 — Workflow Automation                                               */
+/*  Card 1 — Build pipeline                                                    */
 /* -------------------------------------------------------------------------- */
 
 function WorkflowVisual() {
   type Row = {
     label: string;
     meta: string;
-    dot: "violet" | "amber" | "rose" | "emerald" | "white";
-    metaTone?: "muted" | "violet" | "rose" | "emerald";
+    state: "live" | "ready" | "review" | "done" | "wip";
   };
   const rows: Row[] = [
-    { label: "Onboarding-Flow", meta: "Live in Production", dot: "emerald", metaTone: "emerald" },
-    { label: "Stripe-Checkout", meta: "Deploy bereit", dot: "violet", metaTone: "violet" },
-    { label: "Admin-Dashboard", meta: "QA in Review", dot: "amber", metaTone: "violet" },
-    { label: "Auth & Permissions", meta: "vor 1 Tag", dot: "emerald", metaTone: "muted" },
-    { label: "API-Endpoint /v2", meta: "in Entwicklung", dot: "violet", metaTone: "violet" },
+    { label: "Onboarding-Flow", meta: "Live in Production", state: "live" },
+    { label: "Stripe-Checkout", meta: "Deploy bereit", state: "ready" },
+    { label: "Admin-Dashboard", meta: "QA in Review", state: "review" },
+    { label: "Auth & Permissions", meta: "vor 1 Tag", state: "done" },
+    { label: "API-Endpoint /v2", meta: "in Entwicklung", state: "wip" },
   ];
-  const dotMap: Record<Row["dot"], string> = {
-    violet: "bg-violet",
-    amber: "bg-amber-400",
-    rose: "bg-rose-400",
-    emerald: "bg-emerald-400",
-    white: "bg-white",
-  };
-  const metaMap = {
-    muted: "text-white/45",
-    violet: "text-violet",
-    rose: "text-rose-300",
-    emerald: "text-emerald-300",
-  } as const;
-
   return (
-    <div
-      className="rounded-2xl border border-white/[0.06] p-4 backdrop-blur-sm"
-      style={{
-        background: "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-      }}
-    >
-      <div className="flex items-center justify-between mb-3">
+    <div className="skeo-inset p-4" style={{ borderRadius: 16 }}>
+      <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-violet/20 border border-violet/40 grid place-items-center">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-violet">
+          <span
+            className="grid h-6 w-6 place-items-center rounded-md text-[#0a4a00]"
+            style={{
+              background:
+                "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #20d400 100%)",
+              border: "1px solid #1a7a00",
+              boxShadow:
+                "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(57,255,20,0.6)",
+            }}
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 11l3 3L22 4" />
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
             </svg>
-          </div>
-          <p className="text-[13px] font-medium text-white/90">Build-Pipeline</p>
+          </span>
+          <p className="text-[13px] font-medium text-[var(--color-ink)]">
+            Build-Pipeline
+          </p>
         </div>
-        <span className="text-[11px] text-white/45">5 aktive Tasks</span>
+        <span className="text-[11px] text-[var(--color-ink-3)]">5 aktive Tasks</span>
       </div>
       <div className="space-y-1.5">
         {rows.map((r) => (
           <div
             key={r.label}
-            className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.05]"
+            className="skeo-raised-sm flex items-center justify-between px-3 py-2.5"
+            style={{ borderRadius: 10 }}
           >
-            <span className="flex items-center gap-2.5 text-[12.5px] text-white/85">
-              <span className={`w-1.5 h-1.5 rounded-full ${dotMap[r.dot]}`} />
+            <span className="flex items-center gap-2.5 text-[12.5px] text-[var(--color-ink)]">
+              {r.state === "live" || r.state === "done" ? (
+                <span className="led-green" style={{ width: 7, height: 7 }} />
+              ) : (
+                <span className="led-off" style={{ width: 7, height: 7 }} />
+              )}
               {r.label}
             </span>
-            <span className={`text-[11px] ${metaMap[r.metaTone ?? "muted"]}`}>{r.meta}</span>
+            <span className="text-[11px] text-[var(--color-ink-3)]">{r.meta}</span>
           </div>
         ))}
       </div>
@@ -242,7 +230,7 @@ function WorkflowVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Card 2 — AI Assistant                                                      */
+/*  Card 2 — AI agent                                                          */
 /* -------------------------------------------------------------------------- */
 
 function AssistantVisual() {
@@ -255,16 +243,14 @@ function AssistantVisual() {
 
   return (
     <div
-      className="rounded-2xl border border-white/[0.06] p-5 flex flex-col gap-4"
-      style={{
-        background: "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-      }}
+      className="skeo-inset flex flex-col gap-4 p-5"
+      style={{ borderRadius: 16 }}
     >
       <div>
-        <p className="font-display text-[22px] tracking-tight">
+        <p className="font-display headline-engraved text-[22px] tracking-tight">
           Was möchten Sie wissen?
         </p>
-        <p className="mt-1.5 text-[12px] text-white/55 leading-relaxed max-w-[32ch]">
+        <p className="mt-1.5 max-w-[32ch] text-[12px] leading-relaxed text-[var(--color-ink-3)]">
           Ihr Custom AI-Agent — trainiert auf Ihre Daten, integriert in Ihre
           Tools, im Stil Ihrer Marke.
         </p>
@@ -274,7 +260,8 @@ function AssistantVisual() {
         {tools.map((t) => (
           <div
             key={t.label}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.04] border border-white/[0.06] text-[12px] text-white/85"
+            className="skeo-raised-sm flex items-center gap-2 px-3 py-2 text-[12px] text-[var(--color-ink)]"
+            style={{ borderRadius: 10 }}
           >
             <ToolIcon name={t.icon} />
             <span>{t.label}</span>
@@ -283,13 +270,19 @@ function AssistantVisual() {
       </div>
 
       <div className="relative">
-        <div className="flex items-center gap-2 pl-4 pr-2 py-2 rounded-full bg-white/[0.05] border border-white/10">
-          <span className="text-[12.5px] text-white/85 flex-1 truncate">
+        <div
+          className="skeo-raised-sm flex items-center gap-2 py-2 pl-4 pr-2"
+          style={{ borderRadius: 999 }}
+        >
+          <span className="flex-1 truncate text-[12.5px] text-[var(--color-ink)]">
             Fasse die letzten 10 Tickets zusammen
-            <span className="inline-block w-[1px] h-[14px] bg-accent ml-0.5 align-middle animate-pulse-dot" />
+            <span className="ml-0.5 inline-block h-[14px] w-[1.5px] animate-pulse-dot align-middle bg-[#39ff14]" />
           </span>
-          <button className="w-7 h-7 rounded-full bg-accent grid place-items-center text-black">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <button
+            className="skeo-btn-neon"
+            style={{ width: 30, height: 30, padding: 0, borderRadius: 999 }}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />
               <path d="M13 5l7 7-7 7" />
             </svg>
@@ -310,17 +303,18 @@ function ToolIcon({ name }: { name: "doc" | "bar" | "img" | "search" }) {
     strokeWidth: 1.8,
     strokeLinecap: "round" as const,
     strokeLinejoin: "round" as const,
+    className: "text-[var(--color-ink-3)]",
   };
   if (name === "doc")
     return (
-      <svg {...common} className="text-white/70">
+      <svg {...common}>
         <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
         <path d="M14 3v6h6" />
       </svg>
     );
   if (name === "bar")
     return (
-      <svg {...common} className="text-white/70">
+      <svg {...common}>
         <path d="M4 20V10" />
         <path d="M12 20V4" />
         <path d="M20 20v-7" />
@@ -328,14 +322,14 @@ function ToolIcon({ name }: { name: "doc" | "bar" | "img" | "search" }) {
     );
   if (name === "img")
     return (
-      <svg {...common} className="text-white/70">
+      <svg {...common}>
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <circle cx="9" cy="9" r="2" />
         <path d="m21 15-5-5L5 21" />
       </svg>
     );
   return (
-    <svg {...common} className="text-white/70">
+    <svg {...common}>
       <circle cx="11" cy="11" r="7" />
       <path d="m21 21-4.3-4.3" />
     </svg>
@@ -343,7 +337,7 @@ function ToolIcon({ name }: { name: "doc" | "bar" | "img" | "search" }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Card 3 — Sales & Marketing                                                 */
+/*  Card 3 — App users / rollout                                               */
 /* -------------------------------------------------------------------------- */
 
 function SalesVisual() {
@@ -356,27 +350,28 @@ function SalesVisual() {
 
   return (
     <div
-      className="rounded-2xl border border-white/[0.06] p-4 overflow-hidden"
-      style={{
-        background: "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-        height: 290,
-      }}
+      className="skeo-inset overflow-hidden p-4"
+      style={{ borderRadius: 16, height: 290 }}
     >
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-2 text-[11px]">
-          <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot" />
+      <div className="mb-3 flex items-center justify-between">
+        <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
+          <span
+            className="inline-flex items-center gap-1.5 rounded-full px-2 py-1 font-medium"
+            style={{
+              background:
+                "linear-gradient(180deg, #d8ffb3 0%, #b6ff80 100%)",
+              border: "1px solid #2eb800",
+              color: "#0a4a00",
+              boxShadow:
+                "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(57,255,20,0.4)",
+            }}
+          >
+            <span className="led-green animate-neon" style={{ width: 6, height: 6 }} />
             Live-Rollout läuft…
           </span>
-          <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
-            iOS
-          </span>
-          <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
-            Android
-          </span>
-          <span className="px-2 py-1 rounded-full bg-violet/15 border border-violet/30 text-[#a8c0ed]">
-            Aktive Nutzer
-          </span>
+          <span className="skeo-raised-sm rounded-full px-2 py-1 text-[var(--color-ink-2)]" style={{ borderRadius: 999 }}>iOS</span>
+          <span className="skeo-raised-sm rounded-full px-2 py-1 text-[var(--color-ink-2)]" style={{ borderRadius: 999 }}>Android</span>
+          <span className="skeo-raised-sm rounded-full px-2 py-1 text-[var(--color-ink-2)]" style={{ borderRadius: 999 }}>Aktive Nutzer</span>
         </div>
       </div>
 
@@ -390,7 +385,7 @@ function SalesVisual() {
           height: 200,
         }}
       >
-        <div className="flex flex-col gap-2 animate-marquee-y">
+        <div className="flex animate-marquee-y flex-col gap-2">
           {[...founders, ...founders].map((f, i) => (
             <FounderRow key={i} {...f} />
           ))}
@@ -414,13 +409,20 @@ function FounderRow({
   verified: boolean;
 }) {
   return (
-    <div className="flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-      <div className="flex items-center gap-2.5 min-w-0">
+    <div
+      className="skeo-raised-sm flex items-center justify-between gap-3 px-3 py-2.5"
+      style={{ borderRadius: 12 }}
+    >
+      <div className="flex min-w-0 items-center gap-2.5">
         <div
-          className="w-7 h-7 rounded-full grid place-items-center text-[10px] font-medium shrink-0 text-white"
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[10px] font-semibold"
           style={{
             background:
-              "linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 100%)",
+              "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
+            border: "1px solid #1a7a00",
+            color: "#0a2a00",
+            boxShadow:
+              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(57,255,20,0.4)",
           }}
         >
           {name
@@ -429,108 +431,136 @@ function FounderRow({
             .join("")}
         </div>
         <div className="min-w-0">
-          <p className="text-[12.5px] text-white/90 truncate flex items-center gap-1.5">
+          <p className="flex items-center gap-1.5 truncate text-[12.5px] text-[var(--color-ink)]">
             {name}
             {verified ? (
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-accent shrink-0">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1fa800" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             ) : null}
           </p>
-          <p className="text-[10.5px] text-white/45 truncate">
+          <p className="truncate text-[10.5px] text-[var(--color-ink-3)]">
             {role} · {email}
           </p>
         </div>
       </div>
-      <span className="text-[10.5px] text-white/55 shrink-0">{company}</span>
+      <span className="shrink-0 text-[10.5px] text-[var(--color-ink-3)]">
+        {company}
+      </span>
     </div>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Card 4 — Custom Project                                                    */
+/*  Card 4 — Internal tool / dashboard                                         */
 /* -------------------------------------------------------------------------- */
 
 function CustomVisual() {
   const days = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
   return (
     <div
-      className="rounded-2xl border border-white/[0.06] p-4 flex flex-col gap-3"
-      style={{
-        background: "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-      }}
+      className="skeo-inset flex flex-col gap-3 p-4"
+      style={{ borderRadius: 16 }}
     >
       <div className="flex items-center gap-2.5">
         <div
-          className="w-8 h-8 rounded-full grid place-items-center text-[11px] font-semibold text-black"
+          className="grid h-8 w-8 place-items-center rounded-full text-[11px] font-semibold"
           style={{
             background:
-              "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-strong) 100%)",
+              "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
+            border: "1px solid #1a7a00",
+            color: "#0a2a00",
+            boxShadow:
+              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(57,255,20,0.5)",
           }}
         >
-          D
+          O
         </div>
         <div>
-          <p className="text-[13px] font-medium text-white/90">Operations-Team</p>
-          <p className="text-[11px] text-white/55">
+          <p className="text-[13px] font-medium text-[var(--color-ink)]">
+            Operations-Team
+          </p>
+          <p className="text-[11px] text-[var(--color-ink-3)]">
             Ihr internes Dashboard &amp; Sprint-Planung
           </p>
         </div>
       </div>
 
-      <div className="px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-        <p className="text-[10.5px] uppercase tracking-[0.14em] text-white/45">
+      <div className="skeo-raised-sm px-3 py-2.5" style={{ borderRadius: 12 }}>
+        <p className="text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-ink-3)]">
           Sprint 12 — laufend:
         </p>
         <div className="mt-1 flex items-center justify-between text-[13px]">
-          <span className="text-white/90">Custom Admin-Panel</span>
-          <span className="text-accent text-[12px] font-medium">90 % erledigt</span>
+          <span className="text-[var(--color-ink)]">Custom Admin-Panel</span>
+          <span className="text-[12px] font-semibold text-[#1fa800]">
+            90 % erledigt
+          </span>
         </div>
-        <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
-          <div className="h-full w-[90%] bg-accent" />
+        <div
+          className="skeo-inset mt-2 h-2 overflow-hidden"
+          style={{ borderRadius: 999 }}
+        >
+          <div
+            className="h-full"
+            style={{
+              width: "90%",
+              background:
+                "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
+              boxShadow: "0 0 8px rgba(57,255,20,0.65)",
+              borderRadius: 999,
+            }}
+          />
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-1 text-[10px] text-center">
-        {days.map((d, i) => (
-          <div
-            key={d}
-            className={`py-2 rounded-md ${
-              i === 2
-                ? "bg-violet text-white"
-                : "bg-white/[0.03] border border-white/[0.05] text-white/55"
-            }`}
-          >
-            {d}
-          </div>
-        ))}
+      <div className="grid grid-cols-7 gap-1 text-center text-[10px]">
+        {days.map((d, i) =>
+          i === 2 ? (
+            <div
+              key={d}
+              className="py-2 font-semibold text-[#0a2a00]"
+              style={{
+                borderRadius: 8,
+                background:
+                  "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
+                border: "1px solid #1a7a00",
+                boxShadow:
+                  "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(57,255,20,0.5)",
+              }}
+            >
+              {d}
+            </div>
+          ) : (
+            <div
+              key={d}
+              className="skeo-raised-sm py-2 text-[var(--color-ink-3)]"
+              style={{ borderRadius: 8 }}
+            >
+              {d}
+            </div>
+          )
+        )}
       </div>
 
       <div className="space-y-1.5">
-        <ScheduleRow time="10:00 – 10:30" label="Standup mit Eng-Team" tone="accent" />
-        <ScheduleRow time="14:00 – 14:30" label="Demo: Reporting-Module" tone="violet" />
+        <ScheduleRow time="10:00 – 10:30" label="Standup mit Eng-Team" />
+        <ScheduleRow time="14:00 – 14:30" label="Demo: Reporting-Module" />
       </div>
     </div>
   );
 }
 
-function ScheduleRow({
-  time,
-  label,
-  tone,
-}: {
-  time: string;
-  label: string;
-  tone: "accent" | "violet";
-}) {
-  const dot = tone === "accent" ? "bg-accent" : "bg-violet";
+function ScheduleRow({ time, label }: { time: string; label: string }) {
   return (
-    <div className="flex items-center justify-between text-[12px] px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.05]">
-      <span className="flex items-center gap-2 text-white/90">
-        <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
+    <div
+      className="skeo-raised-sm flex items-center justify-between px-3 py-2 text-[12px]"
+      style={{ borderRadius: 10 }}
+    >
+      <span className="flex items-center gap-2 text-[var(--color-ink)]">
+        <span className="led-green" style={{ width: 6, height: 6 }} />
         {label}
       </span>
-      <span className="text-white/55 text-[10.5px]">{time}</span>
+      <span className="text-[10.5px] text-[var(--color-ink-3)]">{time}</span>
     </div>
   );
 }

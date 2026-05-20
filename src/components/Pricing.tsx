@@ -61,119 +61,138 @@ export default function Pricing() {
     <section id="pricing" className="relative px-4 py-28">
       <div className="relative mx-auto max-w-[1100px]">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="skeo-nameplate font-display">
+            <span className="led-green" style={{ width: 7, height: 7 }} />
             Preise
           </span>
           <h2
-            className="font-display mt-5 max-w-3xl"
+            className="font-display headline-engraved mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
               letterSpacing: "-2px",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             Drei klare Wege,
             <br className="hidden sm:block" /> mit uns zu arbeiten.
           </h2>
-          <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
+          <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
             Keine Stundensätze, keine Überraschungen. Wählen Sie das Modell,
             das zu Ihrem Projekt passt — wir passen den Scope an.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
           {TIERS.map((t) => (
             <article
               key={t.name}
-              className={`relative flex flex-col rounded-2xl border p-7 ${
-                t.highlight
-                  ? "border-accent/30 bg-gradient-to-b from-[#0f1318] to-[#0a0a0e]"
-                  : "border-white/[0.06] bg-[#0c0c10]"
+              className={`skeo-raised relative flex flex-col p-7 ${
+                t.highlight ? "neon-ring" : ""
               }`}
+              style={{
+                borderRadius: 22,
+                transform: t.highlight ? "translateY(-8px)" : undefined,
+              }}
             >
               {t.highlight ? (
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute -inset-px rounded-2xl"
+                  className="pointer-events-none absolute -inset-2 -z-10"
                   style={{
                     background:
-                      "linear-gradient(135deg, rgba(191,212,222,0.25) 0%, transparent 40%, rgba(74,115,200,0.25) 100%)",
-                    mask:
-                      "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                    WebkitMask:
-                      "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                    maskComposite: "exclude",
-                    WebkitMaskComposite: "xor",
-                    padding: 1,
-                    borderRadius: 16,
+                      "radial-gradient(60% 60% at 50% 0%, rgba(57,255,20,0.32), transparent 70%)",
+                    borderRadius: 28,
+                    filter: "blur(20px)",
                   }}
                 />
               ) : null}
 
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display text-[22px] tracking-tight text-white">
-                    {t.name}
-                  </h3>
-                  {t.highlight ? (
-                    <span className="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-accent">
-                      Beliebt
-                    </span>
-                  ) : null}
-                </div>
-                <p className="mt-2 text-[14px] leading-relaxed text-white/55">
-                  {t.blurb}
-                </p>
-
-                <div className="mt-6 flex items-baseline gap-2">
+              <div className="flex items-center justify-between">
+                <h3
+                  className="font-display headline-engraved text-[22px] tracking-tight"
+                  style={{ fontWeight: 600 }}
+                >
+                  {t.name}
+                </h3>
+                {t.highlight ? (
                   <span
-                    className="font-display text-white"
+                    className="font-display rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] font-semibold"
                     style={{
-                      fontSize: "32px",
-                      letterSpacing: "-1px",
-                      fontWeight: 500,
+                      background:
+                        "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #20d400 100%)",
+                      border: "1px solid #1a7a00",
+                      color: "#0a2a00",
+                      boxShadow:
+                        "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 10px rgba(57,255,20,0.55)",
                     }}
                   >
-                    {t.price}
+                    Beliebt
                   </span>
-                </div>
-                <p className="mt-1 text-[12px] text-white/45">{t.cadence}</p>
-
-                <ul className="mt-6 space-y-3 border-t border-white/[0.05] pt-5">
-                  {t.features.map((f) => (
-                    <li
-                      key={f}
-                      className="flex items-start gap-2.5 text-[13.5px] text-white/80"
-                    >
-                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="#contact"
-                  className={`group mt-7 inline-flex w-full items-center justify-center gap-1.5 rounded-[10px] px-4 py-3 text-[13px] font-medium transition-[filter,transform] ${
-                    t.highlight
-                      ? "bg-accent text-black hover:brightness-95"
-                      : "border border-white/15 bg-white/[0.04] text-white hover:bg-white/[0.07]"
-                  }`}
-                >
-                  {t.cta}
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
+                ) : null}
               </div>
+              <p className="mt-2 text-[14px] leading-relaxed text-[var(--color-ink-3)]">
+                {t.blurb}
+              </p>
+
+              <div
+                className="skeo-inset mt-6 px-4 py-3 text-center"
+                style={{ borderRadius: 12 }}
+              >
+                <p
+                  className="font-display"
+                  style={{
+                    fontSize: 28,
+                    letterSpacing: "-0.8px",
+                    fontWeight: 700,
+                    color: "#0a4a00",
+                    textShadow:
+                      "0 1px 0 rgba(255,255,255,0.7), 0 0 8px rgba(57,255,20,0.4)",
+                    fontFamily:
+                      "'JetBrains Mono', ui-monospace, SFMono-Regular, monospace",
+                  }}
+                >
+                  {t.price}
+                </p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-3)]">
+                  {t.cadence}
+                </p>
+              </div>
+
+              <ul className="mt-6 space-y-3">
+                {t.features.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-2.5 text-[13.5px] text-[var(--color-ink-2)]"
+                  >
+                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#1fa800]" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#contact"
+                className={`group mt-7 ${
+                  t.highlight ? "skeo-btn-neon" : "skeo-btn-ghost"
+                } w-full text-[13px]`}
+                style={{ padding: "12px 16px" }}
+              >
+                {t.highlight ? (
+                  <span className="led-green" style={{ width: 7, height: 7 }} />
+                ) : null}
+                {t.cta}
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
             </article>
           ))}
         </div>
 
-        <p className="mt-8 text-center text-[13px] text-white/50">
+        <p className="mt-10 text-center text-[13px] text-[var(--color-ink-3)]">
           Eigene Anforderungen?{" "}
           <a
             href="#contact"
-            className="text-white/85 underline-offset-4 hover:underline"
+            className="font-medium text-[var(--color-ink)] underline-offset-4 hover:underline"
           >
             Kontaktieren Sie uns
           </a>{" "}
