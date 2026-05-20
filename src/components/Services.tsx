@@ -417,14 +417,7 @@ function FounderRow({
       <div className="flex min-w-0 items-center gap-2.5">
         <div
           className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[10px] font-semibold"
-          style={{
-            background:
-              "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
-            border: "1px solid #3a5400",
-            color: "#0a1500",
-            boxShadow:
-              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(196, 255, 58,0.4)",
-          }}
+          style={{ background: "#c4ff3a", color: "#1a2a00" }}
         >
           {name
             .split(" ")
@@ -466,14 +459,7 @@ function CustomVisual() {
       <div className="flex items-center gap-2.5">
         <div
           className="grid h-8 w-8 place-items-center rounded-full text-[11px] font-semibold"
-          style={{
-            background:
-              "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
-            border: "1px solid #3a5400",
-            color: "#0a1500",
-            boxShadow:
-              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(196, 255, 58,0.5)",
-          }}
+          style={{ background: "#c4ff3a", color: "#1a2a00" }}
         >
           O
         </div>

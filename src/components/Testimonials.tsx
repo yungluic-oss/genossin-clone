@@ -87,14 +87,7 @@ export default function Testimonials() {
               <div className="flex items-center gap-3">
                 <div
                   className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-[12px] font-semibold"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
-                    border: "1px solid #3a5400",
-                    color: "#0a1500",
-                    boxShadow:
-                      "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(196, 255, 58,0.5), 0 2px 4px rgba(0,0,0,0.15)",
-                  }}
+                  style={{ background: "#c4ff3a", color: "#1a2a00" }}
                 >
                   {q.initials}
                 </div>

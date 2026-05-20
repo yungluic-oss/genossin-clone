@@ -115,14 +115,7 @@ export default function CTA() {
               <div className="flex h-full min-h-[360px] flex-col items-center justify-center text-center">
                 <div
                   className="grid h-12 w-12 place-items-center rounded-full"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
-                    border: "1px solid #3a5400",
-                    color: "#0a1500",
-                    boxShadow:
-                      "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 14px rgba(196, 255, 58,0.6)",
-                  }}
+                  style={{ background: "#c4ff3a", color: "#1a2a00" }}
                 >
                   <CheckCircle className="h-6 w-6" />
                 </div>
