@@ -121,7 +121,6 @@ export default function Footer() {
                 { label: "Leistungen", href: "#services" },
                 { label: "Prozess", href: "#process" },
                 { label: "Arbeiten", href: "#cases" },
-                { label: "Preise", href: "#pricing" },
                 { label: "FAQ", href: "#faq" },
               ]}
             />

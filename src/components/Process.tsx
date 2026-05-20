@@ -118,8 +118,8 @@ function AnalyzeVisual() {
                 style={{
                   width: `${c.v}%`,
                   background:
-                    "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-                  boxShadow: "0 0 6px rgba(57,255,20,0.6)",
+                    "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+                  boxShadow: "0 0 6px rgba(196, 255, 58,0.6)",
                   borderRadius: 999,
                 }}
               />
@@ -145,22 +145,22 @@ function CodeVisual() {
         className="whitespace-pre-wrap"
         style={{ color: "#1a1a1a", textShadow: "0 1px 0 rgba(255,255,255,0.7)" }}
       >
-        <span style={{ color: "#1fa800" }}>class</span>{" "}
-        <span style={{ color: "#0a4a00", fontWeight: 700 }}>Product</span>:
+        <span style={{ color: "#5a7e00" }}>class</span>{" "}
+        <span style={{ color: "#1a2a00", fontWeight: 700 }}>Product</span>:
         {"\n  "}
-        <span style={{ color: "#1fa800" }}>def</span>{" "}
-        <span style={{ color: "#0a4a00" }}>__init__</span>(self, scope):
+        <span style={{ color: "#5a7e00" }}>def</span>{" "}
+        <span style={{ color: "#1a2a00" }}>__init__</span>(self, scope):
         {"\n    "}self.scope = scope
         {"\n    "}self.status ={" "}
-        <span style={{ color: "#1fa800" }}>&quot;in_design&quot;</span>
+        <span style={{ color: "#5a7e00" }}>&quot;in_design&quot;</span>
         {"\n\n  "}
-        <span style={{ color: "#1fa800" }}>def</span>{" "}
-        <span style={{ color: "#0a4a00" }}>ship</span>(self):
+        <span style={{ color: "#5a7e00" }}>def</span>{" "}
+        <span style={{ color: "#1a2a00" }}>ship</span>(self):
         {"\n    "}self.status ={" "}
-        <span style={{ color: "#1fa800" }}>&quot;live&quot;</span>
+        <span style={{ color: "#5a7e00" }}>&quot;live&quot;</span>
         {"\n    "}
-        <span style={{ color: "#1fa800" }}>return</span>{" "}
-        <span style={{ color: "#1fa800" }}>&quot;🚀 Production!&quot;</span>
+        <span style={{ color: "#5a7e00" }}>return</span>{" "}
+        <span style={{ color: "#5a7e00" }}>&quot;🚀 Production!&quot;</span>
       </pre>
     </div>
   );
@@ -177,12 +177,12 @@ function IntegrationVisual() {
           className="grid h-14 w-14 place-items-center text-xl font-semibold"
           style={{
             background:
-              "linear-gradient(180deg, #8dff5e 0%, #39ff14 50%, #1fa800 100%)",
-            border: "1px solid #1a7a00",
-            color: "#0a2a00",
+              "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 50%, #5a7e00 100%)",
+            border: "1px solid #3a5400",
+            color: "#0a1500",
             borderRadius: 16,
             boxShadow:
-              "0 1px 0 rgba(255,255,255,0.65) inset, 0 -1px 0 rgba(0,0,0,0.15) inset, 0 0 14px rgba(57,255,20,0.6), 0 4px 8px rgba(0,0,0,0.15)",
+              "0 1px 0 rgba(255,255,255,0.65) inset, 0 -1px 0 rgba(0,0,0,0.15) inset, 0 0 14px rgba(196, 255, 58,0.6), 0 4px 8px rgba(0,0,0,0.15)",
           }}
         >
           S
@@ -194,7 +194,7 @@ function IntegrationVisual() {
       <svg className="mx-4 flex-1" viewBox="0 0 200 60" fill="none" aria-hidden>
         <path
           d="M0 30 Q 100 -20 200 30"
-          stroke="#1fa800"
+          stroke="#5a7e00"
           strokeWidth="1.8"
           strokeDasharray="4 4"
           opacity="0.7"
@@ -243,7 +243,7 @@ function OptimizeVisual() {
             <p className="text-[13px] text-[var(--color-ink)]">{r.l}</p>
             <p
               className="mt-0.5 text-[11px]"
-              style={{ color: r.state === "live" ? "#1fa800" : "#7a6a00" }}
+              style={{ color: r.state === "live" ? "#5a7e00" : "#7a6a00" }}
             >
               {r.v}
             </p>

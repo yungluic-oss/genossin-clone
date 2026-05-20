@@ -15,15 +15,15 @@
   --color-line-strong: #00000026;
 
   /* Neon green accent */
-  --color-accent: #39ff14;
-  --color-accent-bright: #6dff3a;
-  --color-accent-deep: #1fa800;
-  --color-accent-ink: #0a4a00;
+  --color-accent: #c4ff3a;
+  --color-accent-bright: #d4ff7a;
+  --color-accent-deep: #5a7e00;
+  --color-accent-ink: #1a2a00;
 
   /* Backwards-compat aliases (some old code referenced these tokens) */
-  --color-accent-strong: #1fa800;
-  --color-violet: #2eb800;
-  --color-pink: #6dff3a;
+  --color-accent-strong: #5a7e00;
+  --color-violet: #88c000;
+  --color-pink: #d4ff7a;
 
   --color-muted: #00000099;
   --color-muted-2: #000000bf;
@@ -52,7 +52,7 @@ html {
 }
 
 ::selection {
-  background: #39ff14;
+  background: #c4ff3a;
   color: #0a0a0a;
 }
 
@@ -127,13 +127,13 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: #0a2a00;
+  color: #0a1500;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
   background:
-    linear-gradient(180deg, #8dff5e 0%, #39ff14 45%, #20d400 100%);
-  border: 1px solid #1a7a00;
+    linear-gradient(180deg, #e0ff99 0%, #c4ff3a 45%, #88c000 100%);
+  border: 1px solid #3a5400;
   border-radius: 14px;
   box-shadow:
     /* Top inner highlight */
@@ -142,8 +142,8 @@ html {
     /* Bottom inner shadow */
     0 -2px 0 0 rgba(0, 0, 0, 0.18) inset,
     /* Neon halo */
-    0 0 0 1px rgba(57, 255, 20, 0.2),
-    0 0 18px rgba(57, 255, 20, 0.55),
+    0 0 0 1px rgba(196, 255, 58, 0.2),
+    0 0 18px rgba(196, 255, 58, 0.55),
     /* Drop shadow */
     0 4px 8px rgba(0, 0, 0, 0.18),
     0 8px 18px -6px rgba(0, 0, 0, 0.22);
@@ -157,8 +157,8 @@ html {
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.18) inset,
-    0 0 0 1px rgba(57, 255, 20, 0.2),
-    0 0 10px rgba(57, 255, 20, 0.4),
+    0 0 0 1px rgba(196, 255, 58, 0.2),
+    0 0 10px rgba(196, 255, 58, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -201,11 +201,11 @@ html {
   height: 10px;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 35% 30%, #d8ffb3 0%, #39ff14 50%, #1a7a00 100%);
+    radial-gradient(circle at 35% 30%, #d8ffb3 0%, #c4ff3a 50%, #3a5400 100%);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.15),
-    0 0 6px rgba(57, 255, 20, 0.95),
-    0 0 14px rgba(57, 255, 20, 0.55),
+    0 0 6px rgba(196, 255, 58, 0.95),
+    0 0 14px rgba(196, 255, 58, 0.55),
     0 1px 1px rgba(0, 0, 0, 0.2) inset;
 }
 .led-green::after {
@@ -280,8 +280,8 @@ html {
 /* Neon outline ring — for highlighted/active states */
 .neon-ring {
   box-shadow:
-    0 0 0 2px rgba(57, 255, 20, 0.5),
-    0 0 12px rgba(57, 255, 20, 0.4);
+    0 0 0 2px rgba(196, 255, 58, 0.5),
+    0 0 12px rgba(196, 255, 58, 0.4);
 }
 
 /* "Glass" overlay highlight across the top of any raised surface */
@@ -329,16 +329,16 @@ html {
 .glow-violet {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(57, 255, 20, 0.18) 0%,
-    rgba(57, 255, 20, 0) 70%
+    rgba(196, 255, 58, 0.18) 0%,
+    rgba(196, 255, 58, 0) 70%
   );
 }
 
 .glow-blue {
   background: radial-gradient(
     60% 60% at 50% 50%,
-    rgba(57, 255, 20, 0.12) 0%,
-    rgba(57, 255, 20, 0) 70%
+    rgba(196, 255, 58, 0.12) 0%,
+    rgba(196, 255, 58, 0) 70%
   );
 }
 
@@ -393,15 +393,15 @@ html {
   0%, 100% {
     box-shadow:
       0 0 0 1px rgba(0, 0, 0, 0.15),
-      0 0 6px rgba(57, 255, 20, 0.95),
-      0 0 14px rgba(57, 255, 20, 0.55),
+      0 0 6px rgba(196, 255, 58, 0.95),
+      0 0 14px rgba(196, 255, 58, 0.55),
       0 1px 1px rgba(0, 0, 0, 0.2) inset;
   }
   50% {
     box-shadow:
       0 0 0 1px rgba(0, 0, 0, 0.15),
-      0 0 10px rgba(57, 255, 20, 1),
-      0 0 22px rgba(57, 255, 20, 0.85),
+      0 0 10px rgba(196, 255, 58, 1),
+      0 0 22px rgba(196, 255, 58, 0.85),
       0 1px 1px rgba(0, 0, 0, 0.2) inset;
   }
 }

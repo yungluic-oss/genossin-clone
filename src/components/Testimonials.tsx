@@ -69,25 +69,11 @@ export default function Testimonials() {
                 transform: `rotate(${q.tilt}deg)`,
               }}
             >
-              {/* Tape strip on top */}
-              <span
-                aria-hidden
-                className="absolute left-1/2 -top-3 h-6 w-16 -translate-x-1/2 rotate-[-3deg]"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(57,255,20,0.55) 0%, rgba(57,255,20,0.3) 100%)",
-                  border: "1px solid rgba(31, 168, 0, 0.5)",
-                  borderRadius: 2,
-                  boxShadow:
-                    "0 1px 0 rgba(255,255,255,0.5) inset, 0 2px 4px rgba(0,0,0,0.12)",
-                }}
-              />
-
               <svg
                 aria-hidden
                 className="h-8 w-8"
                 viewBox="0 0 32 32"
-                fill="#1fa800"
+                fill="#5a7e00"
                 style={{ opacity: 0.85 }}
               >
                 <path d="M9.4 22.4c-2.5 0-4.4-2-4.4-4.4 0-5.5 4.6-9.6 9.4-10.4l.6 2.6c-3 .8-5.6 3.4-5.6 5.4 2.5 0 4.4 2 4.4 4.4S11.9 22.4 9.4 22.4zm13.2 0c-2.5 0-4.4-2-4.4-4.4 0-5.5 4.6-9.6 9.4-10.4l.6 2.6c-3 .8-5.6 3.4-5.6 5.4 2.5 0 4.4 2 4.4 4.4S25.1 22.4 22.6 22.4z" />
@@ -103,11 +89,11 @@ export default function Testimonials() {
                   className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-[12px] font-semibold"
                   style={{
                     background:
-                      "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-                    border: "1px solid #1a7a00",
-                    color: "#0a2a00",
+                      "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+                    border: "1px solid #3a5400",
+                    color: "#0a1500",
                     boxShadow:
-                      "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(57,255,20,0.5), 0 2px 4px rgba(0,0,0,0.15)",
+                      "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(196, 255, 58,0.5), 0 2px 4px rgba(0,0,0,0.15)",
                   }}
                 >
                   {q.initials}

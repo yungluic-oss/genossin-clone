@@ -11,7 +11,7 @@ export default function Services() {
         <div className="flex flex-col items-center text-center">
           <span className="skeo-nameplate font-display">
             <span className="led-green" style={{ width: 7, height: 7 }} />
-            Leistungen
+            Leistungen & Investment
           </span>
           <h2
             className="font-display headline-engraved mt-5 max-w-3xl"
@@ -22,12 +22,13 @@ export default function Services() {
               fontWeight: 500,
             }}
           >
-            Software, die heute produktiv geht —
-            <br className="hidden sm:block" /> und morgen noch wartbar ist.
+            Dein Budget.
+            <br className="hidden sm:block" /> Unsere Ambition.
           </h2>
-          <p className="engraved mt-5 max-w-xl text-base text-[var(--color-ink-3)] sm:text-lg">
-            Vom MVP zum produktiven Produkt: Wir konzipieren, designen und
-            entwickeln Software — und übergeben sauberen Code, den Sie besitzen.
+          <p className="engraved mt-5 max-w-2xl text-base text-[var(--color-ink-3)] sm:text-lg">
+            Wir richten uns nach deinem Rahmen, nicht nach Standardpaketen.
+            Sag uns, was du investieren willst — wir bauen das Maximum, was
+            darin Platz hat. Die einzige Grenze ist deine Vorstellungskraft.
           </p>
         </div>
 
@@ -186,13 +187,13 @@ function WorkflowVisual() {
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span
-            className="grid h-6 w-6 place-items-center rounded-md text-[#0a4a00]"
+            className="grid h-6 w-6 place-items-center rounded-md text-[#1a2a00]"
             style={{
               background:
-                "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #20d400 100%)",
-              border: "1px solid #1a7a00",
+                "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #88c000 100%)",
+              border: "1px solid #3a5400",
               boxShadow:
-                "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(57,255,20,0.6)",
+                "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(196, 255, 58,0.6)",
             }}
           >
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -276,7 +277,7 @@ function AssistantVisual() {
         >
           <span className="flex-1 truncate text-[12.5px] text-[var(--color-ink)]">
             Fasse die letzten 10 Tickets zusammen
-            <span className="ml-0.5 inline-block h-[14px] w-[1.5px] animate-pulse-dot align-middle bg-[#39ff14]" />
+            <span className="ml-0.5 inline-block h-[14px] w-[1.5px] animate-pulse-dot align-middle bg-[#c4ff3a]" />
           </span>
           <button
             className="skeo-btn-neon"
@@ -360,10 +361,10 @@ function SalesVisual() {
             style={{
               background:
                 "linear-gradient(180deg, #d8ffb3 0%, #b6ff80 100%)",
-              border: "1px solid #2eb800",
-              color: "#0a4a00",
+              border: "1px solid #88c000",
+              color: "#1a2a00",
               boxShadow:
-                "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(57,255,20,0.4)",
+                "0 1px 0 rgba(255,255,255,0.7) inset, 0 0 8px rgba(196, 255, 58,0.4)",
             }}
           >
             <span className="led-green animate-neon" style={{ width: 6, height: 6 }} />
@@ -418,11 +419,11 @@ function FounderRow({
           className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[10px] font-semibold"
           style={{
             background:
-              "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-            border: "1px solid #1a7a00",
-            color: "#0a2a00",
+              "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+            border: "1px solid #3a5400",
+            color: "#0a1500",
             boxShadow:
-              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(57,255,20,0.4)",
+              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 6px rgba(196, 255, 58,0.4)",
           }}
         >
           {name
@@ -434,7 +435,7 @@ function FounderRow({
           <p className="flex items-center gap-1.5 truncate text-[12.5px] text-[var(--color-ink)]">
             {name}
             {verified ? (
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1fa800" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5a7e00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             ) : null}
@@ -467,11 +468,11 @@ function CustomVisual() {
           className="grid h-8 w-8 place-items-center rounded-full text-[11px] font-semibold"
           style={{
             background:
-              "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-            border: "1px solid #1a7a00",
-            color: "#0a2a00",
+              "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+            border: "1px solid #3a5400",
+            color: "#0a1500",
             boxShadow:
-              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(57,255,20,0.5)",
+              "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(196, 255, 58,0.5)",
           }}
         >
           O
@@ -492,7 +493,7 @@ function CustomVisual() {
         </p>
         <div className="mt-1 flex items-center justify-between text-[13px]">
           <span className="text-[var(--color-ink)]">Custom Admin-Panel</span>
-          <span className="text-[12px] font-semibold text-[#1fa800]">
+          <span className="text-[12px] font-semibold text-[#5a7e00]">
             90 % erledigt
           </span>
         </div>
@@ -505,8 +506,8 @@ function CustomVisual() {
             style={{
               width: "90%",
               background:
-                "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-              boxShadow: "0 0 8px rgba(57,255,20,0.65)",
+                "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+              boxShadow: "0 0 8px rgba(196, 255, 58,0.65)",
               borderRadius: 999,
             }}
           />
@@ -518,14 +519,14 @@ function CustomVisual() {
           i === 2 ? (
             <div
               key={d}
-              className="py-2 font-semibold text-[#0a2a00]"
+              className="py-2 font-semibold text-[#0a1500]"
               style={{
                 borderRadius: 8,
                 background:
-                  "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-                border: "1px solid #1a7a00",
+                  "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+                border: "1px solid #3a5400",
                 boxShadow:
-                  "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(57,255,20,0.5)",
+                  "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 8px rgba(196, 255, 58,0.5)",
               }}
             >
               {d}

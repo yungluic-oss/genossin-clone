@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef, useState, useEffect, type PointerEvent } from "react";
 
 type Case = {
   image: string;
@@ -63,40 +66,41 @@ const CASES: Case[] = [
 function CaseCard({ c }: { c: Case }) {
   return (
     <article
-      className="skeo-raised relative flex shrink-0 overflow-hidden"
-      style={{ width: 1000, height: 490, borderRadius: 24 }}
+      className="skeo-raised relative flex shrink-0 overflow-hidden select-none"
+      style={{ width: "min(960px, calc(100vw - 64px))", height: 480, borderRadius: 24 }}
     >
       {/* Inset image well */}
       <div
-        className="skeo-inset relative m-3 h-[calc(100%-1.5rem)] w-[420px] shrink-0 overflow-hidden"
+        className="skeo-inset relative m-3 hidden h-[calc(100%-1.5rem)] w-[400px] shrink-0 overflow-hidden md:block"
         style={{ borderRadius: 18 }}
       >
         <Image
           src={c.image}
           alt={c.alt}
           fill
-          sizes="420px"
+          sizes="400px"
           className="object-cover"
+          draggable={false}
           priority={false}
         />
       </div>
 
-      <div className="flex flex-1 flex-col px-8 py-9">
+      <div className="flex flex-1 flex-col px-7 py-8 sm:px-8 sm:py-9">
         <p
-          className="font-display headline-engraved text-[30px] leading-[1.15]"
+          className="font-display headline-engraved text-[24px] leading-[1.18] sm:text-[28px] sm:leading-[1.15] md:text-[30px]"
           style={{ letterSpacing: "-1.2px", fontWeight: 600 }}
         >
           {c.headline}
         </p>
-        <p className="mt-5 max-w-[460px] text-[15px] leading-relaxed text-[var(--color-ink-3)]">
+        <p className="mt-4 max-w-[460px] text-[14.5px] leading-relaxed text-[var(--color-ink-3)] sm:text-[15px]">
           {c.body}
         </p>
 
-        <div className="mt-auto">
+        <div className="mt-auto pt-6">
           <p className="engraved mb-3 text-[11px] uppercase tracking-[0.22em] text-[var(--color-ink-3)]">
             Wirkung:
           </p>
-          <div className="grid grid-cols-2 gap-2.5">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
             {c.impact.map((i) => (
               <div
                 key={i}
@@ -115,7 +119,53 @@ function CaseCard({ c }: { c: Case }) {
 }
 
 export default function Cases() {
-  const loop = [...CASES, ...CASES];
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStateRef = useRef({ startX: 0, scrollLeft: 0, hasMoved: false });
+
+  // Prevent click bubbling immediately after a drag
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const onClickCapture = (e: MouseEvent) => {
+      if (dragStateRef.current.hasMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+        dragStateRef.current.hasMoved = false;
+      }
+    };
+    el.addEventListener("click", onClickCapture, true);
+    return () => el.removeEventListener("click", onClickCapture, true);
+  }, []);
+
+  function onPointerDown(e: PointerEvent<HTMLDivElement>) {
+    // Only respond to primary mouse button / touch / pen
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    const el = scrollerRef.current;
+    if (!el) return;
+    setIsDragging(true);
+    dragStateRef.current.startX = e.clientX;
+    dragStateRef.current.scrollLeft = el.scrollLeft;
+    dragStateRef.current.hasMoved = false;
+    el.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e: PointerEvent<HTMLDivElement>) {
+    if (!isDragging) return;
+    const el = scrollerRef.current;
+    if (!el) return;
+    const dx = e.clientX - dragStateRef.current.startX;
+    if (Math.abs(dx) > 4) dragStateRef.current.hasMoved = true;
+    el.scrollLeft = dragStateRef.current.scrollLeft - dx;
+  }
+
+  function onPointerUp(e: PointerEvent<HTMLDivElement>) {
+    setIsDragging(false);
+    const el = scrollerRef.current;
+    if (el?.hasPointerCapture(e.pointerId)) {
+      el.releasePointerCapture(e.pointerId);
+    }
+  }
 
   return (
     <section id="cases" className="relative overflow-hidden py-28">
@@ -145,18 +195,43 @@ export default function Cases() {
       </div>
 
       <div className="relative mt-16">
-        <div className="overflow-hidden">
+        <div
+          ref={scrollerRef}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+          className={`overflow-x-auto overflow-y-hidden ${
+            isDragging ? "cursor-grabbing" : "cursor-grab"
+          }`}
+          style={{
+            scrollSnapType: "x mandatory",
+            scrollPadding: "0 24px",
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+          }}
+        >
           <div
-            className="animate-marquee flex w-max gap-6 will-change-transform"
-            style={{ paddingInline: "1rem" }}
+            className="flex w-max gap-6 px-4 pb-4 sm:px-8"
+            style={{ touchAction: "pan-y" }}
           >
-            {loop.map((c, idx) => (
-              <CaseCard key={`${c.headline}-${idx}`} c={c} />
+            {CASES.map((c) => (
+              <div
+                key={c.headline}
+                style={{ scrollSnapAlign: "center" }}
+              >
+                <CaseCard c={c} />
+              </div>
             ))}
           </div>
         </div>
 
-        <div className="pointer-events-none absolute right-6 bottom-[-1.25rem] z-10">
+        {/* Hide scrollbar in WebKit */}
+        <style>{`
+          #cases ::-webkit-scrollbar { display: none; }
+        `}</style>
+
+        <div className="pointer-events-none absolute right-6 -bottom-2 z-10">
           <div
             className="skeo-raised-sm font-display inline-flex items-center gap-2 px-3.5 py-2 text-[10px] uppercase tracking-[0.22em] text-[var(--color-ink-2)]"
             style={{ borderRadius: 999 }}

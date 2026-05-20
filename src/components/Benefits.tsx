@@ -110,7 +110,7 @@ export default function Benefits() {
               style={{ borderRadius: 18 }}
             >
               <span
-                className="skeo-inset relative inline-flex h-12 w-12 items-center justify-center text-[#0a4a00]"
+                className="skeo-inset relative inline-flex h-12 w-12 items-center justify-center text-[#1a2a00]"
                 style={{ borderRadius: 12 }}
               >
                 {b.icon}

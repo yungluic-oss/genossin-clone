@@ -45,7 +45,7 @@ export default function CTA() {
           className="pointer-events-none absolute -top-32 -left-32 h-[420px] w-[520px] rounded-full opacity-70"
           style={{
             background:
-              "radial-gradient(circle at center, rgba(57,255,20,0.25), transparent 70%)",
+              "radial-gradient(circle at center, rgba(196, 255, 58,0.25), transparent 70%)",
             filter: "blur(30px)",
           }}
         />
@@ -54,7 +54,7 @@ export default function CTA() {
           className="pointer-events-none absolute -bottom-40 -right-24 h-[360px] w-[440px] rounded-full opacity-60"
           style={{
             background:
-              "radial-gradient(circle at center, rgba(57,255,20,0.15), transparent 70%)",
+              "radial-gradient(circle at center, rgba(196, 255, 58,0.15), transparent 70%)",
             filter: "blur(40px)",
           }}
         />
@@ -90,7 +90,7 @@ export default function CTA() {
                   key={r}
                   className="flex items-center gap-2.5 text-[14px] text-[var(--color-ink-2)]"
                 >
-                  <CheckCircle className="h-4 w-4 text-[#1fa800]" />
+                  <CheckCircle className="h-4 w-4 text-[#5a7e00]" />
                   {r}
                 </li>
               ))}
@@ -117,11 +117,11 @@ export default function CTA() {
                   className="grid h-12 w-12 place-items-center rounded-full"
                   style={{
                     background:
-                      "linear-gradient(180deg, #8dff5e 0%, #39ff14 60%, #1fa800 100%)",
-                    border: "1px solid #1a7a00",
-                    color: "#0a2a00",
+                      "linear-gradient(180deg, #e0ff99 0%, #c4ff3a 60%, #5a7e00 100%)",
+                    border: "1px solid #3a5400",
+                    color: "#0a1500",
                     boxShadow:
-                      "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 14px rgba(57,255,20,0.6)",
+                      "0 1px 0 rgba(255,255,255,0.6) inset, 0 0 14px rgba(196, 255, 58,0.6)",
                   }}
                 >
                   <CheckCircle className="h-6 w-6" />
