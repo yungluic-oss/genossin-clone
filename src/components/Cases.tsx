@@ -11,51 +11,51 @@ type Case = {
 const CASES: Case[] = [
   {
     image: "/assets/wZ4QywsLlJwC6C7w4D9W92Oqug.jpeg",
-    alt: "Fallstudie: Schweizer Kofferhersteller",
-    headline: "„AI-gestützte Prognosen reduzierten Lagerabfall um 40 %.“",
-    body: "Eine Schweizer Kofferherstellerin kämpfte mit Lager- und Effizienzproblemen. Unsere AI-Prognose optimierte Bestand und Produktionszyklen — kosteneffizient und schnell.",
+    alt: "Fallstudie: B2B-SaaS Plattform",
+    headline: "„MVP in 6 Wochen — 1'200 zahlende Nutzer in den ersten 90 Tagen.“",
+    body: "Ein B2B-SaaS-Startup brauchte einen schnellen Markteintritt. Wir lieferten Auth, Stripe-Billing, Admin-Dashboard und Onboarding in 6 Wochen — alles in TypeScript, vollständig getestet.",
     impact: [
-      "40 % weniger Lagerabfall",
-      "35 % schnellere Produktion",
-      "20 % präzisere Prognosen",
-      "25 % schnellere Auslieferung",
+      "1'200 zahlende Nutzer in 90 Tagen",
+      "CHF 84k MRR nach 4 Monaten",
+      "99.9 % Uptime",
+      "Code zu 100 % im Kundenbesitz",
     ],
   },
   {
     image: "/assets/CDxS3e61UksiMm0oJGi80w7vEA.jpeg",
-    alt: "Fallstudie: Healthcare-Logistik",
+    alt: "Fallstudie: Logistik-Plattform",
     headline:
-      "„AI-Workflows reduzierten die Fehlerquote im Tagesgeschäft um 80 %.“",
-    body: "Ein Logistikunternehmen im Gesundheitswesen hatte mit Datenfehlern und Verzögerungen zu kämpfen. Wir führten AI-Validierung und Live-Tracking ein — für Präzision und Tempo in der gesamten Lieferkette.",
+      "„Internes Operations-Tool ersetzte 3 Excel-Tabellen und 2 SaaS-Abos.“",
+    body: "Ein Logistikunternehmen jonglierte zwischen Excel, Trello und einem unflexiblen SaaS. Wir bauten ein Custom-Dashboard mit Live-Tracking, Rollen-Permissions und Postgres-Backend — direkt an ihre Daten angebunden.",
     impact: [
-      "80 % weniger Fehler",
-      "90 % Datenqualität",
-      "30 % schnellere Lieferung",
-      "60+ Stunden gespart",
+      "3 Tools konsolidiert",
+      "60+ Stunden / Monat gespart",
+      "CHF 18k / Jahr SaaS-Kosten weg",
+      "Onboarding für neue Mitarbeitende halbiert",
     ],
   },
   {
     image: "/assets/JK0fwwNQempKT9E5v6SvIj81ag.jpeg",
-    alt: "Fallstudie: Finanzdienstleister",
-    headline: "„50 % der Abläufe automatisiert — 20 % Kostensenkung in zwei Monaten.“",
-    body: "Ein Finanzdienstleister war von repetitiven Admin-Aufgaben überlastet. Durch Workflow-Automatisierung und integrierte Datensysteme wurden Abläufe verschlankt und Gemeinkosten gesenkt.",
+    alt: "Fallstudie: AI-Integration FinTech",
+    headline: "„AI-Agent beantwortet 70 % der Support-Tickets autonom — geprüft auf Quellen.“",
+    body: "Ein Finanzdienstleister wollte Support skalieren, ohne Qualität zu verlieren. Wir bauten einen Custom-RAG-Agent auf ihrer Wissensbasis mit Quellen-Verifikation und Eskalationspfaden zu menschlichen Agents.",
     impact: [
-      "50 % Prozesse automatisiert",
-      "20 % Kosten reduziert",
-      "70+ Stunden / Monat gespart",
-      "2× schnelleres Kunden-Onboarding",
+      "70 % Tickets autonom gelöst",
+      "Ø Antwortzeit 6 Sek.",
+      "Quellenangaben bei jeder Antwort",
+      "Compliance-Trail vollständig",
     ],
   },
   {
     image: "/assets/TbStOE6QtWLglNJaSOxQJqyQJOE.jpeg",
-    alt: "Fallstudie: Startup im Vertrieb",
-    headline: "„AI-Integration half einem Startup, 3× mehr Deals in kürzerer Zeit abzuschliessen.“",
-    body: "Das Vertriebsteam kämpfte mit verzögerten Follow-ups. Unser AI-Vertriebsassistent automatisierte Ansprache, Lead-Scoring und CRM-Updates — schnellere Antworten, mehr Abschlüsse.",
+    alt: "Fallstudie: Mobile App",
+    headline: "„Cross-Platform App in 10 Wochen — 4.8 Sterne im App Store.“",
+    body: "Ein Schweizer Lifestyle-Brand wollte eine App ohne separates iOS- und Android-Team. Mit React Native und Expo lieferten wir beide Plattformen in einem Codebase — inklusive Push, Auth und In-App-Käufen.",
     impact: [
-      "3× mehr Abschlüsse",
-      "40 % schnellere Antworten",
-      "95 % Lead-Qualität",
-      "CRM vollständig synchronisiert",
+      "iOS + Android · 1 Codebase",
+      "4.8 ⭐ App-Store-Rating",
+      "20'000+ Downloads im Q1",
+      "OTA-Updates ohne Store-Review",
     ],
   },
 ];
@@ -115,8 +115,12 @@ export default function Cases() {
     <section id="cases" className="relative py-28 overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Arbeiten
+          </span>
           <h2
-            className="font-display max-w-3xl"
+            className="font-display mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
@@ -124,11 +128,12 @@ export default function Cases() {
               fontWeight: 400,
             }}
           >
-            So verändert smarte AI-Automatisierung Unternehmen
+            Produkte, die wir gebaut haben —
+            <br className="hidden sm:block" /> mit messbarem Ergebnis.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Wie AI-Automatisierung Abläufe verschlankt, Effizienz steigert und
-            Wachstum ermöglicht.
+            Von der ersten Idee zum live-Produkt. Eine Auswahl der Software,
+            die wir mit unseren Kunden ausgeliefert haben.
           </p>
         </div>
       </div>

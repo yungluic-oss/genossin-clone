@@ -26,6 +26,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }

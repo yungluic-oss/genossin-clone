@@ -76,33 +76,33 @@ function IconScale(props: IconProps) {
 const ITEMS: { icon: React.ReactNode; title: string; body: string }[] = [
   {
     icon: <IconChartUp />,
-    title: "Mehr Produktivität",
-    body: "AI-gestützte Analysen liefern verwertbare Einblicke — für bessere Entscheidungen und schärfere Strategien.",
-  },
-  {
-    icon: <IconSmile />,
-    title: "Bessere Customer Experience",
-    body: "Personalisierte AI-Interaktionen verkürzen Antwortzeiten und steigern Engagement und Zufriedenheit.",
-  },
-  {
-    icon: <IconClock />,
-    title: "24/7 Verfügbarkeit",
-    body: "AI-Systeme arbeiten rund um die Uhr — für nahtlosen Support und unterbrechungsfreie Abläufe.",
+    title: "Moderner Tech-Stack",
+    body: "Next.js, TypeScript, Postgres, React Native — Technologien mit grosser Community, langer Lebensdauer und einfacher Hire-bility.",
   },
   {
     icon: <IconCoin />,
-    title: "Kostenreduktion",
-    body: "Automatisierung minimiert manuelle Arbeit, senkt Betriebskosten und optimiert den Ressourceneinsatz.",
+    title: "Sie besitzen den Code",
+    body: "Kein Vendor-Lock-in. Das gesamte Repository, die CI/CD-Konfiguration und die Infrastruktur gehen am Ende vollständig in Ihren Besitz über.",
   },
   {
-    icon: <IconLightbulb />,
-    title: "Datengetriebene Entscheidungen",
-    body: "AI analysiert grosse Datenmengen, erkennt Muster und ermöglicht schnellere, präzisere Entscheidungen.",
+    icon: <IconClock />,
+    title: "Speed-to-Launch",
+    body: "Pragmatischer Scope, klare Sprints und ein erfahrenes Team. Erste Live-Version typischerweise nach 4 – 8 Wochen, nicht nach Quartalen.",
   },
   {
     icon: <IconScale />,
-    title: "Skalierbarkeit & Wachstum",
-    body: "AI passt sich Ihrem Geschäft an, sodass Sie effizient skalieren — ohne Aufwand oder Kosten zu steigern.",
+    title: "Skalierbar von Tag eins",
+    body: "Wir entwickeln so, dass Ihr Produkt von 100 auf 100'000 Nutzer wachsen kann — ohne dass die Architektur neu geschrieben werden muss.",
+  },
+  {
+    icon: <IconSmile />,
+    title: "Design-led",
+    body: "Bevor wir programmieren, designen wir. Klare UX, durchdachte Microinteractions und ein Look, der zu Ihrer Marke passt.",
+  },
+  {
+    icon: <IconLightbulb />,
+    title: "Langfristige Partnerschaft",
+    body: "Nach dem Launch ist nicht Schluss. Wir bleiben verfügbar — als Retainer für Wartung und Features, oder per On-Demand-Abruf.",
   },
 ];
 
@@ -111,8 +111,12 @@ export default function Benefits() {
     <section id="benefits" className="relative py-28 px-4">
       <div className="relative max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Warum Star Solutions
+          </span>
           <h2
-            className="font-display max-w-3xl"
+            className="font-display mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
@@ -120,11 +124,12 @@ export default function Benefits() {
               fontWeight: 400,
             }}
           >
-            Die wichtigsten Vorteile von AI für Ihr Wachstum
+            Sechs Gründe, warum Teams uns
+            <br className="hidden sm:block" /> zur Software-Hand werden lassen.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Wie AI-Automatisierung Effizienz steigert, Kosten senkt und Ihr
-            Geschäft mit smarteren, schnelleren Prozessen vorantreibt.
+            Wir sind klein genug, um direkt zu arbeiten — und erfahren genug,
+            um Software zu liefern, die in Produktion bleibt.
           </p>
         </div>
 

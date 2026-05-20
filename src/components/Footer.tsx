@@ -60,53 +60,70 @@ export default function Footer() {
           </div>
 
           <p className="mt-6 max-w-[360px] text-[15px] text-white/65 leading-relaxed">
-            Star Solutions — smarter automatisieren, schneller optimieren, stärker
-            wachsen.
+            Star Solutions ist das Software-Studio aus Zürich. Wir bauen
+            Web-Apps, Mobile-Apps und AI-Integrationen, die produktiv gehen
+            und produktiv bleiben.
           </p>
 
-          <h3 className="mt-7 font-display font-semibold text-[18px]">
-            Unseren Newsletter abonnieren
-          </h3>
-
-          <form
-            className="mt-3 flex items-center gap-2 max-w-[360px] rounded-xl border border-white/10 bg-white/[0.04] p-1.5"
-            onSubmit={(e) => e.preventDefault()}
+          {/* Sister-site cross-link */}
+          <a
+            href="https://genossin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-7 inline-flex max-w-[360px] items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
           >
-            <input
-              type="email"
-              placeholder="E-Mail-Adresse"
-              aria-label="E-Mail"
-              className="flex-1 bg-transparent px-3 py-2 text-sm placeholder:text-white/45 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-black hover:bg-white transition-colors"
+            <div
+              className="grid h-10 w-10 shrink-0 place-items-center rounded-lg text-[11px] font-medium text-black"
+              style={{
+                background:
+                  "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-strong) 100%)",
+              }}
             >
-              Abonnieren
-            </button>
-          </form>
+              SV
+            </div>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-white/45">
+                Schwester-Brand
+              </p>
+              <p className="mt-1 text-[14px] text-white">
+                Starvision — Branding & Design
+              </p>
+            </div>
+            <svg
+              className="ml-auto h-4 w-4 shrink-0 text-white/45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M7 17 17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </a>
         </div>
 
         {/* Right block: 3 column nav */}
         <div className="grid grid-cols-3 gap-8 md:justify-self-end md:w-full md:max-w-[520px]">
           <FooterCol
-            title="Links"
+            title="Studio"
             items={[
-              { label: "Leistungen", href: "/#services" },
-              { label: "Prozess", href: "/#process" },
-              { label: "Fallstudien", href: "/#cases" },
-              { label: "Vorteile", href: "/#benefits" },
-              { label: "Preise", href: "/#pricing" },
+              { label: "Leistungen", href: "#services" },
+              { label: "Prozess", href: "#process" },
+              { label: "Arbeiten", href: "#cases" },
+              { label: "Preise", href: "#pricing" },
+              { label: "FAQ", href: "#faq" },
             ]}
           />
           <FooterCol
-            title="Seiten"
+            title="Kontakt"
             items={[
-              { label: "Start", href: "/" },
-              { label: "Studio", href: "/about" },
-              { label: "Blog", href: "/blog" },
-              { label: "Kontakt", href: "/contact" },
-              { label: "404", href: "/404" },
+              { label: "Projekt starten", href: "#contact" },
+              { label: "hi@starsolutions.ch", href: "mailto:hi@starsolutions.ch" },
+              { label: "Zürich, Schweiz", href: "#contact" },
+              { label: "Starvision (Design)", href: "https://genossin.com" },
             ]}
           />
           <div>

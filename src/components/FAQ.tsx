@@ -5,24 +5,28 @@ import { Plus, Minus } from "@/components/icons";
 
 const FAQS = [
   {
-    q: "Wie hilft AI-Automatisierung meinem Unternehmen?",
-    a: "AI-Automatisierung übernimmt repetitive Aufgaben, steigert die Effizienz und reduziert Fehler. Ihr Team kann sich auf die wirklich wertschöpfende Arbeit konzentrieren — bei höherer Produktivität und tieferen Betriebskosten.",
+    q: "Wie lange dauert ein typisches Projekt?",
+    a: "Ein AI-Sprint mit einem fokussierten Use Case dauert 2–3 Wochen. Ein MVP von Web- oder Mobile-App liegt typischerweise zwischen 6 und 10 Wochen. Grössere Plattform-Builds laufen in 2-Wochen-Sprints mit klaren Meilensteinen — Sie sehen nach jedem Sprint Live-Funktionalität.",
   },
   {
-    q: "Ist die Integration aufwendig?",
-    a: "Nein. Unsere Lösungen sind so gestaltet, dass sie sich nahtlos in Ihre bestehenden Tools und Workflows einfügen. Wir begleiten Sie Schritt für Schritt durch ein reibungsloses Setup — vom ersten Workshop bis zum produktiven Betrieb.",
+    q: "Welchen Tech-Stack benutzt ihr?",
+    a: "Wir setzen bewusst auf Technologien mit grosser Community und langer Lebensdauer: Next.js, React, TypeScript, Node.js, Python und Postgres. Mobile mit React Native und Expo. Hosting auf Vercel oder Ihrer eigenen Infrastruktur. Für AI: OpenAI, Anthropic und passende Vector-Stores. Wenn Sie schon einen Stack haben, arbeiten wir auch darin.",
   },
   {
-    q: "Welche Branchen profitieren von AI-Automatisierung?",
-    a: "Praktisch alle. Wir haben Lösungen in Marketing, Vertrieb, Finanzen, Gesundheitswesen, Kundensupport und Operations umgesetzt. Wo immer Effizienz, Datenqualität oder Skalierung Engpässe sind, hilft AI weiter.",
+    q: "Wem gehört der Code am Ende?",
+    a: "Ihnen — vollständig. Wir entwickeln in Ihrem GitHub-Repo (oder Sie erhalten es bei Projektstart). Es gibt keinen Vendor-Lock-in, keine geheimnisvolle Closed-Source-Schicht. Sie können das Produkt jederzeit selbst weiterentwickeln oder von einem anderen Team weiterführen lassen.",
   },
   {
-    q: "Brauche ich technisches Wissen, um AI-Automatisierung zu nutzen?",
-    a: "Überhaupt nicht. Unsere Lösungen sind für Fachanwender:innen gebaut, nicht für Entwickler:innen. Sie erhalten ein klares Onboarding, verständliche Dokumentation und einen direkten Ansprechpartner — bei Fragen, Anpassungen oder neuen Ideen.",
+    q: "Was passiert nach dem Launch?",
+    a: "Auf Wunsch bleiben wir an Bord — als Monats-Retainer für Wartung, Bugfixes und neue Features. Oder wir übergeben sauber an Ihr internes Team mit Dokumentation, Onboarding-Sessions und einem 30-Tage-Support-Fenster. Beide Varianten sind transparent geregelt, ohne Mindestlaufzeit.",
   },
   {
-    q: "Welche Art von Support bieten Sie an?",
-    a: "Wir bieten umfassenden Support: Onboarding, Schulungen, laufende Updates und schnellen technischen Support. Unser Team ist erreichbar, wenn Sie es brauchen — und proaktiv, wenn wir Optimierungspotenzial sehen.",
+    q: "Können wir mit nur einer Idee zu euch kommen?",
+    a: "Absolut. Viele unserer besten Projekte starten als grobe Skizze. Im Discovery-Workshop schärfen wir gemeinsam Scope, Tech-Architektur und Roadmap — bevor wir ein Angebot machen. Das Erstgespräch ist immer kostenlos.",
+  },
+  {
+    q: "Wie unterscheidet ihr euch von einer klassischen Agentur?",
+    a: "Wir sind ein kleines Studio aus Engineers, die selbst Produkte gebaut haben. Sie sprechen direkt mit den Leuten, die programmieren — keine Account-Manager dazwischen. Wir denken in Produkt- und Business-Outcomes, nicht in Stunden.",
   },
 ];
 
@@ -43,10 +47,12 @@ export default function FAQ() {
               fontWeight: 400,
             }}
           >
-            Wir haben die Antworten, die Sie suchen.
+            Die häufigsten Fragen,
+            <br className="hidden sm:block" /> ehrlich beantwortet.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Schnelle Antworten auf Ihre Fragen zur AI-Automatisierung.
+            Sollte etwas fehlen — schreiben Sie uns einfach. Wir antworten
+            innerhalb von 24h.
           </p>
         </div>
 

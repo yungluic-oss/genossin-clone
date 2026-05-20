@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { label: "Start", href: "./" },
-  { label: "Lösungen", href: "./solutions" },
-  { label: "Blog", href: "./blog" },
-  { label: "Studio", href: "./about" },
-  { label: "Kontakt", href: "./contact" },
+  { label: "Leistungen", href: "#services" },
+  { label: "Prozess", href: "#process" },
+  { label: "Arbeiten", href: "#cases" },
+  { label: "Preise", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
 ];
 
-const CTA_HREF = "https://cal.com";
+const CTA_HREF = "#contact";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function Nav() {
   return (
     <nav
       data-framer-name="Desktop"
-      className="relative w-full bg-black text-white"
+      className="sticky top-0 z-40 w-full border-b border-white/[0.06] bg-black/70 text-white backdrop-blur-xl"
     >
       <div className="mx-auto flex h-[65px] w-full max-w-[1200px] items-center justify-between px-5 py-[10px]">
         {/* Left: logo + wordmark */}
@@ -72,8 +72,6 @@ export default function Nav() {
 
           <a
             href={CTA_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
             className="font-display inline-flex items-center justify-center bg-accent text-black transition-[filter,transform] hover:brightness-95 active:translate-y-[1px]"
             style={{
               fontSize: "14px",
@@ -84,7 +82,7 @@ export default function Nav() {
               borderRadius: "8px",
             }}
           >
-            Termin buchen
+            Projekt starten
           </a>
         </div>
 
@@ -125,8 +123,6 @@ export default function Nav() {
             </ul>
             <a
               href={CTA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="font-display mt-3 inline-flex items-center justify-center bg-accent text-black"
               style={{
@@ -138,7 +134,7 @@ export default function Nav() {
                 borderRadius: "8px",
               }}
             >
-              Termin buchen
+              Projekt starten
             </a>
           </div>
         </div>

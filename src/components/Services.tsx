@@ -14,8 +14,12 @@ export default function Services() {
 
       <div className="relative max-w-[1100px] mx-auto">
         <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Leistungen
+          </span>
           <h2
-            className="font-display max-w-3xl"
+            className="font-display mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
@@ -23,45 +27,45 @@ export default function Services() {
               fontWeight: 400,
             }}
           >
-            AI-Lösungen, die Ihr
-            <br className="hidden sm:block" /> Unternehmen voranbringen
+            Software, die heute produktiv geht —
+            <br className="hidden sm:block" /> und morgen noch wartbar ist.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Wir konzipieren, entwickeln und implementieren Automatisierungen,
-            mit denen Ihr Team schlauer arbeitet — nicht härter.
+            Vom MVP zum produktiven Produkt: Wir konzipieren, designen und
+            entwickeln Software — und übergeben sauberen Code, den Sie besitzen.
           </p>
         </div>
 
         <div className="mt-14 flex flex-col gap-5">
           <ServiceCard
             reverse={false}
-            eyebrow="Workflow-Automatisierung"
-            title="Repetitive Aufgaben automatisieren"
-            body="Wir verschlanken Ihre internen Abläufe — Dateneingabe, Reporting, Freigabeketten — und ersparen Ihrem Team Stunden manueller Arbeit und Fehler."
+            eyebrow="Web-Apps & Plattformen"
+            title="SaaS und Web-Plattformen entwickeln"
+            body="Von der ersten Idee bis zur produktiven Anwendung. Wir bauen skalierbare Web-Apps mit Next.js, TypeScript und Postgres — sauber strukturiert, vollständig getestet und bereit für Wachstum."
             visual={<WorkflowVisual />}
           />
 
           <ServiceCard
             reverse
-            eyebrow="AI-Assistenten"
-            title="Tägliche Aufgaben delegieren"
-            body="Vom Kalender über E-Mail-Entwürfe bis zu Meeting-Zusammenfassungen: Unsere AI-Assistenten arbeiten rund um die Uhr — leise, präzise und konsistent."
+            eyebrow="AI-Integration & Agents"
+            title="AI dort einsetzen, wo sie wirkt"
+            body="Wir bauen AI-Features, die echten Mehrwert liefern: Custom Agents, RAG-Systeme, Chatbots und automatisierte Workflows. Mit OpenAI, Anthropic und massgeschneiderter Logik um Ihre Daten."
             visual={<AssistantVisual />}
           />
 
           <ServiceCard
             reverse={false}
-            eyebrow="Vertrieb & Marketing"
-            title="Verkauf beschleunigen"
-            body="Leadgenerierung, personalisierte Ansprache und automatisierte Content-Erstellung — AI-Tools, die Ihren Vertrieb skalieren und Ihre Marke schärfen."
+            eyebrow="Mobile Apps"
+            title="Native Apps für iOS & Android"
+            body="React Native und Expo für Cross-Platform-Apps, die sich nativ anfühlen. Vom Onboarding über Push-Notifications bis App-Store-Release — wir liefern den gesamten Lebenszyklus."
             visual={<SalesVisual />}
           />
 
           <ServiceCard
             reverse
-            eyebrow="Massgeschneiderte Projekte"
-            title="Smartere Systeme bauen"
-            body="Vom Prototyp bis zur produktiven Lösung: Strategische Beratung und individuelle AI-Projekte, abgestimmt auf Ihre konkreten Ziele."
+            eyebrow="Internal Tools & Dashboards"
+            title="Interne Tools, die Ihr Team wirklich nutzt"
+            body="Dashboards, Admin-Panels, Reporting-Tools und Workflow-Software für Ihr Team. Massgeschneidert auf Ihre Prozesse — angebunden an die Datenquellen, die Sie bereits haben."
             visual={<CustomVisual />}
           />
         </div>
@@ -180,11 +184,11 @@ function WorkflowVisual() {
     metaTone?: "muted" | "violet" | "rose" | "emerald";
   };
   const rows: Row[] = [
-    { label: "Lohnabrechnung", meta: "Fällig am 2. Juli", dot: "amber", metaTone: "violet" },
-    { label: "Mitarbeiter-Tracking", meta: "vor 2 Tagen", dot: "emerald", metaTone: "muted" },
-    { label: "Social-Media-Beitrag", meta: "Vom Nutzer abgebrochen", dot: "rose", metaTone: "rose" },
-    { label: "Lead-Liste", meta: "70% vorbereitet", dot: "violet", metaTone: "violet" },
-    { label: "Zahlungserinnerung", meta: "an ausgewählte Kunden", dot: "emerald", metaTone: "emerald" },
+    { label: "Onboarding-Flow", meta: "Live in Production", dot: "emerald", metaTone: "emerald" },
+    { label: "Stripe-Checkout", meta: "Deploy bereit", dot: "violet", metaTone: "violet" },
+    { label: "Admin-Dashboard", meta: "QA in Review", dot: "amber", metaTone: "violet" },
+    { label: "Auth & Permissions", meta: "vor 1 Tag", dot: "emerald", metaTone: "muted" },
+    { label: "API-Endpoint /v2", meta: "in Entwicklung", dot: "violet", metaTone: "violet" },
   ];
   const dotMap: Record<Row["dot"], string> = {
     violet: "bg-violet",
@@ -215,9 +219,9 @@ function WorkflowVisual() {
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
             </svg>
           </div>
-          <p className="text-[13px] font-medium text-white/90">Alle Aufgaben</p>
+          <p className="text-[13px] font-medium text-white/90">Build-Pipeline</p>
         </div>
-        <span className="text-[11px] text-white/45">Warten auf Freigabe</span>
+        <span className="text-[11px] text-white/45">5 aktive Tasks</span>
       </div>
       <div className="space-y-1.5">
         {rows.map((r) => (
@@ -243,10 +247,10 @@ function WorkflowVisual() {
 
 function AssistantVisual() {
   const tools = [
-    { label: "Dokument hinzufügen", icon: "doc" },
-    { label: "Analysieren", icon: "bar" },
-    { label: "Bild erzeugen", icon: "img" },
-    { label: "Recherche", icon: "search" },
+    { label: "Knowledge-Base anbinden", icon: "doc" },
+    { label: "Daten analysieren", icon: "bar" },
+    { label: "Antwort generieren", icon: "img" },
+    { label: "Quellen prüfen", icon: "search" },
   ] as const;
 
   return (
@@ -258,11 +262,11 @@ function AssistantVisual() {
     >
       <div>
         <p className="font-display text-[22px] tracking-tight">
-          Wobei kann ich helfen?
+          Was möchten Sie wissen?
         </p>
         <p className="mt-1.5 text-[12px] text-white/55 leading-relaxed max-w-[32ch]">
-          Ob Kundenanfragen oder Änderungen im System — geben Sie mir einfach
-          den Auftrag.
+          Ihr Custom AI-Agent — trainiert auf Ihre Daten, integriert in Ihre
+          Tools, im Stil Ihrer Marke.
         </p>
       </div>
 
@@ -281,7 +285,7 @@ function AssistantVisual() {
       <div className="relative">
         <div className="flex items-center gap-2 pl-4 pr-2 py-2 rounded-full bg-white/[0.05] border border-white/10">
           <span className="text-[12.5px] text-white/85 flex-1 truncate">
-            30-Tage-Vertrag plan
+            Fasse die letzten 10 Tickets zusammen
             <span className="inline-block w-[1px] h-[14px] bg-accent ml-0.5 align-middle animate-pulse-dot" />
           </span>
           <button className="w-7 h-7 rounded-full bg-accent grid place-items-center text-black">
@@ -344,10 +348,10 @@ function ToolIcon({ name }: { name: "doc" | "bar" | "img" | "search" }) {
 
 function SalesVisual() {
   const founders = [
-    { name: "Jonas Meier", role: "Gründer", email: "jonas@meier.ch", company: "Meier AG", verified: true },
-    { name: "Léa Bertrand", role: "CEO", email: "lea@bertrand.ch", company: "Bertrand SA", verified: true },
-    { name: "Marco Bianchi", role: "Gründer", email: "marco@bianchi.ch", company: "Bianchi GmbH", verified: false },
-    { name: "Sophie Keller", role: "Gründerin", email: "sophie@keller.ch", company: "Keller & Co.", verified: true },
+    { name: "Jonas Meier", role: "iOS · v3.2.1", email: "Push aktiviert", company: "Zürich", verified: true },
+    { name: "Léa Bertrand", role: "Android · v3.2.1", email: "Onboarding aktiv", company: "Lausanne", verified: true },
+    { name: "Marco Bianchi", role: "iOS · v3.1.4", email: "Update verfügbar", company: "Lugano", verified: false },
+    { name: "Sophie Keller", role: "Android · v3.2.1", email: "Push aktiviert", company: "Bern", verified: true },
   ];
 
   return (
@@ -362,16 +366,16 @@ function SalesVisual() {
         <div className="flex items-center gap-2 text-[11px]">
           <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot" />
-            E-Mail wird versendet…
+            Live-Rollout läuft…
           </span>
           <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
-            LinkedIn
+            iOS
           </span>
           <span className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white/70">
-            IT-Dienstleistungen
+            Android
           </span>
           <span className="px-2 py-1 rounded-full bg-violet/15 border border-violet/30 text-[#a8c0ed]">
-            Gründer:innen
+            Aktive Nutzer
           </span>
         </div>
       </div>
@@ -467,19 +471,19 @@ function CustomVisual() {
           D
         </div>
         <div>
-          <p className="text-[13px] font-medium text-white/90">Hallo David!</p>
+          <p className="text-[13px] font-medium text-white/90">Operations-Team</p>
           <p className="text-[11px] text-white/55">
-            Hier ist Ihr individuelles Projekt &amp; Ihre Planung
+            Ihr internes Dashboard &amp; Sprint-Planung
           </p>
         </div>
       </div>
 
       <div className="px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
         <p className="text-[10.5px] uppercase tracking-[0.14em] text-white/45">
-          Laufendes Projekt:
+          Sprint 12 — laufend:
         </p>
         <div className="mt-1 flex items-center justify-between text-[13px]">
-          <span className="text-white/90">Kundensupport-Chatbot</span>
+          <span className="text-white/90">Custom Admin-Panel</span>
           <span className="text-accent text-[12px] font-medium">90 % erledigt</span>
         </div>
         <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
@@ -503,8 +507,8 @@ function CustomVisual() {
       </div>
 
       <div className="space-y-1.5">
-        <ScheduleRow time="10:00 – 10:30" label="Erstgespräch" tone="accent" />
-        <ScheduleRow time="18:00 – 18:30" label="Individuelle Automatisierung" tone="violet" />
+        <ScheduleRow time="10:00 – 10:30" label="Standup mit Eng-Team" tone="accent" />
+        <ScheduleRow time="14:00 – 14:30" label="Demo: Reporting-Module" tone="violet" />
       </div>
     </div>
   );

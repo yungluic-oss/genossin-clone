@@ -3,8 +3,12 @@ export default function Process() {
     <section id="process" className="relative py-28 px-4">
       <div className="relative max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Prozess
+          </span>
           <h2
-            className="font-display max-w-3xl"
+            className="font-display mt-5 max-w-3xl"
             style={{
               fontSize: "clamp(32px, 4vw, 50px)",
               lineHeight: "1.1",
@@ -12,37 +16,38 @@ export default function Process() {
               fontWeight: 400,
             }}
           >
-            Unser einfacher, smarter und skalierbarer Prozess
+            Vier Schritte vom ersten Workshop
+            <br className="hidden sm:block" /> bis zum Live-Produkt.
           </h2>
           <p className="mt-5 max-w-xl text-white/60 text-base sm:text-lg">
-            Wir konzipieren, entwickeln und implementieren Automatisierungen,
-            mit denen Ihr Team schlauer arbeitet — nicht härter.
+            Wir liefern in 2-Wochen-Sprints, mit Demos am Ende jedes Sprints —
+            damit Sie früh sehen, was wir bauen und Kurs halten können.
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard
             step="Schritt 1"
-            title="Smarte Analyse"
-            body="Wir analysieren Ihre Abläufe und identifizieren AI-Lösungen, die Workflows verschlanken und Effizienz schaffen."
+            title="Discovery & Strategy"
+            body="Wir verstehen Ihr Geschäft, Ihre Nutzer und Ihre Zielgruppe. Daraus entsteht ein klarer Scope mit Architektur-Entscheid, Tech-Stack und realistischem Zeitplan."
             visual={<AnalyzeVisual />}
           />
           <StepCard
             step="Schritt 2"
-            title="AI-Entwicklung"
-            body="Unser Team baut intelligente Automatisierungen, exakt zugeschnitten auf Ihre Geschäftsprozesse."
+            title="Design & Prototype"
+            body="UX-Flows, Wireframes und ein interaktiver Prototyp in Figma. Sie sehen das Produkt, bevor wir die erste Zeile Code schreiben — und Änderungen kosten nichts."
             visual={<CodeVisual />}
           />
           <StepCard
             step="Schritt 3"
-            title="Nahtlose Integration"
-            body="Wir integrieren AI-Lösungen mit minimaler Störung in Ihre bestehende Infrastruktur."
+            title="Build & Ship"
+            body="Wir entwickeln in 2-Wochen-Sprints mit wöchentlichen Demos. Code geht direkt in Ihr GitHub-Repo, mit CI/CD auf Vercel oder Ihrer Infrastruktur."
             visual={<IntegrationVisual />}
           />
           <StepCard
             step="Schritt 4"
-            title="Kontinuierliche Optimierung"
-            body="Wir messen, analysieren und verbessern die Automatisierungen für langfristiges Wachstum."
+            title="Iterate & Scale"
+            body="Nach dem Launch: Monitoring, Bugfixes, Features. Auf Wunsch als Retainer — oder vollständige Übergabe an Ihr Team mit Dokumentation und Onboarding."
             visual={<OptimizeVisual />}
           />
         </div>
@@ -80,15 +85,15 @@ function StepCard({
 
 function AnalyzeVisual() {
   const checks = [
-    { l: "Systemprüfung", v: 100 },
-    { l: "Prozessprüfung", v: 80 },
-    { l: "Geschwindigkeit", v: 60 },
-    { l: "Manuelle Arbeit", v: 45 },
-    { l: "Repetitive Tasks", v: 30 },
+    { l: "Geschäftsziele", v: 100 },
+    { l: "User-Research", v: 85 },
+    { l: "Tech-Architektur", v: 70 },
+    { l: "Datenmodell", v: 55 },
+    { l: "Scope & Roadmap", v: 40 },
   ];
   return (
     <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-3">
-      <p className="text-[12px] text-white/55">Aktueller Workflow wird analysiert…</p>
+      <p className="text-[12px] text-white/55">Discovery-Phase läuft…</p>
       <div className="space-y-2">
         {checks.map((c) => (
           <div key={c.l}>
@@ -188,9 +193,9 @@ function IntegrationVisual() {
 
 function OptimizeVisual() {
   const rows = [
-    { l: "Chatbot-System", v: "Effizienz steigt um 20 %", c: "text-accent" },
-    { l: "Workflow-System", v: "Update verfügbar…", c: "text-violet" },
-    { l: "Vertriebssystem", v: "Auf dem neusten Stand", c: "text-emerald-400" },
+    { l: "Performance-Monitoring", v: "Median 92ms · stable", c: "text-accent" },
+    { l: "Feature-Flag · Pricing-V2", v: "Rollout läuft (50 %)", c: "text-violet" },
+    { l: "Sentry · Error-Tracking", v: "0 kritische Errors", c: "text-emerald-400" },
   ];
   return (
     <div className="rounded-2xl bg-black/40 border border-white/5 p-4 space-y-2">
